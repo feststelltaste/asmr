@@ -1,0 +1,159 @@
+---
+layout: default
+title: Technology Roadmap
+---
+
+{% assign total_techs = site.data.roadmap.technologies | size %}
+{% assign categories = site.data.roadmap.technologies | map: "category" | uniq | sort %}
+
+<!-- Reference card -->
+<div class="reference-card-wrapper">
+  <details class="reference-card">
+    <summary>
+      <span class="ref-icon">📋</span>
+      About this Roadmap
+      <span class="ref-toggle-hint">click to expand</span>
+    </summary>
+    <div class="ref-content">
+      <div class="ref-text">
+        <p>
+          This roadmap tracks where technologies stand in our adoption journey.
+          It uses the six-stage model from <a href="https://cards42.org/roadmap/" target="_blank" rel="noopener">Cards42</a>,
+          extending the ThoughtWorks Technology Radar with explicit <strong>Stop</strong> and <strong>Remove</strong> stages
+          to address the full technology lifecycle.
+        </p>
+        <ul class="stage-legend">
+          {% for stage in site.data.roadmap.stages %}
+          <li style="--stage-color: {{ stage.color }}">
+            <span class="legend-icon">{{ stage.icon }}</span>
+            <span class="legend-name">{{ stage.name }}</span>
+            <span class="legend-desc">{{ stage.description }}</span>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="ref-visual">
+        <img src="https://cards42.org/cards_svg_EN/card29.svg" alt="Cards42 Technology Roadmap Card" class="ref-svg">
+      </div>
+    </div>
+  </details>
+</div>
+
+<!-- Stats -->
+<div class="stats-row">
+  <div class="stat">
+    <span class="stat-num">{{ total_techs }}</span>
+    <span class="stat-lbl">Technologies</span>
+  </div>
+  <div class="stat">
+    <span class="stat-num">{{ site.data.roadmap.stages | size }}</span>
+    <span class="stat-lbl">Stages</span>
+  </div>
+  <div class="stat">
+    <span class="stat-num">{{ categories | size }}</span>
+    <span class="stat-lbl">Categories</span>
+  </div>
+</div>
+
+<!-- Controls -->
+<div class="controls">
+  <div class="search-wrap">
+    <span class="search-icon" aria-hidden="true">🔎</span>
+    <input
+      type="search"
+      id="tech-search"
+      class="search-input"
+      placeholder="Search technologies…"
+      aria-label="Search technologies"
+    >
+  </div>
+  <div class="filter-wrap">
+    <span class="filter-label">Filter:</span>
+    <div class="filter-chips" role="group" aria-label="Filter by category">
+      <button class="chip active" data-category="all" type="button">
+        All <span class="chip-cnt">{{ total_techs }}</span>
+      </button>
+      {% for cat in categories %}
+        {% assign cat_count = site.data.roadmap.technologies | where: "category", cat | size %}
+        <button class="chip" data-category="{{ cat }}" type="button">
+          {{ cat }} <span class="chip-cnt">{{ cat_count }}</span>
+        </button>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<!-- Roadmap -->
+<div class="roadmap" id="roadmap" role="main" aria-label="Technology Roadmap">
+  <div class="roadmap-scroll">
+
+    {% for stage in site.data.roadmap.stages %}
+      {% unless forloop.first %}
+      <div class="connector" aria-hidden="true">
+        <svg viewBox="0 0 32 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="16" y1="0" x2="16" y2="60" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/>
+          <path d="M8 44 L16 56 L24 44" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </svg>
+      </div>
+      {% endunless %}
+
+      <div
+        class="stage"
+        data-stage="{{ stage.id }}"
+        style="--sc: {{ stage.color }}; --sbg: {{ stage.bg_color }}"
+        aria-label="Stage: {{ stage.name }}"
+      >
+        <!-- Stage header -->
+        <div class="stage-hd">
+          <span class="stage-step">{{ forloop.index }}</span>
+          <div class="stage-icon" aria-hidden="true">{{ stage.icon }}</div>
+          <h2 class="stage-name">{{ stage.name }}</h2>
+          <p class="stage-desc">{{ stage.description }}</p>
+          {% assign stage_count = site.data.roadmap.technologies | where: "stage", stage.id | size %}
+          <span class="stage-count">{{ stage_count }}</span>
+        </div>
+
+        <!-- Stage body -->
+        <div class="stage-bd">
+          {% assign stage_techs = site.data.roadmap.technologies | where: "stage", stage.id %}
+
+          {% if stage_techs.size > 0 %}
+            {% for tech in stage_techs %}
+            <button
+              class="tcard"
+              data-category="{{ tech.category }}"
+              data-name="{{ tech.name | downcase }}"
+              data-desc="{{ tech.description | downcase }}"
+              style="--sc: {{ stage.color }}"
+              aria-expanded="false"
+              type="button"
+            >
+              <span class="tcard-name">{{ tech.name }}</span>
+              <span class="tcard-cat">{{ tech.category }}</span>
+              {% if tech.description %}
+              <span class="tcard-desc">{{ tech.description }}</span>
+              {% endif %}
+              {% if tech.description %}
+              <span class="tcard-chevron" aria-hidden="true">›</span>
+              {% endif %}
+            </button>
+            {% endfor %}
+          {% else %}
+            <div class="stage-empty" aria-label="No technologies in this stage yet">
+              <span class="empty-dot" aria-hidden="true">○</span>
+              <span>Empty</span>
+            </div>
+          {% endif %}
+
+          <div class="stage-empty stage-empty--filtered" style="display:none" aria-hidden="true">
+            <span class="empty-dot">◌</span>
+            <span>No match</span>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+
+  </div>
+</div>
+
+<p class="roadmap-hint" aria-hidden="true">← scroll to explore all stages →</p>

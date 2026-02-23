@@ -1,0 +1,15 @@
+title: "Technology Roadmap"
+description: "Tracking technology adoption across the modernization journey"
+url: ""
+baseurl: ""
+
+markdown: kramdown
+
+sass:
+  style: compressed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - "*.sh"

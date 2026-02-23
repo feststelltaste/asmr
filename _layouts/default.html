@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-brand">
+        <span class="header-icon" aria-hidden="true">🗺</span>
+        <div>
+          <h1 class="site-title">{{ site.title }}</h1>
+          <p class="site-subtitle">{{ site.description }}</p>
+        </div>
+      </div>
+      <div class="header-badge">
+        <a href="https://cards42.org/roadmap/" target="_blank" rel="noopener" class="ref-link">
+          Inspired by cards42.org
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="site-main">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Inspired by <a href="https://www.thoughtworks.com/radar" target="_blank" rel="noopener">ThoughtWorks Technology Radar</a>
+      and <a href="https://cards42.org/roadmap/" target="_blank" rel="noopener">Cards42 Roadmap</a>
+    </p>
+  </footer>
+
+  <script src="{{ '/assets/js/roadmap.js' | relative_url }}"></script>
+</body>
+</html>

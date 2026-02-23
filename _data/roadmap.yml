@@ -1,0 +1,239 @@
+stages:
+  - id: hold-on
+    name: Hold On
+    description: Not yet suitable. Watch and wait before committing.
+    color: "#607D8B"
+    bg_color: "#f0f4f7"
+    icon: "⏸"
+
+  - id: assess
+    name: Assess
+    description: Worth investigating. Understand impact before committing.
+    color: "#1565C0"
+    bg_color: "#e8f0fe"
+    icon: "🔍"
+
+  - id: trial
+    name: Trial
+    description: Try it out in low-risk projects to build experience.
+    color: "#E65100"
+    bg_color: "#fff3e0"
+    icon: "🧪"
+
+  - id: apply
+    name: Apply
+    description: Ready to use. Proven choice for appropriate contexts.
+    color: "#2E7D32"
+    bg_color: "#e8f5e9"
+    icon: "✅"
+
+  - id: stop
+    name: Stop
+    description: Do not start new projects. Legacy systems only.
+    color: "#C62828"
+    bg_color: "#fce4ec"
+    icon: "🛑"
+
+  - id: remove
+    name: Remove
+    description: Phase out completely. Actively migrate away.
+    color: "#37474F"
+    bg_color: "#f5f5f5"
+    icon: "🗑"
+
+technologies:
+  # AI & Automation (Hold On)
+  - name: General-Purpose AGI Agents
+    stage: hold-on
+    category: AI & Automation
+    description: "Fully autonomous agents with general reasoning across any domain. Current models lack reliability for unsupervised production use."
+
+  - name: AI-Generated Infrastructure Config
+    stage: hold-on
+    category: Infrastructure
+    description: "Letting AI autonomously generate and apply infrastructure changes without human review. Security and correctness risks are too high today."
+
+  - name: No-Code AI App Builders
+    stage: hold-on
+    category: AI & Automation
+    description: "Fully no-code platforms claiming to replace developers with AI generation. Useful for prototypes only — not production-grade software."
+
+  - name: Blockchain for Internal Data
+    stage: hold-on
+    category: Architecture
+    description: "Applying blockchain/distributed ledger to internal data problems. Adds complexity without meaningful benefits over traditional databases."
+
+  # AI & Automation
+  - name: AI Coding Assistants
+    stage: apply
+    category: AI & Automation
+    description: "Tools like GitHub Copilot, Cursor, Windsurf for AI-assisted code generation and refactoring. Proven productivity boost."
+
+  - name: Agentic AI Workflows
+    stage: trial
+    category: AI & Automation
+    description: "Multi-step AI systems that autonomously plan and execute complex tasks using LLMs. Powerful but requires careful design."
+
+  - name: LLM-powered Code Review
+    stage: trial
+    category: AI & Automation
+    description: "Using large language models to automatically review pull requests for issues, style, and improvements."
+
+  - name: AI Document Generation
+    stage: apply
+    category: AI & Automation
+    description: "Generating documentation, changelogs, and release notes automatically from code and commit history."
+
+  - name: Autonomous Refactoring Agents
+    stage: assess
+    category: AI & Automation
+    description: "AI agents that autonomously refactor large codebases with minimal human guidance. Needs governance framework."
+
+  - name: LLM Fine-tuning on Internal Code
+    stage: assess
+    category: AI & Automation
+    description: "Fine-tuning language models on proprietary codebases for better context-aware suggestions."
+
+  - name: Prompt Engineering Libraries
+    stage: assess
+    category: AI & Automation
+    description: "Structured frameworks (DSPy, LMQL) for building reliable, testable LLM prompt pipelines."
+
+  # Architecture
+  - name: Microservices
+    stage: trial
+    category: Architecture
+    description: "Decomposing applications into small, independently deployable services. Valuable but adds operational complexity."
+
+  - name: Event-Driven Architecture
+    stage: trial
+    category: Architecture
+    description: "Asynchronous communication via events/messages. Enables loose coupling and scalability."
+
+  - name: API-First Design
+    stage: apply
+    category: Architecture
+    description: "Designing and documenting APIs before implementation enables parallel development and better contracts."
+
+  - name: Domain-Driven Design
+    stage: apply
+    category: Architecture
+    description: "Modeling software around business domains with bounded contexts and ubiquitous language."
+
+  - name: Hexagonal Architecture
+    stage: trial
+    category: Architecture
+    description: "Ports & Adapters pattern to isolate core business logic from external dependencies."
+
+  - name: Monolith (Distributed)
+    stage: stop
+    category: Architecture
+    description: "Distributed monoliths combine the worst of both worlds — tightly coupled services with network overhead."
+
+  - name: Big Ball of Mud
+    stage: remove
+    category: Architecture
+    description: "Unstructured, tangled codebases without clear boundaries or separation of concerns."
+
+  - name: Event Sourcing
+    stage: assess
+    category: Architecture
+    description: "Storing state changes as an immutable sequence of events. Powerful for audit trails and temporal queries."
+
+  # Infrastructure
+  - name: Kubernetes
+    stage: apply
+    category: Infrastructure
+    description: "Container orchestration platform for automating deployment, scaling, and management of containerized applications."
+
+  - name: Infrastructure as Code
+    stage: apply
+    category: Infrastructure
+    description: "Managing infrastructure through code using Terraform, Pulumi, or CDK. Essential for reproducibility."
+
+  - name: Serverless Functions
+    stage: apply
+    category: Infrastructure
+    description: "Event-driven compute (AWS Lambda, Azure Functions) without server management overhead."
+
+  - name: Service Mesh
+    stage: trial
+    category: Infrastructure
+    description: "Istio, Linkerd for service-to-service communication, observability, and security policies."
+
+  - name: eBPF-based Observability
+    stage: assess
+    category: Infrastructure
+    description: "Kernel-level observability using eBPF for zero-overhead tracing and network monitoring."
+
+  - name: On-Premise Data Centers
+    stage: stop
+    category: Infrastructure
+    description: "Self-managed physical infrastructure without cloud benefits. High cost, low agility."
+
+  - name: Manual Server Provisioning
+    stage: remove
+    category: Infrastructure
+    description: "Hand-configuring servers without automation. Error-prone and impossible to scale reliably."
+
+  # DevOps
+  - name: CI/CD Pipelines
+    stage: apply
+    category: DevOps
+    description: "Automated build, test, and deployment pipelines. Non-negotiable for modern software delivery."
+
+  - name: GitOps
+    stage: apply
+    category: DevOps
+    description: "Git as the single source of truth for infrastructure and application deployments."
+
+  - name: Feature Flags
+    stage: trial
+    category: DevOps
+    description: "Runtime configuration to enable/disable features without deployments. Enables trunk-based development."
+
+  - name: OpenTelemetry
+    stage: trial
+    category: DevOps
+    description: "Vendor-neutral standard for distributed tracing, metrics, and logging across services."
+
+  - name: Chaos Engineering
+    stage: assess
+    category: DevOps
+    description: "Deliberately introducing failures to test system resilience. Builds confidence in production reliability."
+
+  - name: SSH-based Deployments
+    stage: remove
+    category: DevOps
+    description: "Manually deploying via SSH. No rollback, no audit trail, no consistency. Replace with pipelines."
+
+  # Modernization
+  - name: Strangler Fig Pattern
+    stage: apply
+    category: Modernization
+    description: "Incrementally migrating legacy systems by routing traffic to new services while keeping the old system running."
+
+  - name: Anti-Corruption Layer
+    stage: apply
+    category: Modernization
+    description: "Translating layer between legacy and new systems to prevent legacy concepts from leaking into new code."
+
+  - name: Database Decomposition
+    stage: trial
+    category: Modernization
+    description: "Breaking apart shared monolithic databases into service-owned stores. Hard but critical for independence."
+
+  - name: Legacy API Wrapping
+    stage: trial
+    category: Modernization
+    description: "Wrapping legacy SOAP/RPC services in modern REST/GraphQL facades to enable incremental modernization."
+
+  - name: Big Bang Rewrite
+    stage: stop
+    category: Modernization
+    description: "Complete rewrites from scratch. Almost always over budget, over schedule, and fail to capture edge cases."
+
+  - name: Shared Database Pattern
+    stage: stop
+    category: Modernization
+    description: "Multiple services sharing one database schema. Creates tight coupling and impedes independent deployment."
