@@ -1,7 +1,7 @@
 ---
 title: "Fully Autonomous Code Deployment"
 stage: hold-on
-category: Architecture & Delivery
+category: Agentic AI Tools
 description: "AI agents that autonomously merge, deploy, and release to production without human approval steps. Safety and reliability risks are too high today."
 strategic_value: generic
 devops_phases: [release, deploy]

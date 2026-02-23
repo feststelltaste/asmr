@@ -21,6 +21,14 @@ If Context Engineering is about what the agent *knows*, Harness Engineering is a
 - **Action Guardrails** — Rules that intercept agent commands (e.g., preventing `rm -rf /` or unauthorized API calls).
 - **Observability** — Detailed logging of agent "thoughts" and tool calls to diagnose where the "harness" failed to guide the agent.
 
+## Infrastructure Prerequisites
+
+To build an effective harness, the following classic engineering disciplines are non-negotiable:
+
+- **CI/CD Pipelines** — The automated referee. Every agent-generated PR must pass a full suite of build, test, and security checks before human review.
+- **Feature Flags** — The kill switch. AI-generated code should be released behind flags to allow for instant rollback and side-by-side comparison in production.
+- **Distributed Tracing (OpenTelemetry)** — The black-box recorder. Since agentic flows are multi-step and non-deterministic, you need granular tracing to understand exactly where a chain failed or became slow.
+
 ## Why It Matters
 
 - **Reliability** — Moves AI from "probabilistic" to "deterministic" by surrounding it with traditional engineering gates.

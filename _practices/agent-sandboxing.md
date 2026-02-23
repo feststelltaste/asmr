@@ -1,7 +1,7 @@
 ---
 title: "Agent Sandboxing"
 stage: assess
-category: Architecture & Delivery
+category: AI Tooling Setup
 description: "Isolating AI agents in secure, ephemeral environments (E2B, Docker) to prevent destructive shell commands or data exfiltration on developer machines."
 strategic_value: supporting
 devops_phases: [code, build, test]

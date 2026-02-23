@@ -1,7 +1,7 @@
 ---
 title: "AI-powered Code Review"
 stage: trial
-category: Architecture & Delivery
+category: Agentic AI Tools
 description: "Automated PR review using LLMs (CodeRabbit, etc.) that flags logic errors, security issues, and style violations."
 strategic_value: supporting
 devops_phases: [build, test]
