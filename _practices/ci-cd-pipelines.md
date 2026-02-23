@@ -42,6 +42,7 @@ AI agents produce code that needs verification. A CI/CD pipeline is the automate
 
 ## Resources
 
+- [Regression Test After Every Change (OORP)](https://oorp.github.io/#regression-test-after-every-change) — The foundational discipline for safe modernization.
 - [GitHub Actions documentation](https://docs.github.com/en/actions) — getting started with CI/CD workflows
 - [Martin Fowler — Continuous Integration](https://martinfowler.com/articles/continuousIntegration.html) — foundational principles
 - [DORA metrics](https://dora.dev/) — measuring software delivery performance
