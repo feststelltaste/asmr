@@ -1,5 +1,7 @@
 # Agentic Software Modernization Roadmap (ASMR)
 
+> Relaxation for your legacy system
+
 Agentic Software Modernization Roadmap is a technology roadmap focused on the tools, patterns, and practices required to modernize legacy software systems using agentic AI.
 
 _Draft version 2026-02-23_
@@ -48,4 +50,4 @@ This work is licensed under a [Creative Commons Attribution 4.0 International Li
 
 ## About the name
 
-It's totally coincidence, but watching your technical debt disappear by using AI agents may cause extreme relaxation as well.
+If this roadmap gives you a tingly sensation in your brain, don't worry—it's just the **ASMR** (Agentic Software Modernization Roadmap) doing its job. Warning: Watching your technical debt disappear may cause extreme relaxation.
