@@ -19,9 +19,10 @@ When integrating with a legacy system, the ACL translates between the legacy's i
 
 ## Implementation Patterns
 
-- **Adapter** — Converts legacy DTOs to your domain objects at the boundary
-- **Repository** — Hides legacy DB access behind a clean interface
-- **Gateway** — Wraps legacy API calls in a typed, domain-friendly client
+- **Semantic Wrapper** — Wrap the old software to emulate the new abstractions, even if they aren't in the implementation.
+- **Adapter** — Converts legacy DTOs to your domain objects at the boundary.
+- **Repository** — Hides legacy DB access behind a clean interface.
+- **Gateway** — Wraps legacy API calls in a typed, domain-friendly client.
 
 ## AI Acceleration
 
@@ -37,5 +38,6 @@ LLMs are effective at:
 
 ## Resources
 
+- [Present the Right Interface (OORP)](https://oorp.github.io/#present-the-right-interface) — How to wrap legacy services to export the right abstractions.
 - [Eric Evans — Domain-Driven Design (Blue Book)](https://www.domainlanguage.com/ddd/) — the original DDD book introducing the ACL concept
 - [Vaughn Vernon — Implementing Domain-Driven Design](https://vaughnvernon.com/?page_id=168) — practical patterns including ACL implementation
