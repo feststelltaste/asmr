@@ -19,6 +19,12 @@ Shared databases create invisible contracts between teams. Any schema change ris
 4. Move to separate schemas per service in the same DB cluster
 5. Eventually split into physically separate databases when the team/scale justifies it
 
+## AI Acceleration
+
+- LLMs can analyze large sets of SQL queries to find tables being accessed by multiple services.
+- Agents can generate migration scripts to move data from a shared schema to a service-owned schema.
+- AI can suggest service boundaries based on data access patterns found in the legacy code.
+
 ## See Also
 
 - [Database Decomposition](/practices/database-decomposition/)
