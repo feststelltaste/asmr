@@ -46,10 +46,6 @@ Inspired by [cards42's card called "Roadmap"](https://cards42.org/roadmap/), whi
 
 This work is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
 
-## About the Name
-
-If this roadmap gives you a tingly sensation in your brain, don't worry—it's just the **ASMR** (Agentic Software Modernization Roadmap) doing its job. Warning: Watching your technical debt disappear may cause extreme relaxation.
-
 ## About the name
 
-It's totally coincidence that there is also ASMR.
+It's totally coincidence, but watching your technical debt disappear by using AI agents may cause extreme relaxation as well.
