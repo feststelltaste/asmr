@@ -2,7 +2,7 @@ stages:
   - id: hold-on
     name: Hold On
     description: Not yet suitable. Watch and wait before committing.
-    color: "#f1f5f9"
+    color: "#64748b"
     bg_color: "#0f172a"
 
   - id: assess
