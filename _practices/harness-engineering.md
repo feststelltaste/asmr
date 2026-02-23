@@ -16,7 +16,7 @@ If Context Engineering is about what the agent *knows*, Harness Engineering is a
 ## Core Components
 
 - **Deterministic Environments** — Ephemeral, reproducible sandboxes (Docker, E2B) where agents can run code without side effects.
-- **Verification Loops** — Automated test suites (unit, integration, and characterization) that the agent must pass before proposing a change. Follows the [Regression Test After Every Change](https://oorp.github.io/#regression-test-after-every-change) pattern.
+- **Verification Loops** — Automated test suites (unit, integration, and characterization) that the agent must pass before proposing a change.
 - **Context Injection** — Dynamically providing only the relevant 5% of a codebase that an agent needs for a specific task.
 - **Action Guardrails** — Rules that intercept agent commands (e.g., preventing `rm -rf /` or unauthorized API calls).
 - **Observability** — Detailed logging of agent "thoughts" and tool calls to diagnose where the "harness" failed to guide the agent.
@@ -35,6 +35,7 @@ If Context Engineering is about what the agent *knows*, Harness Engineering is a
 
 ## Resources
 
+- [Regression Test After Every Change (OORP)](https://oorp.github.io/#regression-test-after-every-change) — (Classic) The foundational discipline for safe modernization.
 - [OpenAI — Harness Engineering: Leveraging Codex in an Agent-First World](https://openai.com/index/harness-engineering/)
 - [Martin Fowler — Harness Engineering: Making AI Reliable](https://martinfowler.com/articles/exploring-gen-ai/harness-engineering.html)
 - [Authentica — Harness Engineering: Making AI Reliable for Supply Chain](https://authenti.ca/news/harness-engineering)
