@@ -17,8 +17,10 @@
       <div class="header-brand">
         <span class="header-icon" aria-hidden="true">🗺</span>
         <div>
-          <h1 class="site-title">{{ site.title }}</h1>
-          <p class="site-subtitle">{{ site.description }}</p>
+          <a href="{{ '/' | relative_url }}" class="site-home-link">
+            <h1 class="site-title">{{ site.title }}</h1>
+            <p class="site-subtitle">{{ site.description }}</p>
+          </a>
         </div>
       </div>
       <div class="header-badge">

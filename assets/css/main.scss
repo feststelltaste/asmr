@@ -108,6 +108,16 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .header-brand { display: flex; align-items: center; gap: .875rem; }
 .header-icon  { font-size: 2rem; line-height: 1; }
 
+.site-home-link {
+  display: block;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+    .site-title { color: #fff; }
+    .site-subtitle { opacity: .8; }
+  }
+}
+
 .site-title {
   font-size: 1.25rem;
   font-weight: 800;
