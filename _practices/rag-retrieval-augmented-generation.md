@@ -36,6 +36,7 @@ Query → Embed → Vector Search → Top-K Chunks → LLM Context → Response
 - Retrieval quality depends heavily on chunking and embedding strategy
 - Retrieved context may be outdated if indexing is not kept in sync
 - Context window limits how much retrieved content can be used at once
+- For structural questions (e.g., dependency analysis), consider [Knowledge Graph-Augmented Generation (GraphRAG)](/practices/knowledge-graph-augmented-generation/)
 
 ## Resources
 
