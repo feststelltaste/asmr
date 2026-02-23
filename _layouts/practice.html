@@ -11,7 +11,7 @@ layout: default
     <span class="bc-sep" aria-hidden="true">›</span>
     {% if stage_data %}
     <span class="bc-stage" style="color: {{ stage_data.color }}">
-      {{ stage_data.icon }} {{ stage_data.name }}
+      <span class="bc-icon">{% include stage-icon.html id=stage_data.id %}</span>{{ stage_data.name }}
     </span>
     <span class="bc-sep" aria-hidden="true">›</span>
     {% endif %}
@@ -21,7 +21,7 @@ layout: default
   <header class="tech-hd" {% if stage_data %}style="--sc: {{ stage_data.color }}; --sbg: {{ stage_data.bg_color }}"{% endif %}>
     {% if stage_data %}
     <span class="tech-stage-badge" style="background: {{ stage_data.color }}">
-      {{ stage_data.icon }} {{ stage_data.name }}
+      <span class="badge-icon">{% include stage-icon.html id=stage_data.id %}</span>{{ stage_data.name }}
     </span>
     {% endif %}
     <h1 class="tech-title">{{ page.title }}</h1>
@@ -35,6 +35,28 @@ layout: default
     </div>
     {% if page.description %}
     <p class="tech-summary">{{ page.description }}</p>
+    {% endif %}
+    {% if page.devops_phases %}
+    <div class="devops-cycle-hd">
+      <span class="devops-cycle-label">DevOps cycle</span>
+      <div class="devops-cycle-groups">
+        <div class="devops-cycle-group">
+          <span class="devops-group-lbl">Dev</span>
+          {% assign dev_phases = "plan,code,build,test" | split: "," %}
+          {% for p in dev_phases %}
+            <span class="dsq dsq-lg{% if page.devops_phases contains p %} dsq-on{% endif %}" title="{{ p }}">{{ p | slice: 0 | upcase }}</span>
+          {% endfor %}
+        </div>
+        <span class="devops-cycle-loop" aria-hidden="true">↻</span>
+        <div class="devops-cycle-group">
+          <span class="devops-group-lbl">Ops</span>
+          {% assign ops_phases = "release,deploy,operate,monitor" | split: "," %}
+          {% for p in ops_phases %}
+            <span class="dsq dsq-lg{% if page.devops_phases contains p %} dsq-on{% endif %}" title="{{ p }}">{{ p | slice: 0 | upcase }}</span>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
     {% endif %}
   </header>
 

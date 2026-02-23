@@ -2,41 +2,35 @@ stages:
   - id: hold-on
     name: Hold On
     description: Not yet suitable. Watch and wait before committing.
-    color: "#607D8B"
-    bg_color: "#f0f4f7"
-    icon: "⏸"
+    color: "#475569"
+    bg_color: "#e2e8f0"
 
   - id: assess
     name: Assess
     description: Worth investigating. Understand impact before committing.
-    color: "#1565C0"
-    bg_color: "#e8f0fe"
-    icon: "🔍"
+    color: "#1d4ed8"
+    bg_color: "#dbeafe"
 
   - id: trial
     name: Trial
     description: Try it out in low-risk projects to build experience.
-    color: "#E65100"
-    bg_color: "#fff3e0"
-    icon: "🧪"
+    color: "#c2410c"
+    bg_color: "#ffedd5"
 
   - id: apply
     name: Apply
     description: Ready to use. Proven choice for appropriate contexts.
-    color: "#2E7D32"
-    bg_color: "#e8f5e9"
-    icon: "✅"
+    color: "#166534"
+    bg_color: "#dcfce7"
 
   - id: stop
     name: Stop
     description: Do not start new projects. Legacy systems only.
-    color: "#C62828"
-    bg_color: "#fce4ec"
-    icon: "🛑"
+    color: "#b91c1c"
+    bg_color: "#fee2e2"
 
   - id: remove
     name: Remove
     description: Phase out completely. Actively migrate away.
-    color: "#37474F"
-    bg_color: "#f5f5f5"
-    icon: "🗑"
+    color: "#374151"
+    bg_color: "#f3f4f6"

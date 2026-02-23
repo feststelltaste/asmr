@@ -4,6 +4,7 @@ stage: trial
 category: AI Tooling Setup
 description: "Anthropic's open standard for connecting AI agents to external tools, data sources, and APIs. Rapidly gaining adoption across major IDEs and platforms."
 strategic_value: supporting
+devops_phases: [code, build]
 ---
 
 ## Overview

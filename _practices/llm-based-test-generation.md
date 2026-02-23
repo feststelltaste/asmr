@@ -4,6 +4,7 @@ stage: trial
 category: Agentic AI Tools
 description: "Generating unit and integration tests from source code using LLMs. Dramatically improves coverage when adding tests to existing legacy code."
 strategic_value: supporting
+devops_phases: [test]
 ---
 
 ## Overview

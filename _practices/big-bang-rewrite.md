@@ -4,6 +4,7 @@ stage: stop
 category: Legacy Modernization
 description: "Complete rewrites from scratch. Almost always fail to capture edge-case business logic. Prefer incremental modernization strategies."
 strategic_value: generic
+devops_phases: [plan, code, test, deploy]
 ---
 
 ## Why Stop

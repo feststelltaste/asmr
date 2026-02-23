@@ -4,6 +4,7 @@ stage: assess
 category: Agentic AI Tools
 description: "Using LLMs to systematically identify, classify, and prioritize technical debt across a codebase — turning a slow manual process into an automated, prioritized backlog."
 strategic_value: core
+devops_phases: [plan, code]
 ---
 
 ## Overview

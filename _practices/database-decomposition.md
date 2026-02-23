@@ -4,6 +4,7 @@ stage: trial
 category: Legacy Modernization
 description: "Breaking apart a shared monolithic DB into service-owned schemas or separate databases. Hard but critical for enabling independent deployment."
 strategic_value: supporting
+devops_phases: [plan, code, deploy, operate]
 ---
 
 ## Overview

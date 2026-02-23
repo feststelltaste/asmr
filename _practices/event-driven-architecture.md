@@ -4,6 +4,7 @@ stage: trial
 category: Architecture & Delivery
 description: "Async communication via events (Kafka, EventBridge). Decouples legacy systems from new services during modernization."
 strategic_value: supporting
+devops_phases: [code, build, operate]
 ---
 
 ## Overview

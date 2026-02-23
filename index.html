@@ -27,12 +27,31 @@ title: Agentic Software Modernization Roadmap (ASMR)
         <ul class="stage-legend">
           {% for stage in site.data.roadmap.stages %}
           <li style="--stage-color: {{ stage.color }}">
-            <span class="legend-icon">{{ stage.icon }}</span>
+            <span class="legend-icon">{% include stage-icon.html id=stage.id %}</span>
             <span class="legend-name">{{ stage.name }}</span>
             <span class="legend-desc">{{ stage.description }}</span>
           </li>
           {% endfor %}
         </ul>
+
+        <p class="ref-legend-heading">DDD strategic relevance</p>
+        <ul class="sv-legend">
+          <li><span class="sv-badge sv-core">core</span> — Uniquely enabled by agentic AI; the defining practices of this approach</li>
+          <li><span class="sv-badge sv-supporting">supporting</span> — Important enablers; not AI-specific but essential context</li>
+          <li><span class="sv-badge sv-generic">generic</span> — Commodity or universal anti-patterns to avoid</li>
+        </ul>
+
+        <p class="ref-legend-heading">DevOps cycle coverage</p>
+        <p class="ref-legend-desc">Each card shows which DevOps phases the practice affects. Filled square = relevant, empty = not in scope.</p>
+        <div class="dsq-legend">
+          {% assign dp_labels = "plan,code,build,test,release,deploy,operate,monitor" | split: "," %}
+          {% for p in dp_labels %}
+            <span class="dsq-legend-item">
+              <span class="dsq dsq-on">{{ p | slice: 0 | upcase }}</span>
+              <span class="dsq-legend-name">{{ p | capitalize }}</span>
+            </span>
+          {% endfor %}
+        </div>
       </div>
       <div class="ref-visual">
         <img src="https://cards42.org/cards_svg_EN/card29.svg" alt="Cards42 Technology Roadmap Card" class="ref-svg">
@@ -98,7 +117,7 @@ title: Agentic Software Modernization Roadmap (ASMR)
       type="button"
       title="{{ stage.name }}: {{ stage.description }}"
     >
-      <span class="pnav-icon">{{ stage.icon }}</span>
+      <span class="pnav-icon">{% include stage-icon.html id=stage.id %}</span>
       <span class="pnav-name">{{ stage.name }}</span>
     </button>
   {% endfor %}
@@ -130,10 +149,12 @@ title: Agentic Software Modernization Roadmap (ASMR)
         <!-- Stage header -->
         <div class="stage-hd">
           <span class="stage-step">{{ forloop.index }}</span>
-          <div class="stage-icon" aria-hidden="true">{{ stage.icon }}</div>
-          <h2 class="stage-name">{{ stage.name }}</h2>
+          <div class="stage-title-row">
+            <span class="stage-icon">{% include stage-icon.html id=stage.id %}</span>
+            <h2 class="stage-name">{{ stage.name }}</h2>
+            <span class="stage-count">{{ stage_techs | size }}</span>
+          </div>
           <p class="stage-desc">{{ stage.description }}</p>
-          <span class="stage-count">{{ stage_techs | size }}</span>
         </div>
 
         <!-- Stage body -->
@@ -155,7 +176,15 @@ title: Agentic Software Modernization Roadmap (ASMR)
               </div>
               <span class="tcard-name">{{ tech.title }}</span>
               {% if tech.description %}<span class="tcard-desc">{{ tech.description }}</span>{% endif %}
-              <span class="tcard-arrow" aria-hidden="true">→</span>
+              <div class="tcard-footer">
+                <div class="dsq-row" aria-label="DevOps phases">
+                  {% assign dp = "plan,code,build,test,release,deploy,operate,monitor" | split: "," %}
+                  {% for p in dp %}
+                    <span class="dsq{% if tech.devops_phases contains p %} dsq-on{% endif %}" title="{{ p }}">{{ p | slice: 0 | upcase }}</span>
+                  {% endfor %}
+                </div>
+                <span class="tcard-arrow" aria-hidden="true">→</span>
+              </div>
             </a>
             {% endfor %}
           {% else %}

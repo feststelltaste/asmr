@@ -4,6 +4,7 @@ stage: stop
 category: Architecture & Delivery
 description: "Tightly coupled services that must deploy together — worst of both worlds. Do not build new distributed systems this way."
 strategic_value: generic
+devops_phases: [plan, deploy]
 ---
 
 ## Why Stop

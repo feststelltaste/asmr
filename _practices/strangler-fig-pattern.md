@@ -4,6 +4,7 @@ stage: apply
 category: Legacy Modernization
 description: "Incrementally replace a legacy system by routing traffic to new services while keeping the old system alive. The safest path for big-bang-free migration."
 strategic_value: supporting
+devops_phases: [plan, code, deploy, operate]
 ---
 
 ## Overview

@@ -4,6 +4,7 @@ stage: apply
 category: AI Tooling Setup
 description: "Pgvector, Qdrant, Pinecone — semantic search stores used by RAG pipelines. Mature enough to pick based on your existing infrastructure."
 strategic_value: supporting
+devops_phases: [build, operate]
 ---
 
 ## Overview

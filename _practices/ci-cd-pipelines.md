@@ -4,6 +4,7 @@ stage: apply
 category: Architecture & Delivery
 description: "Automated build, test, and deployment pipelines. Non-negotiable for any modernization project — required before AI agents can safely merge code."
 strategic_value: supporting
+devops_phases: [build, test, release, deploy]
 ---
 
 ## Overview

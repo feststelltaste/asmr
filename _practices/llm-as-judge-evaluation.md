@@ -4,6 +4,7 @@ stage: assess
 category: AI Tooling Setup
 description: "Using a powerful LLM to evaluate quality of outputs from another LLM. Scales automated quality assessment but requires careful calibration."
 strategic_value: supporting
+devops_phases: [test, monitor]
 ---
 
 ## Overview

@@ -4,6 +4,7 @@ stage: apply
 category: Legacy Modernization
 description: "A translation layer between legacy concepts and new domain models. Prevents legacy data structures from leaking into freshly written code."
 strategic_value: supporting
+devops_phases: [plan, code]
 ---
 
 ## Overview

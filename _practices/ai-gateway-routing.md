@@ -4,6 +4,7 @@ stage: assess
 category: AI Tooling Setup
 description: "Routing LLM requests dynamically across models by cost, capability, or latency (LiteLLM, Portkey). Valuable for multi-model setups."
 strategic_value: generic
+devops_phases: [build, operate]
 ---
 
 ## Overview

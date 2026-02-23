@@ -4,6 +4,7 @@ stage: remove
 category: Legacy Modernization
 description: "Multiple services or teams sharing one database schema without boundaries. Creates hidden coupling that makes independent deployment impossible."
 strategic_value: generic
+devops_phases: [deploy, operate]
 ---
 
 ## Why Remove

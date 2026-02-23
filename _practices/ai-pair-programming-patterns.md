@@ -4,6 +4,7 @@ stage: apply
 category: Agentic AI Tools
 description: "Proven patterns for collaborating effectively with AI coding assistants — when to lead, when to delegate, and how to review AI-generated code critically."
 strategic_value: core
+devops_phases: [code]
 ---
 
 ## Overview

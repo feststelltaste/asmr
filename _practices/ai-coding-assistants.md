@@ -4,6 +4,7 @@ stage: apply
 category: Agentic AI Tools
 description: "GitHub Copilot, Cursor, Windsurf — AI pair-programming that accelerates writing, refactoring, and understanding of existing code."
 strategic_value: supporting
+devops_phases: [code]
 ---
 
 ## Overview

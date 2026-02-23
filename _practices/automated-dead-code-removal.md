@@ -4,6 +4,7 @@ stage: trial
 category: Legacy Modernization
 description: "AI and static analysis tooling to detect and safely remove unused code paths, dead features, and unreachable branches in large legacy systems."
 strategic_value: supporting
+devops_phases: [code, build]
 ---
 
 ## Overview

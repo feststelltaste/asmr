@@ -4,6 +4,7 @@ stage: apply
 category: AI Tooling Setup
 description: "Reusing cached prefix computations on repeated system prompts (Anthropic, OpenAI). Reduces cost and latency for agents with large static contexts."
 strategic_value: generic
+devops_phases: [build, operate]
 ---
 
 ## Overview

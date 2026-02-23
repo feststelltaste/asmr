@@ -4,6 +4,7 @@ stage: trial
 category: Architecture & Delivery
 description: "Vendor-neutral distributed tracing, metrics, and logs. Necessary for understanding where AI-assisted systems are slow or failing."
 strategic_value: generic
+devops_phases: [operate, monitor]
 ---
 
 ## Overview

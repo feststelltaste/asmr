@@ -4,6 +4,7 @@ stage: apply
 category: Architecture & Delivery
 description: "Runtime toggles to release code to subsets of users without deployments. Essential for safely rolling out AI-generated changes incrementally."
 strategic_value: supporting
+devops_phases: [release, deploy, operate]
 ---
 
 ## Overview

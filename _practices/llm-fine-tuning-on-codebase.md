@@ -4,6 +4,7 @@ stage: assess
 category: Agentic AI Tools
 description: "Fine-tuning models on internal proprietary code for better context-aware suggestions and code completion specific to your architecture."
 strategic_value: supporting
+devops_phases: [build, operate]
 ---
 
 ## Overview

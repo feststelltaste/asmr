@@ -4,6 +4,7 @@ stage: apply
 category: Architecture & Delivery
 description: "Defining APIs (OpenAPI/AsyncAPI) before implementation. Enables parallel development and gives AI agents a clear contract to work against."
 strategic_value: generic
+devops_phases: [plan, code, build]
 ---
 
 ## Overview

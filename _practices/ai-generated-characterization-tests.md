@@ -4,6 +4,7 @@ stage: trial
 category: Legacy Modernization
 description: "Using LLMs to generate 'golden master' tests from existing behavior before refactoring. Makes safe modernization possible when there are no existing tests."
 strategic_value: core
+devops_phases: [test]
 ---
 
 ## Overview

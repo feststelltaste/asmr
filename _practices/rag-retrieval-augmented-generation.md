@@ -4,6 +4,7 @@ stage: apply
 category: AI Tooling Setup
 description: "Grounding LLM responses in your own knowledge base via vector search. Essential for AI tools that need to work with internal documentation or codebases."
 strategic_value: supporting
+devops_phases: [code, operate]
 ---
 
 ## Overview

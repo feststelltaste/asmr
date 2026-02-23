@@ -4,6 +4,7 @@ stage: trial
 category: Agentic AI Tools
 description: "AI-first development where you describe intent in natural language and let the AI implement, then iterate on the result rather than writing code line by line."
 strategic_value: core
+devops_phases: [code]
 ---
 
 ## Overview
