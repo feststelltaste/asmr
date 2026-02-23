@@ -21,8 +21,8 @@ One of the biggest costs in legacy modernization is simply *understanding* what 
 
 ## Tips
 
-- Break large files into sections when they exceed context windows
-- Use RAG over the whole codebase for cross-file questions
+- Use models with massive context windows (Gemini 1.5 Pro, Claude 3.5 Sonnet) to read entire modules or small codebases at once
+- For very large monoliths, break context by bounded context or module to improve reasoning quality
 - Ask the LLM to generate a glossary of domain terms it finds in the code
 
 ## Risks & Considerations

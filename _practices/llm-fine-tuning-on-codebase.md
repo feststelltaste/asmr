@@ -1,7 +1,7 @@
 ---
 title: "LLM Fine-tuning on Codebase"
 stage: assess
-category: Agentic AI Tools
+category: AI Tooling Setup
 description: "Fine-tuning models on internal proprietary code for better context-aware suggestions and code completion specific to your architecture."
 strategic_value: supporting
 devops_phases: [build, operate]

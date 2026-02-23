@@ -26,6 +26,21 @@ AI coding assistants embed LLM capabilities directly into the IDE, providing inl
 - Understanding unfamiliar legacy code quickly
 - Generating first drafts of documentation or migration scripts
 
+## Core Collaboration Patterns
+
+- **Prompt-then-review loop** — Describe intent → review output → refine. Never accept on the first pass for non-trivial code.
+- **Write the tests first** — Describe expected behavior or write unit tests, then let the AI implement. This gives you a correctness check you control.
+- **Scaffold with AI, own the logic** — Use AI for boilerplate and data wiring; write the core domain logic yourself.
+- **Paste errors directly** — Paste the full error message and stack trace back into the conversation for better AI responses.
+- **Ask for explanations** — "Explain what this function does and any risks" catches issues that a silent review might miss.
+- **Reject and re-ask** — Don't fix AI output line by line. Say "this is wrong because X — try again" and let it regenerate.
+
+## Anti-patterns
+
+- **Merge without reading** — AI code must be reviewed as carefully as any other PR.
+- **Accepting hallucinated APIs** — Verify every method and import the AI uses actually exists.
+- **Over-prompting** — Giant prompts often produce worse results than focused, sequential prompts.
+
 ## Risks & Considerations
 
 - **Hallucinations**: Generated code must be reviewed — LLMs confidently produce plausible-looking but wrong code
@@ -36,6 +51,9 @@ AI coding assistants embed LLM capabilities directly into the IDE, providing inl
 
 - [GitHub Copilot documentation](https://docs.github.com/en/copilot) — official guide and feature reference
 - [Cursor — the AI-first code editor](https://www.cursor.com/) — homepage and docs
+- [Kent Beck — "Taming the AI"](https://tidyfirst.substack.com/p/taming-the-ai) — practical patterns for AI-assisted TDD
+- [Harper Reed — My AI Pair Programming Setup](https://harperreed.com/posts/2024-07-16-my-llm-codegen-workflow/) — real-world workflow
 - [Simon Willison — AI-assisted programming](https://simonwillison.net/tags/ai-assisted-programming/) — ongoing critical analysis
+- [YouTube — AI Pair Programming Best Practices](https://www.youtube.com/results?search_query=ai+pair+programming+patterns+best+practices+2025)
 - [YouTube — GitHub Copilot tips and tricks](https://www.youtube.com/results?search_query=github+copilot+tips+tricks+productivity+2025) — practical usage
 - [YouTube — Cursor AI editor deep dive](https://www.youtube.com/results?search_query=cursor+ai+editor+tutorial+2025)

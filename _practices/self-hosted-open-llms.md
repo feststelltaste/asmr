@@ -1,6 +1,6 @@
 ---
 title: "Self-hosted Open LLMs"
-stage: assess
+stage: trial
 category: AI Tooling Setup
 description: "Running Llama, Mistral, Qwen locally for privacy-sensitive code and data. Viable for many tasks, gap to frontier models still matters for complex reasoning."
 strategic_value: generic

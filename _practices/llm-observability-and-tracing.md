@@ -1,7 +1,7 @@
 ---
 title: "LLM Observability & Tracing"
-stage: trial
-category: AI Tooling Setup
+stage: apply
+category: Architecture & Delivery
 description: "Langfuse, LangSmith, Arize — tracking LLM calls, costs, latencies, and outputs in production. Necessary as soon as agents touch real workflows."
 strategic_value: supporting
 devops_phases: [operate, monitor]

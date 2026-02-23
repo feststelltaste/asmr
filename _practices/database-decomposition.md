@@ -17,7 +17,7 @@ A shared monolithic database is often the biggest coupling point in a legacy sys
 2. **Separate schemas** — Move tables into per-service schemas within the same DB
 3. **Introduce APIs** — Replace cross-service DB joins with service-to-service API calls
 4. **Split databases** — Move schemas into physically separate databases
-5. **Migrate data** — Use dual-write or event sourcing to migrate data with zero downtime
+5. **Migrate data** — Use dual-write or staged synchronization to migrate data with zero downtime
 
 ## AI Acceleration
 

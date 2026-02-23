@@ -1,7 +1,7 @@
 ---
-title: "Vibe Coding Analysis Tools"
+title: "AI-assisted Codebase Analytics"
 stage: trial
-category: Agentic AI Tools
+category: Legacy Modernization
 description: "Using AI-assisted vibe coding to build custom, situation-specific analysis scripts that reveal how your legacy system actually behaves — hotspots, coupling, change frequency, and more."
 strategic_value: core
 devops_phases: [plan, monitor]

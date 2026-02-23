@@ -1,6 +1,6 @@
 ---
 title: "OpenTelemetry"
-stage: trial
+stage: apply
 category: Architecture & Delivery
 description: "Vendor-neutral distributed tracing, metrics, and logs. Necessary for understanding where AI-assisted systems are slow or failing."
 strategic_value: generic
