@@ -36,4 +36,3 @@ Unstructured text output from LLMs is hard to integrate into software pipelines.
 - [Anthropic — Tool use (function calling)](https://docs.anthropic.com/en/docs/tool-use) — structured output via tools
 - [instructor — Python library for structured outputs](https://python.useinstructor.com/) — Pydantic-validated LLM responses
 - [outlines — constrained text generation](https://github.com/outlines-dev/outlines) — token-level schema enforcement
-- [YouTube — Structured LLM outputs tutorial](https://www.youtube.com/results?search_query=structured+llm+output+json+schema+instructor+2025)

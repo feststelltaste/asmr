@@ -36,4 +36,4 @@ Agentic coding goes beyond autocomplete: the agent reads the task, plans a solut
 - [SWE-bench leaderboard](https://www.swebench.com/) — benchmark for evaluating agentic coding systems
 - [OpenHands (formerly OpenDevin)](https://github.com/All-Hands-AI/OpenHands) — open-source multi-agent platform
 - [Devin by Cognition](https://cognition.ai/) — AI software engineer product
-- [YouTube — Agentic coding workflows demo](https://www.youtube.com/results?search_query=agentic+coding+claude+code+devin+2025)
+

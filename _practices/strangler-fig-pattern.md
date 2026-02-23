@@ -35,4 +35,3 @@ LLMs are now useful at every step:
 
 - [Martin Fowler — StranglerFigApplication](https://martinfowler.com/bliki/StranglerFigApplication.html) — the original pattern description
 - [Sam Newman — Monolith to Microservices](https://www.oreilly.com/library/view/monolith-to-microservices/9781492047834/) — book covering strangler fig and related decomposition patterns
-- [YouTube — Strangler Fig Pattern with AI assistance](https://www.youtube.com/results?search_query=strangler+fig+pattern+legacy+modernization+2025)

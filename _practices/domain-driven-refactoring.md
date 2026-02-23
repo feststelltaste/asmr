@@ -37,4 +37,3 @@ DDD provides the vocabulary and patterns (bounded contexts, aggregates, domain e
 - [Vaughn Vernon — Implementing Domain-Driven Design](https://vaughnvernon.com/?page_id=168) — hands-on patterns for applying DDD
 - [EventStorming by Alberto Brandolini](https://www.eventstorming.com/) — collaborative technique for discovering bounded contexts
 - [Henning Schwentner — Domain-Driven Refactorings](https://hschwentner.io/domain-driven-refactorings/) — catalog of DDD-based refactoring patterns
-- [YouTube — DDD for legacy modernization](https://www.youtube.com/results?search_query=domain+driven+design+legacy+modernization+bounded+context+2025)

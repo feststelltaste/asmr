@@ -38,9 +38,13 @@ In agentic setups, this is the difference between an agent that confidently does
 - Update context when patterns change — stale context misleads agents
 - Layer context: global rules + per-directory rules for large monorepos
 
+## Related
+
+- [Harness Engineering](/practices/harness-engineering/) — Building the execution environment for agents.
+
 ## Resources
 
 - [Anthropic — CLAUDE.md best practices](https://docs.anthropic.com/en/docs/claude-code/memory) — official guidance on project memory files
 - [Cursor rules documentation](https://docs.cursor.com/context/rules-for-ai) — how to write effective `.cursorrules`
-- [YouTube — Context Engineering for AI Coding](https://www.youtube.com/results?search_query=context+engineering+ai+coding+agents+2025)
+- [No Vibes Allowed: Solving Hard Problems in Complex Codebases – Dex Horthy, HumanLayer](https://www.youtube.com/watch?v=rmvDxxNubIg)
 - [Philipp Schmid — Prompt Engineering Guide](https://www.philschmid.de/prompt-engineering-llms) — practical patterns for shaping LLM behavior

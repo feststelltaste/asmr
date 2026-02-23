@@ -37,4 +37,3 @@ Start with **pgvector** if you use PostgreSQL — you get semantic search withou
 - [pgvector — vector extension for PostgreSQL](https://github.com/pgvector/pgvector) — simplest starting point for most teams
 - [Qdrant documentation](https://qdrant.tech/documentation/) — self-hosted vector search engine
 - [Pinecone — managed vector database](https://www.pinecone.io/learn/) — learning resources from Pinecone
-- [YouTube — Vector databases explained](https://www.youtube.com/results?search_query=vector+database+comparison+pgvector+qdrant+pinecone+2025)

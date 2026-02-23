@@ -38,4 +38,3 @@ LLM calls are opaque by default. Observability tooling captures traces of every 
 - [Langfuse — open-source LLM observability](https://langfuse.com/) — self-hostable tracing and evaluation platform
 - [Arize Phoenix](https://phoenix.arize.com/) — open-source LLM observability and evaluation
 - [OpenLLMetry — OTel for LLMs](https://github.com/traceloop/openllmetry) — OpenTelemetry-compatible LLM tracing
-- [YouTube — LLM observability in production](https://www.youtube.com/results?search_query=llm+observability+tracing+langfuse+production+2025)

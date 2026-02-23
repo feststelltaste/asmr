@@ -41,4 +41,3 @@ The goal is not to replace engineering judgment, but to surface issues fast enou
 
 - [Martin Fowler — Technical Debt Quadrant](https://martinfowler.com/bliki/TechnicalDebtQuadrant.html) — framework for classifying debt types
 - [SonarQube](https://www.sonarsource.com/products/sonarqube/) — static analysis to combine with LLM findings
-- [YouTube — AI for Technical Debt Detection](https://www.youtube.com/results?search_query=ai+llm+technical+debt+detection+codebase+2025)

@@ -35,5 +35,3 @@ One of the biggest costs in legacy modernization is simply *understanding* what 
 
 - [Sourcegraph — code intelligence for large codebases](https://sourcegraph.com/) — search and understand code at scale
 - [GitHub Copilot Chat — explain code feature](https://docs.github.com/en/copilot/using-github-copilot/asking-github-copilot-questions-in-your-ide) — ask questions about any code in the IDE
-- [YouTube — Using AI to understand legacy code](https://www.youtube.com/results?search_query=ai+llm+understand+explain+legacy+code+2025)
-- [YouTube — Reading COBOL with AI assistance](https://www.youtube.com/results?search_query=ai+read+cobol+legacy+code+llm+2025)

@@ -39,4 +39,3 @@ LLMs are effective at:
 
 - [Eric Evans — Domain-Driven Design (Blue Book)](https://www.domainlanguage.com/ddd/) — the original DDD book introducing the ACL concept
 - [Vaughn Vernon — Implementing Domain-Driven Design](https://vaughnvernon.com/?page_id=168) — practical patterns including ACL implementation
-- [YouTube — Anti-Corruption Layer in practice](https://www.youtube.com/results?search_query=anti+corruption+layer+ddd+pattern+2025)

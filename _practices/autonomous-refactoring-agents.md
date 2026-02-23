@@ -34,4 +34,3 @@ Beyond single-file refactoring, agentic systems can now perform large-scale, mul
 - [Sourcegraph Cody — large-scale code intelligence](https://sourcegraph.com/cody) — codebase-aware AI for large refactoring
 - [Martin Fowler — Refactoring (2nd ed.)](https://martinfowler.com/books/refactoring.html) — canonical patterns that agents should follow
 - [OpenRewrite](https://docs.openrewrite.org/) — automated, large-scale refactoring recipes for Java/other languages
-- [YouTube — AI-driven refactoring at scale](https://www.youtube.com/results?search_query=ai+autonomous+refactoring+agent+codebase+2025)

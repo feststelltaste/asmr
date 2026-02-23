@@ -37,4 +37,3 @@ Human evaluation of LLM outputs is expensive and slow. LLM-as-judge uses a capab
 - [MT-Bench and Chatbot Arena paper](https://arxiv.org/abs/2306.05685) — foundational LLM-as-judge research
 - [RAGAS — RAG evaluation framework](https://docs.ragas.io/) — LLM-as-judge evaluation for RAG pipelines
 - [Anthropic — Evaluations guide](https://docs.anthropic.com/en/docs/test-and-evaluate/develop-tests) — practical guidance on building evals
-- [YouTube — LLM-as-judge evaluation explained](https://www.youtube.com/results?search_query=llm+as+judge+evaluation+ai+quality+2025)

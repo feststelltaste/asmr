@@ -36,4 +36,3 @@ Large legacy codebases accumulate dead code — unused methods, unreachable bran
 - [SonarQube — static analysis](https://www.sonarsource.com/products/sonarqube/) — industry-standard dead code and quality detection
 - [Semgrep — static analysis for custom rules](https://semgrep.dev/) — write rules to detect project-specific dead code patterns
 - [vulture — Python dead code detection](https://github.com/jendrikseipp/vulture) — simple Python dead code finder
-- [YouTube — Finding and removing dead code with AI](https://www.youtube.com/results?search_query=dead+code+removal+static+analysis+ai+2025)

@@ -35,4 +35,3 @@ An AI gateway sits in front of multiple LLM providers and routes requests based 
 
 - [LiteLLM documentation](https://docs.litellm.ai/) — open-source gateway supporting 100+ models
 - [Portkey](https://portkey.ai/) — managed AI gateway with routing and observability
-- [YouTube — LiteLLM setup and usage](https://www.youtube.com/results?search_query=litellm+ai+gateway+routing+2025)

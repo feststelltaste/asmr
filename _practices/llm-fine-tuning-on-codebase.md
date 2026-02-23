@@ -36,4 +36,3 @@ Fine-tuning adapts a base LLM to your organization's specific coding conventions
 - [Hugging Face — fine-tuning guide](https://huggingface.co/docs/transformers/training) — practical tutorials for LLM fine-tuning
 - [LoRA: Low-Rank Adaptation paper](https://arxiv.org/abs/2106.09685) — the technique behind parameter-efficient fine-tuning
 - [Axolotl — fine-tuning framework](https://github.com/OpenAccess-AI-Collective/axolotl) — popular open-source fine-tuning tool
-- [YouTube — LLM fine-tuning on code explained](https://www.youtube.com/results?search_query=llm+fine+tuning+code+codebase+2025)

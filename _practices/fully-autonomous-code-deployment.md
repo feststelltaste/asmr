@@ -34,4 +34,3 @@ The idea: an AI agent takes a task, writes the code, passes tests, merges the PR
 
 - [Anthropic — Building safe agentic AI](https://www.anthropic.com/research/building-effective-agents) — guidance on minimal footprint, human oversight
 - [OWASP LLM Top 10](https://owasp.org/www-project-top-10-for-large-language-model-applications/) — security risks in autonomous AI systems
-- [YouTube — Risks of fully autonomous AI agents](https://www.youtube.com/results?search_query=autonomous+ai+agent+deployment+risks+2025)

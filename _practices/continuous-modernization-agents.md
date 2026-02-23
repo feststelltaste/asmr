@@ -35,4 +35,3 @@ Modernization is often treated as a one-time project, but technical debt accumul
 
 - [Moderne / OpenRewrite](https://www.moderne.ai/) — automated, large-scale refactoring and modernization.
 - [GitHub Copilot Extensions](https://github.com/features/copilot/extensions) — building custom background agents for specific repo tasks.
-- [YouTube — Continuous Modernization with AI](https://www.youtube.com/results?search_query=continuous+modernization+ai+agents+2025)

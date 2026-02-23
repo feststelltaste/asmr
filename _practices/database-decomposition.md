@@ -36,4 +36,3 @@ A shared monolithic database is often the biggest coupling point in a legacy sys
 - [Sam Newman — Monolith to Microservices](https://www.oreilly.com/library/view/monolith-to-microservices/9781492047834/) — dedicated chapters on database decomposition patterns
 - [Martin Fowler — Database Decomposition patterns](https://martinfowler.com/articles/patterns-of-distributed-systems/) — patterns for distributed data
 - [Flyway / Liquibase](https://flywaydb.org/) — schema migration tools for incremental DB changes
-- [YouTube — Database decomposition in practice](https://www.youtube.com/results?search_query=database+decomposition+microservices+legacy+2025)

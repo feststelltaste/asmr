@@ -38,4 +38,3 @@ AI-generated code can be deployed behind a flag:
 - [LaunchDarkly — feature flag best practices](https://launchdarkly.com/blog/best-practices-feature-flags/) — practical guide to flag management
 - [OpenFeature specification](https://openfeature.dev/) — vendor-neutral SDK standard for feature flags
 - [Martin Fowler — Feature Toggles](https://martinfowler.com/articles/feature-toggles.html) — comprehensive pattern guide
-- [YouTube — Feature flags for AI rollout](https://www.youtube.com/results?search_query=feature+flags+canary+deployment+ai+rollout+2025)

@@ -45,4 +45,3 @@ AI agents produce code that needs verification. A CI/CD pipeline is the automate
 - [GitHub Actions documentation](https://docs.github.com/en/actions) — getting started with CI/CD workflows
 - [Martin Fowler — Continuous Integration](https://martinfowler.com/articles/continuousIntegration.html) — foundational principles
 - [DORA metrics](https://dora.dev/) — measuring software delivery performance
-- [YouTube — CI/CD pipeline best practices](https://www.youtube.com/results?search_query=ci+cd+pipeline+best+practices+github+actions+2025)

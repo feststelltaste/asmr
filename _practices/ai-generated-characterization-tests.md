@@ -33,4 +33,3 @@ Michael Feathers coined characterization testing in *Working Effectively with Le
 
 - [Michael Feathers — Working Effectively with Legacy Code](https://www.oreilly.com/library/view/working-effectively-with/0131177052/) — the original book introducing characterization tests
 - [Approval Tests library](https://approvaltests.com/) — framework specifically built for golden master / characterization testing
-- [YouTube — Characterization tests with AI](https://www.youtube.com/results?search_query=characterization+tests+golden+master+ai+llm+2025)

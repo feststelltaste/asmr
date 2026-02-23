@@ -27,4 +27,3 @@ Small Language Models (SLMs) like Microsoft Phi, Google Gemma, or Llama 3.2 (1B/
 
 - [Microsoft Phi-4 documentation](https://azure.microsoft.com/en-us/blog/introducing-phi-4-microsofts-newest-small-language-model/) — latest in the Phi series of SLMs.
 - [Hugging Face — Small Language Models guide](https://huggingface.co/blog/smollm) — comparison and use cases for smaller models.
-- [YouTube — SLMs vs LLMs for developers](https://www.youtube.com/results?search_query=small+language+models+vs+llms+coding+2025)

@@ -35,4 +35,3 @@ LLM-based code review bots comment on pull requests automatically, pointing out 
 - [CodeRabbit — AI code review](https://coderabbit.ai/) — product and documentation
 - [Greptile — codebase-aware AI review](https://www.greptile.com/) — full codebase context for PR review
 - [Sourcery — Python refactoring](https://sourcery.ai/) — focused refactoring suggestions
-- [YouTube — AI code review tools compared](https://www.youtube.com/results?search_query=ai+code+review+coderabbit+2025) — demo and comparison videos

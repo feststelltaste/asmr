@@ -36,4 +36,3 @@ When many API calls share a large common prefix (a system prompt, a codebase con
 
 - [Anthropic — Prompt caching guide](https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching) — official documentation with examples
 - [OpenAI — Prompt caching](https://platform.openai.com/docs/guides/prompt-caching) — OpenAI's automatic caching behavior
-- [YouTube — LLM prompt caching explained](https://www.youtube.com/results?search_query=llm+prompt+caching+cost+reduction+2025)

@@ -34,4 +34,3 @@ As we move from "Chat" to "Agents" (like Claude Code, Devin, or OpenHands) that 
 - [E2B — Sandboxing for AI Agents](https://e2b.dev/) — cloud-based SDK for running agents in secure, ephemeral environments.
 - [OpenHands (OpenDevin) Sandboxing](https://github.com/All-Hands-AI/OpenHands) — how open-source agents handle execution safety.
 - [OWASP LLM Security Top 10](https://owasp.org/www-project-top-10-for-large-language-model-applications/) — focus on "Insecure Output Handling" and "Excessive Agency."
-- [YouTube — Securing AI Agents with Sandboxing](https://www.youtube.com/results?search_query=ai+agent+sandboxing+security+2025)

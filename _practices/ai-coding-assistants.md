@@ -54,6 +54,4 @@ AI coding assistants embed LLM capabilities directly into the IDE, providing inl
 - [Kent Beck — "Taming the AI"](https://tidyfirst.substack.com/p/taming-the-ai) — practical patterns for AI-assisted TDD
 - [Harper Reed — My AI Pair Programming Setup](https://harperreed.com/posts/2024-07-16-my-llm-codegen-workflow/) — real-world workflow
 - [Simon Willison — AI-assisted programming](https://simonwillison.net/tags/ai-assisted-programming/) — ongoing critical analysis
-- [YouTube — AI Pair Programming Best Practices](https://www.youtube.com/results?search_query=ai+pair+programming+patterns+best+practices+2025)
-- [YouTube — GitHub Copilot tips and tricks](https://www.youtube.com/results?search_query=github+copilot+tips+tricks+productivity+2025) — practical usage
-- [YouTube — Cursor AI editor deep dive](https://www.youtube.com/results?search_query=cursor+ai+editor+tutorial+2025)
+

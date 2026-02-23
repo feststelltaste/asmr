@@ -43,4 +43,4 @@ Orchestration frameworks manage the control flow, memory, tool routing, and coor
 - [LangGraph documentation](https://langchain-ai.github.io/langgraph/) — stateful multi-agent workflow framework
 - [CrewAI documentation](https://docs.crewai.com/) — role-based multi-agent orchestration
 - [Anthropic — Building effective agents](https://www.anthropic.com/research/building-effective-agents) — patterns for agentic systems (including when NOT to use frameworks)
-- [YouTube — LangGraph vs CrewAI comparison](https://www.youtube.com/results?search_query=langgraph+crewai+autogen+orchestration+comparison+2025)
+

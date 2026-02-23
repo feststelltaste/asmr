@@ -39,4 +39,6 @@ MCP Host (Claude / IDE) ←→ MCP Server ←→ External Tool / API / DB
 
 - [Anthropic — MCP documentation](https://docs.anthropic.com/en/docs/mcp) — official specification and getting-started guide
 - [MCP servers registry](https://github.com/modelcontextprotocol/servers) — official and community MCP server implementations
-- [YouTube — Model Context Protocol explained](https://www.youtube.com/results?search_query=model+context+protocol+mcp+anthropic+2025)
+- [The Model Context Protocol (MCP)](https://www.youtube.com/watch?v=o-Jb-I_2J_8)
+- [Model Context Protocol (MCP), clearly explained (why it matters)](https://www.youtube.com/watch?v=m9_g-Y-0_18)
+

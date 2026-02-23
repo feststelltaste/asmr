@@ -30,4 +30,3 @@ LLMs make this *slightly* less painful by helping write boilerplate faster, but 
 
 - [Joel Spolsky — Things You Should Never Do](https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/) — the classic argument against rewrites
 - [Martin Fowler — Is High Quality Software Worth the Cost?](https://martinfowler.com/articles/is-quality-worth-cost.html) — the economic case for incremental improvement
-- [YouTube — Why software rewrites fail](https://www.youtube.com/results?search_query=software+rewrite+failure+lessons+2025)

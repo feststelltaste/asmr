@@ -42,4 +42,3 @@ API specs are machine-readable contracts. AI agents can:
 - [OpenAPI Specification](https://spec.openapis.org/oas/latest.html) — the standard for describing REST APIs
 - [AsyncAPI](https://www.asyncapi.com/) — the standard for event-driven API contracts
 - [Stoplight Studio](https://stoplight.io/studio) — visual API design tool
-- [YouTube — API-first design in practice](https://www.youtube.com/results?search_query=api+first+design+openapi+2025)

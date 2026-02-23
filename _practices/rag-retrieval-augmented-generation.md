@@ -42,4 +42,3 @@ Query → Embed → Vector Search → Top-K Chunks → LLM Context → Response
 - [Anthropic — RAG guide](https://www.anthropic.com/news/contextual-retrieval) — contextual retrieval approach for better RAG
 - [LlamaIndex documentation](https://docs.llamaindex.ai/) — comprehensive RAG framework and patterns
 - [LangChain RAG tutorial](https://python.langchain.com/docs/tutorials/rag/) — step-by-step RAG implementation
-- [YouTube — RAG explained and implemented](https://www.youtube.com/results?search_query=rag+retrieval+augmented+generation+implementation+2025)

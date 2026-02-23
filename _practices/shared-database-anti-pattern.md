@@ -28,4 +28,3 @@ Shared databases create invisible contracts between teams. Any schema change ris
 
 - [Sam Newman — Monolith to Microservices](https://www.oreilly.com/library/view/monolith-to-microservices/9781492047834/) — definitive guide to database ownership patterns
 - [Martin Fowler — Integration Database](https://martinfowler.com/bliki/IntegrationDatabase.html) — why shared databases cause problems
-- [YouTube — Shared database anti-pattern explained](https://www.youtube.com/results?search_query=shared+database+anti+pattern+microservices+2025)

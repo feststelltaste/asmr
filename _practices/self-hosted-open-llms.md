@@ -37,4 +37,3 @@ Open-weight models (Llama 3, Mistral, Qwen, DeepSeek) can be self-hosted on GPU 
 - [Ollama](https://ollama.com/) — simplest way to run open models locally
 - [vLLM documentation](https://docs.vllm.ai/) — production-grade open-source inference engine
 - [Hugging Face Open LLM Leaderboard](https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard) — compare open model quality
-- [YouTube — Self-hosting open-source LLMs](https://www.youtube.com/results?search_query=self+hosted+open+source+llm+ollama+vllm+2025)

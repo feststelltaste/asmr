@@ -49,4 +49,3 @@ This is Software Analytics applied at development speed — you describe what in
 - [Adam Tornhill — Your Code as a Crime Scene](https://pragprog.com/titles/atcrime2/your-code-as-a-crime-scene-second-edition/) — behavioral code analysis techniques using git history
 - [CodeScene](https://codescene.com/) — commercial tool built on behavioral code analysis principles
 - [jQAssistant](https://jqassistant.org/) — graph-based architecture analysis and constraint checking
-- [YouTube — Software analytics and code analysis](https://www.youtube.com/results?search_query=software+analytics+code+hotspot+analysis+legacy+2025)

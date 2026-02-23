@@ -38,4 +38,3 @@ AI agents introduce new failure modes — slow LLM calls, unexpected tool invoca
 - [OpenTelemetry documentation](https://opentelemetry.io/docs/) — official getting started guides per language
 - [OpenLLMetry — LLM-specific OTel spans](https://github.com/traceloop/openllmetry) — extends OTel for AI observability
 - [Grafana + Tempo — open-source tracing stack](https://grafana.com/oss/tempo/) — popular self-hosted OTel backend
-- [YouTube — OpenTelemetry getting started](https://www.youtube.com/results?search_query=opentelemetry+getting+started+distributed+tracing+2025)
