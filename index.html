@@ -17,10 +17,12 @@ title: Technology Roadmap
     <div class="ref-content">
       <div class="ref-text">
         <p>
-          This roadmap tracks where technologies stand in our adoption journey.
+          This roadmap tracks tools, techniques, and patterns for <strong>modernizing software using agentic AI</strong> —
+          from AI coding assistants and autonomous agents to legacy migration techniques that get a revival
+          because of the new way we program with LLMs.
           It uses the six-stage model from <a href="https://cards42.org/roadmap/" target="_blank" rel="noopener">Cards42</a>,
           extending the ThoughtWorks Technology Radar with explicit <strong>Stop</strong> and <strong>Remove</strong> stages
-          to address the full technology lifecycle.
+          to cover the full technology lifecycle.
         </p>
         <ul class="stage-legend">
           {% for stage in site.data.roadmap.stages %}
@@ -83,6 +85,25 @@ title: Technology Roadmap
   </div>
 </div>
 
+<!-- Phase navigation -->
+<nav class="phase-nav" aria-label="Jump to stage">
+  {% for stage in site.data.roadmap.stages %}
+    {% unless forloop.first %}
+    <span class="phase-nav-sep" aria-hidden="true">›</span>
+    {% endunless %}
+    <button
+      class="phase-nav-btn"
+      data-target="stage-{{ stage.id }}"
+      style="--sc: {{ stage.color }}"
+      type="button"
+      title="{{ stage.name }}: {{ stage.description }}"
+    >
+      <span class="pnav-icon">{{ stage.icon }}</span>
+      <span class="pnav-name">{{ stage.name }}</span>
+    </button>
+  {% endfor %}
+</nav>
+
 <!-- Roadmap -->
 <div class="roadmap" id="roadmap" role="main" aria-label="Technology Roadmap">
   <div class="roadmap-scroll">
@@ -90,15 +111,16 @@ title: Technology Roadmap
     {% for stage in site.data.roadmap.stages %}
       {% unless forloop.first %}
       <div class="connector" aria-hidden="true">
-        <svg viewBox="0 0 32 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <line x1="16" y1="0" x2="16" y2="60" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/>
-          <path d="M8 44 L16 56 L24 44" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <svg viewBox="0 0 50 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="0" y1="16" x2="38" y2="16" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/>
+          <path d="M30 8 L42 16 L30 24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
         </svg>
       </div>
       {% endunless %}
 
       <div
         class="stage"
+        id="stage-{{ stage.id }}"
         data-stage="{{ stage.id }}"
         style="--sc: {{ stage.color }}; --sbg: {{ stage.bg_color }}"
         aria-label="Stage: {{ stage.name }}"
@@ -156,4 +178,4 @@ title: Technology Roadmap
   </div>
 </div>
 
-<p class="roadmap-hint" aria-hidden="true">← scroll to explore all stages →</p>
+<p class="roadmap-hint" aria-hidden="true">← swipe or scroll to explore all stages →</p>

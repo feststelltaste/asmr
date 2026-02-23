@@ -22,12 +22,10 @@
   --radius-sm:   4px;
   --radius:      8px;
   --radius-lg:   14px;
-  --radius-xl:   20px;
 
   --shadow-xs:   0 1px 2px rgb(0 0 0 / .07);
   --shadow-sm:   0 2px 6px rgb(0 0 0 / .10);
   --shadow-md:   0 6px 16px rgb(0 0 0 / .12);
-  --shadow-hov:  0 10px 28px rgb(0 0 0 / .18);
 }
 
 /* ================================================================
@@ -61,8 +59,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .header-inner {
-  max-width: 1800px;
-  margin: 0 auto;
+  max-width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -76,10 +73,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   gap: .875rem;
 }
 
-.header-icon {
-  font-size: 2.25rem;
-  line-height: 1;
-}
+.header-icon { font-size: 2.25rem; line-height: 1; }
 
 .site-title {
   font-size: 1.5rem;
@@ -112,18 +106,14 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
    ================================================================ */
 .site-main {
   flex: 1;
-  padding: 1.75rem 2rem 3rem;
-  max-width: 1800px;
-  width: 100%;
-  margin: 0 auto;
+  padding: 1.5rem 2rem 3rem;
+  /* no max-width — roadmap scrolls horizontally */
 }
 
 /* ================================================================
    REFERENCE CARD
    ================================================================ */
-.reference-card-wrapper {
-  margin-bottom: 1.75rem;
-}
+.reference-card-wrapper { margin-bottom: 1.5rem; }
 
 .reference-card {
   background: var(--c-surface);
@@ -144,7 +134,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   list-style: none;
   user-select: none;
   transition: background .15s;
-
   &::-webkit-details-marker { display: none; }
 }
 .reference-card summary:hover { background: var(--c-bg); }
@@ -157,10 +146,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   font-weight: 400;
   color: var(--c-faint);
 }
-
-.reference-card[open] summary .ref-toggle-hint {
-  display: none;
-}
+.reference-card[open] summary .ref-toggle-hint { display: none; }
 
 .ref-content {
   display: flex;
@@ -172,7 +158,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 .ref-text {
   flex: 1;
-  min-width: 280px;
+  min-width: 260px;
 
   p {
     font-size: .9rem;
@@ -202,7 +188,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
   .legend-name {
     font-weight: 700;
-    color: var(--stage-color, var(--sc, #333));
+    color: var(--stage-color, #333);
     min-width: 80px;
   }
 
@@ -236,11 +222,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   flex-wrap: wrap;
 }
 
-.stat {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.2;
-}
+.stat { display: flex; flex-direction: column; line-height: 1.2; }
 
 .stat-num {
   font-size: 1.875rem;
@@ -264,15 +246,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   display: flex;
   align-items: center;
   gap: 1.25rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
   flex-wrap: wrap;
 }
 
-/* Search */
-.search-wrap {
-  position: relative;
-  flex-shrink: 0;
-}
+.search-wrap { position: relative; flex-shrink: 0; }
 
 .search-icon {
   position: absolute;
@@ -302,7 +280,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .search-input::placeholder { color: var(--c-faint); }
 
-/* Chips */
 .filter-wrap {
   display: flex;
   align-items: center;
@@ -319,11 +296,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   white-space: nowrap;
 }
 
-.filter-chips {
-  display: flex;
-  gap: .375rem;
-  flex-wrap: wrap;
-}
+.filter-chips { display: flex; gap: .375rem; flex-wrap: wrap; }
 
 .chip {
   display: inline-flex;
@@ -339,15 +312,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   transition: all .15s;
   white-space: nowrap;
 }
-.chip:hover {
-  border-color: #94a3b8;
-  background: var(--c-bg);
-}
-.chip.active {
-  background: var(--c-text);
-  border-color: var(--c-text);
-  color: #fff;
-}
+.chip:hover { border-color: #94a3b8; background: var(--c-bg); }
+.chip.active { background: var(--c-text); border-color: var(--c-text); color: #fff; }
 
 .chip-cnt {
   display: inline-flex;
@@ -362,49 +328,113 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   background: rgba(0,0,0,.08);
   color: inherit;
 }
-.chip.active .chip-cnt {
-  background: rgba(255,255,255,.2);
-}
+.chip.active .chip-cnt { background: rgba(255,255,255,.2); }
 
 /* ================================================================
-   ROADMAP CONTAINER
+   PHASE NAV  (sticky, above roadmap scroll)
    ================================================================ */
-.roadmap {
-  position: relative;
-}
-
-.roadmap-scroll {
+.phase-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
   display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  gap: 0;
-  width: 100%;
-}
-
-/* ================================================================
-   CONNECTOR (between stages)
-   ================================================================ */
-.connector {
-  display: flex;
-  justify-content: center;
   align-items: center;
-  height: 50px;
-  color: var(--c-faint);
-  flex-shrink: 0;
+  gap: .25rem;
+  padding: .5rem 0;
+  margin-bottom: .875rem;
+  background: var(--c-bg);
+  border-bottom: 1px solid var(--c-border);
+  /* hide scrollbar but allow overflow on tiny screens */
+  overflow-x: auto;
+  scrollbar-width: none;
+  &::-webkit-scrollbar { display: none; }
+}
 
-  svg {
-    width: 32px;
-    height: 50px;
+.phase-nav-sep {
+  color: var(--c-faint);
+  font-size: .9rem;
+  flex-shrink: 0;
+  user-select: none;
+  padding: 0 .1rem;
+}
+
+.phase-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  padding: .35rem .7rem;
+  border-radius: var(--radius);
+  font-size: .775rem;
+  font-weight: 600;
+  color: var(--c-muted);
+  background: var(--c-surface);
+  border: 1.5px solid var(--c-border);
+  transition: all .15s;
+  white-space: nowrap;
+  flex-shrink: 0;
+  cursor: pointer;
+
+  .pnav-icon { font-size: .9rem; line-height: 1; }
+
+  &:hover {
+    border-color: var(--sc);
+    color: var(--sc);
+  }
+
+  &.is-active {
+    background: var(--sc);
+    border-color: var(--sc);
+    color: #fff;
   }
 }
 
 /* ================================================================
-   STAGE
+   ROADMAP  (horizontal scroll)
+   ================================================================ */
+.roadmap { position: relative; }
+
+.roadmap-scroll {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 0;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  scroll-snap-type: x proximity;
+  scrollbar-width: thin;
+  scrollbar-color: var(--c-border) transparent;
+  &::-webkit-scrollbar { height: 5px; }
+  &::-webkit-scrollbar-track { background: transparent; }
+  &::-webkit-scrollbar-thumb { background: var(--c-border); border-radius: 3px; }
+}
+
+/* ================================================================
+   CONNECTOR  (horizontal arrow between stages)
+   ================================================================ */
+.connector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 4rem; /* vertically centers arrow within stage header */
+  width: 50px;
+  flex-shrink: 0;
+  align-self: stretch;
+  color: var(--c-faint);
+
+  svg { width: 50px; height: 32px; }
+}
+
+/* ================================================================
+   STAGE  (vertical column)
    ================================================================ */
 .stage {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 280px;
+  min-width: 280px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-sm);
@@ -415,73 +445,65 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .stage-hd {
   background: var(--sc, #607D8B);
   color: #fff;
-  padding: 1.25rem 1.5rem;
+  padding: 1.25rem 1.125rem 1rem;
   display: flex;
-  align-items: center;
-  gap: 1rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: .4rem;
   position: relative;
-  flex-wrap: wrap;
 }
 
 .stage-step {
   position: absolute;
   top: .5rem;
-  right: .75rem;
-  font-size: .7rem;
+  right: .625rem;
+  font-size: .65rem;
   font-weight: 700;
   font-family: var(--font-mono);
   opacity: .5;
-  background: rgba(0,0,0,.15);
-  padding: .1rem .4rem;
+  background: rgba(0,0,0,.18);
+  padding: .1rem .35rem;
   border-radius: var(--radius-sm);
 }
 
-.stage-icon {
-  font-size: 2rem;
-  line-height: 1;
-  flex-shrink: 0;
-}
+.stage-icon { font-size: 1.75rem; line-height: 1; }
 
 .stage-name {
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: .1em;
-  min-width: 120px;
+  line-height: 1.1;
 }
 
 .stage-desc {
-  font-size: .8rem;
+  font-size: .775rem;
   opacity: .82;
   line-height: 1.45;
-  flex: 1;
-  min-width: 140px;
 }
 
 .stage-count {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
-  background: rgba(255,255,255,.2);
-  font-size: .8rem;
+  background: rgba(255,255,255,.22);
+  font-size: .75rem;
   font-weight: 700;
-  flex-shrink: 0;
-  margin-left: auto;
+  margin-top: .25rem;
 }
 
 /* Stage body */
 .stage-bd {
   background: var(--sbg, #f8fafc);
-  padding: 1rem 1.25rem;
+  padding: .875rem .75rem;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: .625rem;
+  flex-direction: column;
+  gap: .5rem;
   min-height: 80px;
-  align-content: flex-start;
+  flex: 1;
 }
 
 /* Empty state */
@@ -489,15 +511,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   display: flex;
   align-items: center;
   gap: .5rem;
-  width: 100%;
   color: var(--c-faint);
   font-size: .8125rem;
-  padding: .75rem .5rem;
+  padding: .75rem .25rem;
 
-  .empty-dot {
-    font-size: 1.25rem;
-    line-height: 1;
-  }
+  .empty-dot { font-size: 1.1rem; line-height: 1; }
 }
 
 /* ================================================================
@@ -507,27 +525,26 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: .25rem;
-  padding: .625rem .875rem;
+  gap: .2rem;
+  padding: .6rem .75rem;
   background: var(--c-surface);
   border-radius: var(--radius);
   border: none;
-  border-left: 3.5px solid var(--sc, #607D8B);
+  border-left: 3px solid var(--sc, #607D8B);
   box-shadow: var(--shadow-xs);
   cursor: pointer;
   text-align: left;
+  width: 100%;
   transition: transform .18s ease, box-shadow .18s ease;
-  width: calc(33.33% - .5rem);
-  min-width: 180px;
 
   &:hover {
-    transform: translateY(-3px);
+    transform: translateY(-2px);
     box-shadow: var(--shadow-md);
   }
 }
 
 .tcard-name {
-  font-size: .875rem;
+  font-size: .8125rem;
   font-weight: 700;
   color: var(--c-text);
   line-height: 1.35;
@@ -535,7 +552,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .tcard-cat {
-  font-size: .6875rem;
+  font-size: .6625rem;
   font-weight: 600;
   color: var(--c-faint);
   text-transform: uppercase;
@@ -544,13 +561,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .tcard-desc {
-  font-size: .8rem;
+  font-size: .775rem;
   color: var(--c-muted);
   line-height: 1.5;
   display: none;
   border-top: 1px solid var(--c-border);
-  padding-top: .5rem;
-  margin-top: .25rem;
+  padding-top: .45rem;
+  margin-top: .2rem;
 }
 
 .tcard-chevron {
@@ -561,28 +578,26 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   color: var(--c-faint);
   transition: transform .2s;
   line-height: 1;
-  font-weight: 400;
+  font-weight: 300;
 }
 
-/* Expanded state */
 .tcard[aria-expanded="true"] {
   .tcard-desc { display: block; }
   .tcard-chevron { transform: rotate(90deg); }
   box-shadow: var(--shadow-md);
 }
 
-/* Hidden by filter */
 .tcard.is-hidden { display: none; }
 
 /* ================================================================
-   HINT
+   SCROLL HINT
    ================================================================ */
 .roadmap-hint {
   text-align: center;
   color: var(--c-faint);
   font-size: .75rem;
-  margin-top: 1.5rem;
-  display: none; /* shown only on small screens */
+  margin-top: 1rem;
+  letter-spacing: .05em;
 }
 
 /* ================================================================
@@ -602,46 +617,22 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 /* ================================================================
    RESPONSIVE
    ================================================================ */
-
-/* Large: 3 cards per row (default above) */
-
-/* Medium */
-@media (max-width: 1100px) {
-  .tcard {
-    width: calc(50% - .375rem);
-  }
-}
-
-/* Tablet */
 @media (max-width: 768px) {
-  .site-header { padding: 1.25rem 1.25rem; }
-  .site-main { padding: 1.25rem 1.25rem 2.5rem; }
+  .site-header { padding: 1.25rem; }
+  .site-main { padding: 1.25rem 1rem 2.5rem; }
 
-  .tcard {
-    width: calc(50% - .375rem);
-  }
-
-  .controls {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+  .controls { flex-direction: column; align-items: flex-start; }
   .search-input { width: 100%; }
+
+  .ref-visual { display: none; }
 }
 
-/* Mobile */
-@media (max-width: 560px) {
-  .site-main { padding: 1rem 1rem 2rem; }
-
-  .tcard {
-    width: 100%;
-    min-width: unset;
-  }
-
+@media (max-width: 480px) {
+  .site-main { padding: 1rem .75rem 2rem; }
   .stats-row { gap: 1.25rem; }
   .stat-num { font-size: 1.5rem; }
-
   .ref-content { flex-direction: column; }
-  .ref-visual { display: none; }
 
-  .roadmap-hint { display: block; }
+  /* hide stage name in phase nav, show only icon */
+  .phase-nav-btn .pnav-name { display: none; }
 }
