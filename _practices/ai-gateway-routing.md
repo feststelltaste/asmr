@@ -1,8 +1,9 @@
 ---
 title: "AI Gateway / Routing"
 stage: assess
-category: LLM Infrastructure
+category: AI Tooling Setup
 description: "Routing LLM requests dynamically across models by cost, capability, or latency (LiteLLM, Portkey). Valuable for multi-model setups."
+strategic_value: generic
 ---
 
 ## Overview
@@ -28,3 +29,9 @@ An AI gateway sits in front of multiple LLM providers and routes requests based 
 - Adds a network hop and potential failure point
 - Complex routing logic can be hard to debug
 - Provider-specific features may not be accessible through the unified API layer
+
+## Resources
+
+- [LiteLLM documentation](https://docs.litellm.ai/) — open-source gateway supporting 100+ models
+- [Portkey](https://portkey.ai/) — managed AI gateway with routing and observability
+- [YouTube — LiteLLM setup and usage](https://www.youtube.com/results?search_query=litellm+ai+gateway+routing+2025)

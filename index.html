@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Technology Roadmap
+title: Agentic Software Modernization Roadmap (ASMR)
 ---
 
 {% assign total_techs = site.practices | size %}
@@ -45,7 +45,7 @@ title: Technology Roadmap
 <div class="stats-row">
   <div class="stat">
     <span class="stat-num">{{ total_techs }}</span>
-    <span class="stat-lbl">Technologies</span>
+    <span class="stat-lbl">Practices</span>
   </div>
   <div class="stat">
     <span class="stat-num">{{ site.data.roadmap.stages | size }}</span>
@@ -146,10 +146,14 @@ title: Technology Roadmap
               data-category="{{ tech.category }}"
               data-name="{{ tech.title | downcase }}"
               data-desc="{{ tech.description | downcase }}"
+              data-sv="{{ tech.strategic_value }}"
               style="--sc: {{ stage.color }}"
             >
+              <div class="tcard-meta">
+                <span class="tcard-cat">{{ tech.category }}</span>
+                {% if tech.strategic_value %}<span class="sv-badge sv-{{ tech.strategic_value }}">{{ tech.strategic_value }}</span>{% endif %}
+              </div>
               <span class="tcard-name">{{ tech.title }}</span>
-              <span class="tcard-cat">{{ tech.category }}</span>
               {% if tech.description %}<span class="tcard-desc">{{ tech.description }}</span>{% endif %}
               <span class="tcard-arrow" aria-hidden="true">→</span>
             </a>

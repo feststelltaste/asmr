@@ -3,6 +3,7 @@ title: "API-First Design"
 stage: apply
 category: Architecture & Delivery
 description: "Defining APIs (OpenAPI/AsyncAPI) before implementation. Enables parallel development and gives AI agents a clear contract to work against."
+strategic_value: generic
 ---
 
 ## Overview
@@ -34,3 +35,10 @@ API specs are machine-readable contracts. AI agents can:
 
 - Specs drift from implementation if not enforced in CI (use contract testing)
 - Over-specified APIs become rigid; leave room for evolution
+
+## Resources
+
+- [OpenAPI Specification](https://spec.openapis.org/oas/latest.html) — the standard for describing REST APIs
+- [AsyncAPI](https://www.asyncapi.com/) — the standard for event-driven API contracts
+- [Stoplight Studio](https://stoplight.io/studio) — visual API design tool
+- [YouTube — API-first design in practice](https://www.youtube.com/results?search_query=api+first+design+openapi+2025)

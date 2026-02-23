@@ -3,6 +3,7 @@ title: "OpenTelemetry"
 stage: trial
 category: Architecture & Delivery
 description: "Vendor-neutral distributed tracing, metrics, and logs. Necessary for understanding where AI-assisted systems are slow or failing."
+strategic_value: generic
 ---
 
 ## Overview
@@ -30,3 +31,10 @@ AI agents introduce new failure modes — slow LLM calls, unexpected tool invoca
 - Instrumentation adds a small performance overhead — negligible for most services
 - Trace data volume can be high in production — sample appropriately
 - OTel SDK APIs are stable but collector/exporter ecosystem still evolves
+
+## Resources
+
+- [OpenTelemetry documentation](https://opentelemetry.io/docs/) — official getting started guides per language
+- [OpenLLMetry — LLM-specific OTel spans](https://github.com/traceloop/openllmetry) — extends OTel for AI observability
+- [Grafana + Tempo — open-source tracing stack](https://grafana.com/oss/tempo/) — popular self-hosted OTel backend
+- [YouTube — OpenTelemetry getting started](https://www.youtube.com/results?search_query=opentelemetry+getting+started+distributed+tracing+2025)

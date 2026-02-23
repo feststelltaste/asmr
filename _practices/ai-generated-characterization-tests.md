@@ -3,6 +3,7 @@ title: "AI-generated Characterization Tests"
 stage: trial
 category: Legacy Modernization
 description: "Using LLMs to generate 'golden master' tests from existing behavior before refactoring. Makes safe modernization possible when there are no existing tests."
+strategic_value: core
 ---
 
 ## Overview
@@ -26,3 +27,9 @@ Michael Feathers coined characterization testing in *Working Effectively with Le
 - Characterization tests codify bugs as well as correct behavior — don't treat them as specifications
 - Output-sensitive tests (dates, random values, IDs) need special handling
 - Works best for pure functions; stateful or I/O-heavy code requires more setup
+
+## Resources
+
+- [Michael Feathers — Working Effectively with Legacy Code](https://www.oreilly.com/library/view/working-effectively-with/0131177052/) — the original book introducing characterization tests
+- [Approval Tests library](https://approvaltests.com/) — framework specifically built for golden master / characterization testing
+- [YouTube — Characterization tests with AI](https://www.youtube.com/results?search_query=characterization+tests+golden+master+ai+llm+2025)

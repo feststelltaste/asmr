@@ -1,8 +1,9 @@
 ---
 title: "LLM Observability & Tracing"
 stage: trial
-category: LLM Infrastructure
+category: AI Tooling Setup
 description: "Langfuse, LangSmith, Arize — tracking LLM calls, costs, latencies, and outputs in production. Necessary as soon as agents touch real workflows."
+strategic_value: supporting
 ---
 
 ## Overview
@@ -30,3 +31,10 @@ LLM calls are opaque by default. Observability tooling captures traces of every 
 - Traces contain prompt data — handle PII carefully
 - High-volume agentic systems generate a lot of trace data; control storage costs
 - Start simple: even basic logging of prompts/responses is far better than nothing
+
+## Resources
+
+- [Langfuse — open-source LLM observability](https://langfuse.com/) — self-hostable tracing and evaluation platform
+- [Arize Phoenix](https://phoenix.arize.com/) — open-source LLM observability and evaluation
+- [OpenLLMetry — OTel for LLMs](https://github.com/traceloop/openllmetry) — OpenTelemetry-compatible LLM tracing
+- [YouTube — LLM observability in production](https://www.youtube.com/results?search_query=llm+observability+tracing+langfuse+production+2025)

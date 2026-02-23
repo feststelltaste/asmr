@@ -3,6 +3,7 @@ title: "Agentic Coding Workflows"
 stage: trial
 category: Agentic AI Tools
 description: "Multi-step autonomous agents (Claude Code, Devin, SWE-agent) that plan, write, run, debug, and iterate on tasks with minimal human guidance."
+strategic_value: core
 ---
 
 ## Overview
@@ -27,3 +28,11 @@ Agentic coding goes beyond autocomplete: the agent reads the task, plans a solut
 - Requires careful scoping — vague tasks produce poor results
 - Agents can go down wrong paths silently; progress monitoring is important
 - Security: agents with shell access can make destructive changes — use sandboxes
+
+## Resources
+
+- [Anthropic — Claude Code documentation](https://docs.anthropic.com/en/docs/claude-code) — official docs for the terminal-based coding agent
+- [SWE-bench leaderboard](https://www.swebench.com/) — benchmark for evaluating agentic coding systems
+- [OpenHands (formerly OpenDevin)](https://github.com/All-Hands-AI/OpenHands) — open-source multi-agent platform
+- [Devin by Cognition](https://cognition.ai/) — AI software engineer product
+- [YouTube — Agentic coding workflows demo](https://www.youtube.com/results?search_query=agentic+coding+claude+code+devin+2025)

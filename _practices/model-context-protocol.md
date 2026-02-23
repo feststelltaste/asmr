@@ -1,8 +1,9 @@
 ---
 title: "Model Context Protocol (MCP)"
 stage: trial
-category: LLM Infrastructure
+category: AI Tooling Setup
 description: "Anthropic's open standard for connecting AI agents to external tools, data sources, and APIs. Rapidly gaining adoption across major IDEs and platforms."
+strategic_value: supporting
 ---
 
 ## Overview
@@ -32,3 +33,9 @@ MCP Host (Claude / IDE) ←→ MCP Server ←→ External Tool / API / DB
 - Protocol is relatively new (late 2024) — breaking changes possible
 - Security: MCP servers have access to tools on your behalf — scope permissions carefully
 - Tool proliferation: too many tools confuse agents; curate carefully
+
+## Resources
+
+- [Anthropic — MCP documentation](https://docs.anthropic.com/en/docs/mcp) — official specification and getting-started guide
+- [MCP servers registry](https://github.com/modelcontextprotocol/servers) — official and community MCP server implementations
+- [YouTube — Model Context Protocol explained](https://www.youtube.com/results?search_query=model+context+protocol+mcp+anthropic+2025)

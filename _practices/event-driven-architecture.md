@@ -3,6 +3,7 @@ title: "Event-Driven Architecture"
 stage: trial
 category: Architecture & Delivery
 description: "Async communication via events (Kafka, EventBridge). Decouples legacy systems from new services during modernization."
+strategic_value: supporting
 ---
 
 ## Overview
@@ -29,3 +30,10 @@ In event-driven architecture, services communicate by publishing and consuming e
 - Schema evolution needs governance (Confluent Schema Registry or AsyncAPI contracts)
 - Debugging distributed event flows requires good observability
 - Don't use events for everything — synchronous calls are simpler when real-time response is required
+
+## Resources
+
+- [Martin Fowler — Event-Driven Architecture](https://martinfowler.com/articles/201701-event-driven.html) — four patterns of event-driven systems
+- [Confluent — Event Streaming fundamentals](https://developer.confluent.io/learn-kafka/) — Kafka and event streaming learning path
+- [Sam Newman — Monolith to Microservices](https://www.oreilly.com/library/view/monolith-to-microservices/9781492047834/) — outbox pattern and EDA for migration
+- [YouTube — Event-driven architecture for legacy modernization](https://www.youtube.com/results?search_query=event+driven+architecture+legacy+modernization+kafka+2025)

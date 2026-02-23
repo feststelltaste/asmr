@@ -3,6 +3,7 @@ title: "Anti-Corruption Layer"
 stage: apply
 category: Legacy Modernization
 description: "A translation layer between legacy concepts and new domain models. Prevents legacy data structures from leaking into freshly written code."
+strategic_value: supporting
 ---
 
 ## Overview
@@ -32,3 +33,9 @@ LLMs are effective at:
 
 - The ACL becomes a maintenance burden if the legacy changes frequently
 - Don't allow ACL concepts to bleed into the domain — keep it at the boundary
+
+## Resources
+
+- [Eric Evans — Domain-Driven Design (Blue Book)](https://www.domainlanguage.com/ddd/) — the original DDD book introducing the ACL concept
+- [Vaughn Vernon — Implementing Domain-Driven Design](https://vaughnvernon.com/?page_id=168) — practical patterns including ACL implementation
+- [YouTube — Anti-Corruption Layer in practice](https://www.youtube.com/results?search_query=anti+corruption+layer+ddd+pattern+2025)

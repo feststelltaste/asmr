@@ -3,6 +3,7 @@ title: "AI Coding Assistants"
 stage: apply
 category: Agentic AI Tools
 description: "GitHub Copilot, Cursor, Windsurf — AI pair-programming that accelerates writing, refactoring, and understanding of existing code."
+strategic_value: supporting
 ---
 
 ## Overview
@@ -29,3 +30,11 @@ AI coding assistants embed LLM capabilities directly into the IDE, providing inl
 - **Hallucinations**: Generated code must be reviewed — LLMs confidently produce plausible-looking but wrong code
 - **Over-reliance**: Junior developers may skip learning fundamentals
 - **IP / data privacy**: Check whether code is sent to third-party servers; use self-hosted models for sensitive IP
+
+## Resources
+
+- [GitHub Copilot documentation](https://docs.github.com/en/copilot) — official guide and feature reference
+- [Cursor — the AI-first code editor](https://www.cursor.com/) — homepage and docs
+- [Simon Willison — AI-assisted programming](https://simonwillison.net/tags/ai-assisted-programming/) — ongoing critical analysis
+- [YouTube — GitHub Copilot tips and tricks](https://www.youtube.com/results?search_query=github+copilot+tips+tricks+productivity+2025) — practical usage
+- [YouTube — Cursor AI editor deep dive](https://www.youtube.com/results?search_query=cursor+ai+editor+tutorial+2025)

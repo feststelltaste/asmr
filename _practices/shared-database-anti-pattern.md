@@ -3,6 +3,7 @@ title: "Shared Database Anti-pattern"
 stage: remove
 category: Legacy Modernization
 description: "Multiple services or teams sharing one database schema without boundaries. Creates hidden coupling that makes independent deployment impossible."
+strategic_value: generic
 ---
 
 ## Why Remove
@@ -19,5 +20,11 @@ Shared databases create invisible contracts between teams. Any schema change ris
 
 ## See Also
 
-- [Database Decomposition](/technologies/database-decomposition/)
-- [Domain-Driven Refactoring](/technologies/domain-driven-refactoring/)
+- [Database Decomposition](/practices/database-decomposition/)
+- [Domain-Driven Refactoring](/practices/domain-driven-refactoring/)
+
+## Resources
+
+- [Sam Newman — Monolith to Microservices](https://www.oreilly.com/library/view/monolith-to-microservices/9781492047834/) — definitive guide to database ownership patterns
+- [Martin Fowler — Integration Database](https://martinfowler.com/bliki/IntegrationDatabase.html) — why shared databases cause problems
+- [YouTube — Shared database anti-pattern explained](https://www.youtube.com/results?search_query=shared+database+anti+pattern+microservices+2025)

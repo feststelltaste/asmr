@@ -71,6 +71,23 @@ a:hover { text-decoration: underline; }
 button { font-family: inherit; cursor: pointer; border: none; background: none; }
 
 /* ================================================================
+   POC BANNER
+   ================================================================ */
+.poc-banner {
+  background: #7c2d12;
+  background: linear-gradient(90deg, #7c2d12, #92400e);
+  color: #fef3c7;
+  text-align: center;
+  padding: .65rem 1.5rem;
+  font-size: .85rem;
+  line-height: 1.5;
+  letter-spacing: .01em;
+  border-bottom: 2px solid #b45309;
+
+  strong { color: #fde68a; }
+}
+
+/* ================================================================
    HEADER
    ================================================================ */
 .site-header {
@@ -547,6 +564,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   line-height: 1.35;
 }
 
+.tcard-meta {
+  display: flex;
+  align-items: center;
+  gap: .35rem;
+  flex-wrap: wrap;
+}
+
 .tcard-cat {
   font-size: .65rem;
   font-weight: 600;
@@ -554,6 +578,21 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   text-transform: uppercase;
   letter-spacing: .055em;
 }
+
+/* Strategic value badges — cards + detail page */
+.sv-badge {
+  display: inline-block;
+  font-size: .58rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  padding: .1rem .4rem;
+  border-radius: 3px;
+  line-height: 1.4;
+}
+.sv-core      { background: #ede9fe; color: #5b21b6; }
+.sv-supporting { background: #dbeafe; color: #1d4ed8; }
+.sv-generic   { background: #f1f5f9; color: #64748b; }
 
 .tcard-desc {
   font-size: .75rem;
@@ -642,6 +681,14 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   margin-bottom: .5rem;
 }
 
+.tech-meta-row {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  flex-wrap: wrap;
+  margin-bottom: .875rem;
+}
+
 .tech-category {
   display: inline-block;
   font-size: .725rem;
@@ -649,7 +696,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   text-transform: uppercase;
   letter-spacing: .07em;
   color: var(--c-faint);
-  margin-bottom: .875rem;
 }
 
 .tech-summary {
@@ -823,26 +869,74 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 /* ================================================================
    RESPONSIVE
    ================================================================ */
+
+/* Smooth momentum scrolling on iOS for the roadmap */
+.roadmap-scroll { -webkit-overflow-scrolling: touch; }
+
+/* Tables in detail page — scroll horizontally on small screens */
+.tech-body table {
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 @media (max-width: 768px) {
-  .site-header { padding: 1.125rem 1.25rem; }
+  .site-header { padding: 1rem 1.25rem; }
   .site-main   { padding: 1.25rem 1rem 2.5rem; }
 
-  .controls { flex-direction: column; align-items: flex-start; }
+  /* Hide the inspired-by badge to free up header space */
+  .header-badge { display: none; }
+
+  /* Tighten site title */
+  .site-title { font-size: 1.05rem; }
+
+  /* Controls stack vertically */
+  .controls { flex-direction: column; align-items: stretch; }
+  .search-wrap { width: 100%; }
   .search-input { width: 100%; }
+  .filter-wrap { width: 100%; }
+  .filter-chips { flex-wrap: wrap; }
+
+  /* Scroll snapping offset matches the main padding */
+  .roadmap-scroll { scroll-padding-left: 1rem; }
+
+  /* Reference card */
   .ref-visual { display: none; }
 
-  .tech-body { padding: 1.25rem 1.25rem; }
-  .tech-hd   { padding: 1.25rem 1.25rem; }
+  /* Detail page */
+  .tech-body { padding: 1.25rem; }
+  .tech-hd   { padding: 1.25rem; }
   .tech-title { font-size: 1.5rem; }
 }
 
 @media (max-width: 480px) {
-  .site-main { padding: 1rem .875rem 2rem; }
+  .poc-banner { padding: .5rem 1rem; font-size: .78rem; }
+  .site-header { padding: .875rem 1rem; }
+  .site-main   { padding: .875rem .75rem 2rem; }
+
   .stats-row { gap: 1.25rem; }
   .stat-num  { font-size: 1.5rem; }
+
   .ref-content { flex-direction: column; }
 
-  .phase-nav-btn .pnav-name { display: none; }
+  /* Phase nav — icon only; taller tap target */
+  .phase-nav { padding: .375rem 0; }
+  .phase-nav-btn {
+    min-height: 40px;
+    padding: .375rem .55rem;
+    .pnav-name { display: none; }
+  }
 
+  /* Stage cards fill ~88% of screen so the next one peeks */
+  .stage {
+    width: calc(88vw - .75rem);
+    min-width: calc(88vw - .75rem);
+  }
+
+  /* Scroll snapping offset matches the tighter main padding */
+  .roadmap-scroll { scroll-padding-left: .75rem; }
+
+  /* Detail page */
   .tech-footer { flex-direction: column; align-items: flex-start; }
+  .tech-title  { font-size: 1.3rem; }
 }

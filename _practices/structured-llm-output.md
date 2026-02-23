@@ -1,8 +1,9 @@
 ---
 title: "Structured LLM Output (JSON mode)"
 stage: apply
-category: LLM Infrastructure
+category: AI Tooling Setup
 description: "Enforcing typed JSON schemas on LLM output (tool use, JSON mode). Makes LLMs reliable participants in typed software pipelines."
+strategic_value: generic
 ---
 
 ## Overview
@@ -28,3 +29,10 @@ Unstructured text output from LLMs is hard to integrate into software pipelines.
 - Tool use / JSON mode increases token count slightly
 - Complex nested schemas may hit model capability limits
 - Always validate output against schema even when using JSON mode — providers can still make mistakes
+
+## Resources
+
+- [Anthropic — Tool use (function calling)](https://docs.anthropic.com/en/docs/tool-use) — structured output via tools
+- [instructor — Python library for structured outputs](https://python.useinstructor.com/) — Pydantic-validated LLM responses
+- [outlines — constrained text generation](https://github.com/outlines-dev/outlines) — token-level schema enforcement
+- [YouTube — Structured LLM outputs tutorial](https://www.youtube.com/results?search_query=structured+llm+output+json+schema+instructor+2025)

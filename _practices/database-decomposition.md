@@ -3,6 +3,7 @@ title: "Database Decomposition"
 stage: trial
 category: Legacy Modernization
 description: "Breaking apart a shared monolithic DB into service-owned schemas or separate databases. Hard but critical for enabling independent deployment."
+strategic_value: supporting
 ---
 
 ## Overview
@@ -28,3 +29,10 @@ A shared monolithic database is often the biggest coupling point in a legacy sys
 - Cross-service queries become network calls — latency and failure modes change
 - Distributed transactions are hard; prefer eventual consistency where possible
 - Data consistency is the primary risk — move incrementally with extensive testing
+
+## Resources
+
+- [Sam Newman — Monolith to Microservices](https://www.oreilly.com/library/view/monolith-to-microservices/9781492047834/) — dedicated chapters on database decomposition patterns
+- [Martin Fowler — Database Decomposition patterns](https://martinfowler.com/articles/patterns-of-distributed-systems/) — patterns for distributed data
+- [Flyway / Liquibase](https://flywaydb.org/) — schema migration tools for incremental DB changes
+- [YouTube — Database decomposition in practice](https://www.youtube.com/results?search_query=database+decomposition+microservices+legacy+2025)

@@ -3,6 +3,7 @@ title: "AI Documentation Generation"
 stage: apply
 category: Agentic AI Tools
 description: "Auto-generating API docs, changelogs, architecture summaries, and README files from code and commit history."
+strategic_value: supporting
 ---
 
 ## Overview
@@ -28,3 +29,10 @@ LLMs can generate and maintain documentation that developers routinely skip writ
 - Generated docs inherit misunderstandings from the code; always review
 - Docs that are never maintained become misleading — treat as a starting point
 - Sensitive internal details may end up in docs accidentally
+
+## Resources
+
+- [Mintlify — AI-powered docs](https://mintlify.com/) — documentation generation and hosting
+- [Swimm — docs that live with the code](https://swimm.io/) — auto-updating code-coupled documentation
+- [Conventional Commits](https://www.conventionalcommits.org/) — commit format that enables automated changelog generation
+- [YouTube — AI documentation generation tools](https://www.youtube.com/results?search_query=ai+documentation+generation+code+2025)

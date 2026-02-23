@@ -3,6 +3,7 @@ title: "Monolith (Distributed)"
 stage: stop
 category: Architecture & Delivery
 description: "Tightly coupled services that must deploy together — worst of both worlds. Do not build new distributed systems this way."
+strategic_value: generic
 ---
 
 ## Why Stop
@@ -24,7 +25,13 @@ A distributed monolith looks like microservices but behaves like a monolith: ser
 
 ## What to Do Instead
 
-- Identify true bounded contexts before splitting — see [Domain-Driven Refactoring](/technologies/domain-driven-refactoring/)
-- Own your data — see [Database Decomposition](/technologies/database-decomposition/)
+- Identify true bounded contexts before splitting — see [Domain-Driven Refactoring](/practices/domain-driven-refactoring/)
+- Own your data — see [Database Decomposition](/practices/database-decomposition/)
 - Prefer async event communication for cross-service coordination
 - If you can't deploy a service independently, it's not a microservice
+
+## Resources
+
+- [Sam Newman — Monolith to Microservices](https://www.oreilly.com/library/view/monolith-to-microservices/9781492047834/) — patterns for avoiding and resolving distributed monolith problems
+- [Martin Fowler — Microservices prerequisites](https://martinfowler.com/bliki/MicroservicePrerequisites.html) — what you need before going microservices
+- [YouTube — Distributed monolith anti-pattern](https://www.youtube.com/results?search_query=distributed+monolith+anti+pattern+microservices+2025)

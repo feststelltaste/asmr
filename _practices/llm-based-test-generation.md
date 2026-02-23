@@ -3,6 +3,7 @@ title: "LLM-based Test Generation"
 stage: trial
 category: Agentic AI Tools
 description: "Generating unit and integration tests from source code using LLMs. Dramatically improves coverage when adding tests to existing legacy code."
+strategic_value: supporting
 ---
 
 ## Overview
@@ -27,3 +28,10 @@ LLMs can read a function or class and generate a set of unit tests covering happ
 - Generated tests may test the wrong thing — they reflect the code, not the intent
 - Tests that just confirm existing (buggy) behavior give false confidence
 - Always review and run generated tests before committing
+
+## Resources
+
+- [CodiumAI / Qodo — AI test generation](https://www.qodo.ai/) — purpose-built LLM test generation tool
+- [Kent Beck — Taming the AI (TDD with AI)](https://tidyfirst.substack.com/p/taming-the-ai) — practical AI-assisted TDD patterns
+- [Diffblue Cover](https://www.diffblue.com/) — automated Java unit test generation
+- [YouTube — AI test generation for legacy code](https://www.youtube.com/results?search_query=llm+ai+test+generation+legacy+code+2025)

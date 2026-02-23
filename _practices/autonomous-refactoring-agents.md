@@ -3,6 +3,7 @@ title: "Autonomous Refactoring Agents"
 stage: assess
 category: Agentic AI Tools
 description: "AI agents that autonomously refactor large codebases (extract classes, rename, restructure). Powerful but needs human oversight for complex domains."
+strategic_value: core
 ---
 
 ## Overview
@@ -26,3 +27,10 @@ Beyond single-file refactoring, agentic systems can now perform large-scale, mul
 - How to verify correctness beyond test suites?
 - How to handle domain logic that isn't captured in tests?
 - Tooling maturity is still uneven across languages
+
+## Resources
+
+- [Sourcegraph Cody — large-scale code intelligence](https://sourcegraph.com/cody) — codebase-aware AI for large refactoring
+- [Martin Fowler — Refactoring (2nd ed.)](https://martinfowler.com/books/refactoring.html) — canonical patterns that agents should follow
+- [OpenRewrite](https://docs.openrewrite.org/) — automated, large-scale refactoring recipes for Java/other languages
+- [YouTube — AI-driven refactoring at scale](https://www.youtube.com/results?search_query=ai+autonomous+refactoring+agent+codebase+2025)

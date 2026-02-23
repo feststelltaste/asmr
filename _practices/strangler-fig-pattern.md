@@ -3,6 +3,7 @@ title: "Strangler Fig Pattern"
 stage: apply
 category: Legacy Modernization
 description: "Incrementally replace a legacy system by routing traffic to new services while keeping the old system alive. The safest path for big-bang-free migration."
+strategic_value: supporting
 ---
 
 ## Overview
@@ -28,3 +29,9 @@ LLMs are now useful at every step:
 - The facade layer adds latency and complexity
 - Defining clean seams in a deeply coupled monolith is hard
 - Requires discipline to not expand legacy dependencies during migration
+
+## Resources
+
+- [Martin Fowler — StranglerFigApplication](https://martinfowler.com/bliki/StranglerFigApplication.html) — the original pattern description
+- [Sam Newman — Monolith to Microservices](https://www.oreilly.com/library/view/monolith-to-microservices/9781492047834/) — book covering strangler fig and related decomposition patterns
+- [YouTube — Strangler Fig Pattern with AI assistance](https://www.youtube.com/results?search_query=strangler+fig+pattern+legacy+modernization+2025)

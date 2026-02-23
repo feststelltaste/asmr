@@ -3,6 +3,7 @@ title: "LLM Fine-tuning on Codebase"
 stage: assess
 category: Agentic AI Tools
 description: "Fine-tuning models on internal proprietary code for better context-aware suggestions and code completion specific to your architecture."
+strategic_value: supporting
 ---
 
 ## Overview
@@ -28,3 +29,10 @@ Fine-tuning adapts a base LLM to your organization's specific coding conventions
 - Risk of overfitting to old patterns in legacy code
 - Requires ongoing maintenance as the codebase evolves
 - Consider RAG first — it is usually simpler and more up-to-date
+
+## Resources
+
+- [Hugging Face — fine-tuning guide](https://huggingface.co/docs/transformers/training) — practical tutorials for LLM fine-tuning
+- [LoRA: Low-Rank Adaptation paper](https://arxiv.org/abs/2106.09685) — the technique behind parameter-efficient fine-tuning
+- [Axolotl — fine-tuning framework](https://github.com/OpenAccess-AI-Collective/axolotl) — popular open-source fine-tuning tool
+- [YouTube — LLM fine-tuning on code explained](https://www.youtube.com/results?search_query=llm+fine+tuning+code+codebase+2025)

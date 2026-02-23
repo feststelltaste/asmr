@@ -25,9 +25,14 @@ layout: default
     </span>
     {% endif %}
     <h1 class="tech-title">{{ page.title }}</h1>
-    {% if page.category %}
-    <span class="tech-category">{{ page.category }}</span>
-    {% endif %}
+    <div class="tech-meta-row">
+      {% if page.category %}
+      <span class="tech-category">{{ page.category }}</span>
+      {% endif %}
+      {% if page.strategic_value %}
+      <span class="sv-badge sv-{{ page.strategic_value }}">{{ page.strategic_value }}</span>
+      {% endif %}
+    </div>
     {% if page.description %}
     <p class="tech-summary">{{ page.description }}</p>
     {% endif %}

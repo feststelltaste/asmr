@@ -1,8 +1,9 @@
 ---
 title: "Self-hosted Open LLMs"
 stage: assess
-category: LLM Infrastructure
+category: AI Tooling Setup
 description: "Running Llama, Mistral, Qwen locally for privacy-sensitive code and data. Viable for many tasks, gap to frontier models still matters for complex reasoning."
+strategic_value: generic
 ---
 
 ## Overview
@@ -29,3 +30,10 @@ Open-weight models (Llama 3, Mistral, Qwen, DeepSeek) can be self-hosted on GPU 
 - Frontier tasks (complex reasoning, long-context) still benefit from closed-source models
 - Model updates require your own process; you won't automatically get improvements
 - Security: downloaded model weights must be verified; malicious weights are a real threat
+
+## Resources
+
+- [Ollama](https://ollama.com/) — simplest way to run open models locally
+- [vLLM documentation](https://docs.vllm.ai/) — production-grade open-source inference engine
+- [Hugging Face Open LLM Leaderboard](https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard) — compare open model quality
+- [YouTube — Self-hosting open-source LLMs](https://www.youtube.com/results?search_query=self+hosted+open+source+llm+ollama+vllm+2025)

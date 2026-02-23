@@ -3,6 +3,7 @@ title: "Fully Autonomous Code Deployment"
 stage: hold-on
 category: Agentic AI Tools
 description: "AI agents that autonomously merge, deploy, and release to production without human approval steps. Safety and reliability risks are too high today."
+strategic_value: generic
 ---
 
 ## Overview
@@ -25,5 +26,11 @@ The idea: an AI agent takes a task, writes the code, passes tests, merges the PR
 
 ## Related
 
-- [Agentic Coding Workflows](/technologies/agentic-coding-workflows/) — with human review
-- [CI/CD Pipelines](/technologies/ci-cd-pipelines/) — the foundation needed first
+- [Agentic Coding Workflows](/practices/agentic-coding-workflows/) — with human review
+- [CI/CD Pipelines](/practices/ci-cd-pipelines/) — the foundation needed first
+
+## Resources
+
+- [Anthropic — Building safe agentic AI](https://www.anthropic.com/research/building-effective-agents) — guidance on minimal footprint, human oversight
+- [OWASP LLM Top 10](https://owasp.org/www-project-top-10-for-large-language-model-applications/) — security risks in autonomous AI systems
+- [YouTube — Risks of fully autonomous AI agents](https://www.youtube.com/results?search_query=autonomous+ai+agent+deployment+risks+2025)

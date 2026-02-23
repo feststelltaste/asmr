@@ -1,8 +1,9 @@
 ---
 title: "LLM Prompt Caching"
 stage: apply
-category: LLM Infrastructure
+category: AI Tooling Setup
 description: "Reusing cached prefix computations on repeated system prompts (Anthropic, OpenAI). Reduces cost and latency for agents with large static contexts."
+strategic_value: generic
 ---
 
 ## Overview
@@ -29,3 +30,9 @@ When many API calls share a large common prefix (a system prompt, a codebase con
 - Cache hits are not guaranteed — providers may evict cached content
 - Caching benefits are highest when the cached prefix is long (>1K tokens)
 - Structure prompts so the stable prefix comes before the dynamic user input
+
+## Resources
+
+- [Anthropic — Prompt caching guide](https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching) — official documentation with examples
+- [OpenAI — Prompt caching](https://platform.openai.com/docs/guides/prompt-caching) — OpenAI's automatic caching behavior
+- [YouTube — LLM prompt caching explained](https://www.youtube.com/results?search_query=llm+prompt+caching+cost+reduction+2025)
