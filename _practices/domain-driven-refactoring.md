@@ -1,0 +1,30 @@
+---
+title: "Domain-Driven Refactoring"
+stage: apply
+category: Legacy Modernization
+description: "Using DDD techniques (bounded contexts, ubiquitous language) to find the right cuts when splitting a monolith. LLMs can help identify domain concepts in code."
+---
+
+## Overview
+
+DDD provides the vocabulary and patterns (bounded contexts, aggregates, domain events, ubiquitous language) to identify where a monolith should be split. The key insight is that organizational boundaries and domain boundaries should align. LLMs make this discovery phase faster.
+
+## AI-assisted Discovery
+
+- Ask an LLM to identify domain concepts and entity names from the codebase
+- Map which modules share the same concepts under different names (semantic overlap)
+- Generate a context map draft from existing code structure and dependencies
+- Identify aggregate roots by analyzing transaction boundaries
+
+## Key DDD Patterns for Modernization
+
+- **Bounded Context** — Clear ownership boundary; basis for a microservice
+- **Context Map** — Documents how contexts relate and integrate
+- **Ubiquitous Language** — Shared vocabulary between code and business — clarify it now
+- **Domain Events** — Events that cross context boundaries; basis for async integration
+
+## Risks & Considerations
+
+- Domain modeling requires domain expert involvement — don't let LLMs drive this alone
+- Over-engineering into too many tiny contexts creates distributed monolith problems
+- The refactoring must be incremental; a full DDD rewrite is a big-bang rewrite

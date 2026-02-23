@@ -1,0 +1,51 @@
+---
+layout: default
+---
+
+{% assign stage_data = site.data.roadmap.stages | where: "id", page.stage | first %}
+
+<article class="tech-page">
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="{{ '/' | relative_url }}">Roadmap</a>
+    <span class="bc-sep" aria-hidden="true">›</span>
+    {% if stage_data %}
+    <span class="bc-stage" style="color: {{ stage_data.color }}">
+      {{ stage_data.icon }} {{ stage_data.name }}
+    </span>
+    <span class="bc-sep" aria-hidden="true">›</span>
+    {% endif %}
+    <span class="bc-current">{{ page.title }}</span>
+  </nav>
+
+  <header class="tech-hd" {% if stage_data %}style="--sc: {{ stage_data.color }}; --sbg: {{ stage_data.bg_color }}"{% endif %}>
+    {% if stage_data %}
+    <span class="tech-stage-badge" style="background: {{ stage_data.color }}">
+      {{ stage_data.icon }} {{ stage_data.name }}
+    </span>
+    {% endif %}
+    <h1 class="tech-title">{{ page.title }}</h1>
+    {% if page.category %}
+    <span class="tech-category">{{ page.category }}</span>
+    {% endif %}
+    {% if page.description %}
+    <p class="tech-summary">{{ page.description }}</p>
+    {% endif %}
+  </header>
+
+  {% if page.content != "" %}
+  <div class="tech-body">
+    {{ content }}
+  </div>
+  {% endif %}
+
+  <footer class="tech-footer">
+    <a href="{{ '/' | relative_url }}" class="back-link">← Back to Roadmap</a>
+    {% if stage_data %}
+    <span class="tech-footer-stage" style="--sc: {{ stage_data.color }}">
+      Stage: <strong>{{ stage_data.name }}</strong> — {{ stage_data.description }}
+    </span>
+    {% endif %}
+  </footer>
+
+</article>

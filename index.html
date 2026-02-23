@@ -3,8 +3,8 @@ layout: default
 title: Technology Roadmap
 ---
 
-{% assign total_techs = site.data.roadmap.technologies | size %}
-{% assign categories = site.data.roadmap.technologies | map: "category" | uniq | sort %}
+{% assign total_techs = site.practices | size %}
+{% assign categories = site.practices | map: "category" | uniq | sort %}
 
 <!-- Reference card -->
 <div class="reference-card-wrapper">
@@ -76,7 +76,7 @@ title: Technology Roadmap
         All <span class="chip-cnt">{{ total_techs }}</span>
       </button>
       {% for cat in categories %}
-        {% assign cat_count = site.data.roadmap.technologies | where: "category", cat | size %}
+        {% assign cat_count = site.practices | where: "category", cat | size %}
         <button class="chip" data-category="{{ cat }}" type="button">
           {{ cat }} <span class="chip-cnt">{{ cat_count }}</span>
         </button>
@@ -118,6 +118,8 @@ title: Technology Roadmap
       </div>
       {% endunless %}
 
+      {% assign stage_techs = site.practices | where: "stage", stage.id | sort: "title" %}
+
       <div
         class="stage"
         id="stage-{{ stage.id }}"
@@ -131,34 +133,26 @@ title: Technology Roadmap
           <div class="stage-icon" aria-hidden="true">{{ stage.icon }}</div>
           <h2 class="stage-name">{{ stage.name }}</h2>
           <p class="stage-desc">{{ stage.description }}</p>
-          {% assign stage_count = site.data.roadmap.technologies | where: "stage", stage.id | size %}
-          <span class="stage-count">{{ stage_count }}</span>
+          <span class="stage-count">{{ stage_techs | size }}</span>
         </div>
 
         <!-- Stage body -->
         <div class="stage-bd">
-          {% assign stage_techs = site.data.roadmap.technologies | where: "stage", stage.id %}
-
           {% if stage_techs.size > 0 %}
             {% for tech in stage_techs %}
-            <button
+            <a
               class="tcard"
+              href="{{ tech.url | relative_url }}"
               data-category="{{ tech.category }}"
-              data-name="{{ tech.name | downcase }}"
+              data-name="{{ tech.title | downcase }}"
               data-desc="{{ tech.description | downcase }}"
               style="--sc: {{ stage.color }}"
-              aria-expanded="false"
-              type="button"
             >
-              <span class="tcard-name">{{ tech.name }}</span>
+              <span class="tcard-name">{{ tech.title }}</span>
               <span class="tcard-cat">{{ tech.category }}</span>
-              {% if tech.description %}
-              <span class="tcard-desc">{{ tech.description }}</span>
-              {% endif %}
-              {% if tech.description %}
-              <span class="tcard-chevron" aria-hidden="true">›</span>
-              {% endif %}
-            </button>
+              {% if tech.description %}<span class="tcard-desc">{{ tech.description }}</span>{% endif %}
+              <span class="tcard-arrow" aria-hidden="true">→</span>
+            </a>
             {% endfor %}
           {% else %}
             <div class="stage-empty" aria-label="No technologies in this stage yet">

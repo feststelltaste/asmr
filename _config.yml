@@ -1,9 +1,21 @@
-title: "Agentic Software Modernization — Technology Roadmap"
-description: "Tools, techniques, and patterns for modernizing software with agentic AI"
+title: "Agentic Software Modernization Roadmap (ASMR)"
+description: "Tools, patterns, and practices for modernizing software with agentic AI"
 url: ""
 baseurl: ""
 
 markdown: kramdown
+
+collections:
+  practices:
+    output: true
+    permalink: /practices/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: "practices"
+    values:
+      layout: "practice"
 
 sass:
   style: compressed
