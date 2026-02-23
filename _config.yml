@@ -1,7 +1,7 @@
 title: "Agentic Software Modernization Roadmap (ASMR)"
 description: "Tools, patterns, and practices for modernizing software with agentic AI"
 url: ""
-baseurl: ""
+baseurl: "/asmr"
 
 markdown: kramdown
 
