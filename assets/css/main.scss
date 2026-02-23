@@ -438,60 +438,43 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 /* ================================================================
-   CONNECTOR
+   CONNECTOR  — gap spacer between stage arrows
    ================================================================ */
 .connector {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  padding-top: 3.75rem;
-  width: 44px;
+  width: 8px;
   flex-shrink: 0;
-  align-self: stretch;
-  color: var(--c-faint);
 
-  svg { width: 44px; height: 28px; }
+  svg { display: none; }
 }
 
 /* ================================================================
-   STAGE
+   STAGE  — open roadmap zone, not a kanban column
    ================================================================ */
 .stage {
   display: flex;
   flex-direction: column;
-  width: 270px;
-  min-width: 270px;
+  width: 290px;
+  min-width: 290px;
   flex-shrink: 0;
   scroll-snap-align: start;
-  border-radius: var(--r-lg);
-  overflow: hidden;
-  box-shadow: var(--sh-sm);
-  border: 1px solid rgba(0,0,0,.07);
 }
 
 .stage-hd {
-  background: var(--sbg, #f8fafc);
+  background: var(--sbg, var(--c-bg));
   color: var(--c-text);
-  padding: 1rem 1rem .875rem;
+  padding: .875rem 2.25rem .875rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: .3rem;
   position: relative;
-  border-bottom: 2px solid var(--sc);
+  height: 5.5rem;
+  overflow: hidden;
+  clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 50%, calc(100% - 18px) 100%, 0 100%);
 }
 
 .stage-step {
-  position: absolute;
-  top: .5rem;
-  right: .625rem;
-  font-size: .6rem;
-  font-weight: 700;
-  font-family: var(--font-mono);
-  color: var(--sc);
-  opacity: .5;
-  letter-spacing: .05em;
+  display: none;
 }
 
 .stage-title-row {
@@ -542,7 +525,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .stage-bd {
-  background: var(--c-surface);
+  background: transparent;
   padding: .75rem .625rem;
   display: flex;
   flex-direction: column;
@@ -560,6 +543,17 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   padding: .75rem .25rem;
 
   .empty-dot { font-size: 1.1rem; }
+}
+
+/* Hold On — dark header: invert inner elements */
+.stage[data-stage="hold-on"] {
+  .stage-icon { color: rgba(255, 255, 255, .7); }
+  .stage-desc  { color: rgba(255, 255, 255, .5); }
+  .stage-count {
+    background: rgba(255, 255, 255, .15);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, .2);
+  }
 }
 
 /* ================================================================
@@ -840,13 +834,42 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .tech-hd {
-  background: var(--c-surface);
+  background: var(--sbg, var(--c-surface));
   border: 1px solid var(--c-border);
-  border-left: 4px solid var(--sc, #607D8B);
+  border-top: 4px solid var(--sc, var(--c-border));
   border-radius: var(--r-lg);
   padding: 1.75rem 2rem;
   margin-bottom: 1.5rem;
   box-shadow: var(--sh-sm);
+}
+
+/* Hold On detail page — dark header: invert text */
+.tech-hd[data-stage="hold-on"] {
+  border-color: transparent;
+
+  .tech-stage-badge {
+    background: rgba(255, 255, 255, .12) !important;
+    color: #f1f5f9;
+    border: 1px solid rgba(255, 255, 255, .2);
+  }
+
+  .tech-title    { color: #f1f5f9; }
+  .tech-category { color: rgba(255, 255, 255, .5); }
+  .tech-summary  { color: rgba(255, 255, 255, .65); }
+
+  .devops-cycle-label,
+  .devops-group-lbl,
+  .devops-cycle-loop { color: rgba(255, 255, 255, .4); }
+
+  .dsq {
+    border-color: rgba(255, 255, 255, .2);
+    color: rgba(255, 255, 255, .35);
+  }
+  .dsq.dsq-on {
+    background: #f1f5f9;
+    color: #0f172a;
+    border-color: #f1f5f9;
+  }
 }
 
 .tech-stage-badge {

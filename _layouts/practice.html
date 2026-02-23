@@ -18,7 +18,7 @@ layout: default
     <span class="bc-current">{{ page.title }}</span>
   </nav>
 
-  <header class="tech-hd" {% if stage_data %}style="--sc: {{ stage_data.color }}; --sbg: {{ stage_data.bg_color }}"{% endif %}>
+  <header class="tech-hd" {% if stage_data %}data-stage="{{ page.stage }}" style="--sc: {{ stage_data.color }}; --sbg: {{ stage_data.bg_color }}"{% endif %}>
     {% if stage_data %}
     <span class="tech-stage-badge" style="background: {{ stage_data.color }}">
       <span class="badge-icon">{% include stage-icon.html id=stage_data.id %}</span>{{ stage_data.name }}

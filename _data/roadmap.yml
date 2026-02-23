@@ -2,8 +2,8 @@ stages:
   - id: hold-on
     name: Hold On
     description: Not yet suitable. Watch and wait before committing.
-    color: "#475569"
-    bg_color: "#e2e8f0"
+    color: "#f1f5f9"
+    bg_color: "#0f172a"
 
   - id: assess
     name: Assess
@@ -25,12 +25,12 @@ stages:
 
   - id: stop
     name: Stop
-    description: Do not start new projects. Legacy systems only.
+    description: Do not adopt for new work. Only maintain where already in use.
     color: "#b91c1c"
     bg_color: "#fee2e2"
 
   - id: remove
     name: Remove
     description: Phase out completely. Actively migrate away.
-    color: "#374151"
-    bg_color: "#f3f4f6"
+    color: "#1e293b"
+    bg_color: "#cbd5e1"
