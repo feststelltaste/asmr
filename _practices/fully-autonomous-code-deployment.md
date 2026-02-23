@@ -28,7 +28,6 @@ The idea: an AI agent takes a task, writes the code, passes tests, merges the PR
 ## Related
 
 - [Agentic Coding Workflows](/practices/agentic-coding-workflows/) — with human review
-- [CI/CD Pipelines](/practices/ci-cd-pipelines/) — the foundation needed first
 
 ## Resources
 

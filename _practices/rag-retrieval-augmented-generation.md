@@ -21,7 +21,7 @@ Query → Embed → Vector Search → Top-K Chunks → LLM Context → Response
 
 - **Chunking strategy** — How to split documents (fixed-size, semantic, by function)
 - **Embedding model** — Converts text to vectors (OpenAI `text-embedding-3`, `nomic-embed-text`, etc.)
-- **Vector store** — Stores and retrieves embeddings (see [Vector Databases](/technologies/vector-databases/))
+- **Vector store** — Stores and retrieves embeddings (see [Vector Databases](/practices/vector-databases/))
 - **LLM** — Synthesizes retrieved context into an answer
 
 ## Use Cases in Modernization

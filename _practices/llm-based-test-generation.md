@@ -16,7 +16,7 @@ LLMs can read a function or class and generate a set of unit tests covering happ
 1. **IDE-based generation** — Ask Copilot/Cursor to generate tests for a selected function
 2. **Agentic generation** — Agent reads a whole module and writes a full test file
 3. **Mutation-guided** — Combine with mutation testing tools to identify gaps
-4. **Characterization tests** — See [AI-generated Characterization Tests](/technologies/ai-generated-characterization-tests/)
+4. **Characterization tests** — See [AI-generated Characterization Tests](/practices/ai-generated-characterization-tests/)
 
 ## When to Use
 

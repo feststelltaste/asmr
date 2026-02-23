@@ -1,15 +1,15 @@
 ---
-title: "Human-in-the-loop (HITL) Review Patterns"
+title: "Human in the Loop"
 stage: apply
 category: Agentic AI Tools
-description: "Patterns for effectively reviewing agent-generated code — focusing on architectural intent and edge cases rather than syntax."
+description: "The essential role of humans in directing, verifying, and refining agentic workflows — shifting from coding to high-level architectural oversight."
 strategic_value: core
 devops_phases: [code, test]
 ---
 
 ## Overview
 
-As AI agents move from single-line completions to generating whole features or refactoring entire modules, the traditional code review process becomes a bottleneck. HITL Review Patterns define a new collaboration model where the human reviewer acts as a high-level architect rather than a line-by-line editor.
+As AI agents move from single-line completions to generating whole features or refactoring entire modules, the traditional development process becomes a bottleneck. Human-in-the-Loop (HITL) defines a new collaboration model where the human acts as a high-level architect and decision-maker rather than a line-by-line editor.
 
 ## Core Patterns
 
