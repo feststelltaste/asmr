@@ -6,9 +6,6 @@ description: "Adding new functionality by creating fresh, clean code ('Sprouting
 strategic_value: core
 devops_phases: [plan, code]
 ---
-
-# Sprout and Bubble
-
 ## Problem
 
 How do you add new features or modern logic to a "big ball of mud" legacy system without making the technical debt worse or forcing the agent to navigate thousands of lines of existing spaghetti code?

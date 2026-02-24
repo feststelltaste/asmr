@@ -6,9 +6,6 @@ description: "Categorizing subdomains into Core, Supporting, and Generic to focu
 strategic_value: core
 devops_phases: [plan, code]
 ---
-
-# Selective Modernization (Strategic Design)
-
 ## Problem
 
 How do you prevent a modernization project from becoming a "death march" by trying to apply the same high level of quality, cost, and agentic reasoning to every part of a massive legacy system?

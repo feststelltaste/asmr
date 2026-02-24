@@ -6,9 +6,6 @@ description: "Identifying and exploiting 'seams' to break dependencies and extra
 strategic_value: core
 devops_phases: [plan, code, test]
 ---
-
-# Seams and Slicing
-
 ## Problem
 
 How do you break the tight coupling of a legacy codebase to enable automated testing and refactoring without performing a high-risk, large-scale rewrite of the entire module?
