@@ -62,7 +62,12 @@ layout: default
 
   {% if page.content != "" %}
   <div class="tech-body">
-    {{ content }}
+    {% comment %} Strip the first H1 if it exists to avoid duplication with the layout header {% endcomment %}
+    {% if content contains "</h1>" %}
+      {{ content | split: "</h1>" | last }}
+    {% else %}
+      {{ content }}
+    {% endif %}
   </div>
   {% endif %}
 
