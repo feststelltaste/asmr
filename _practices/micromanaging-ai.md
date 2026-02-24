@@ -69,13 +69,13 @@ In 2026, the volume of code generated during a modernization project is too high
 
 ## Related Patterns
 
-- [Human in the Loop](human-in-the-loop.md) — the modern alternative; strategic oversight instead of tactical micromanagement.
-- [Harness Engineering](harness-engineering.md) — the prerequisite for stopping micromanagement.
-- [Autonomous Pattern Enforcement](autonomous-pattern-enforcement.md) — automates the "style" corrections that lead to human micromanagement.
+- [Human in the Loop](../human-in-the-loop/) — the modern alternative; strategic oversight instead of tactical micromanagement.
+- [Harness Engineering](../harness-engineering/) — the prerequisite for stopping micromanagement.
+- [Autonomous Pattern Enforcement](../autonomous-pattern-enforcement/) — automates the "style" corrections that lead to human micromanagement.
 
 ## What Next
 
-After identifying micromanagement as a bottleneck, implement [Harness Engineering](harness-engineering.md) to build the automated trust required to give agents more autonomy.
+After identifying micromanagement as a bottleneck, implement [Harness Engineering](../harness-engineering/) to build the automated trust required to give agents more autonomy.
 
 ## Staging History
 

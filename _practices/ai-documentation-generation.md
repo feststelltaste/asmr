@@ -78,13 +78,13 @@ Documentation is a "high-leverage" asset in modernization—it reduces the cost 
 
 ## Related Patterns
 
-- [AI-assisted Legacy Code Reading](ai-assisted-legacy-code-reading.md) — code reading is the input; documentation generation is the durable output of that understanding.
-- [Knowledge Graph-Augmented Generation (GraphRAG)](knowledge-graph-augmented-generation.md) — can be used to ensure that generated documentation is consistent across the entire system.
-- [Human in the Loop](human-in-the-loop.md) — a critical quality gate for all AI-generated documentation before it is published.
+- [AI-assisted Legacy Code Reading](../ai-assisted-legacy-code-reading/) — code reading is the input; documentation generation is the durable output of that understanding.
+- [Knowledge Graph-Augmented Generation (GraphRAG)](../knowledge-graph-augmented-generation/) — can be used to ensure that generated documentation is consistent across the entire system.
+- [Human in the Loop](../human-in-the-loop/) — a critical quality gate for all AI-generated documentation before it is published.
 
 ## What Next
 
-After generating initial documentation, apply [Human in the Loop](human-in-the-loop.md) to ensure its accuracy before making it the primary source of truth for the modernization team.
+After generating initial documentation, apply [Human in the Loop](../human-in-the-loop/) to ensure its accuracy before making it the primary source of truth for the modernization team.
 
 ## Staging History
 

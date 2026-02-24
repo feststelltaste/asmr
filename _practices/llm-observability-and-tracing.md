@@ -80,13 +80,13 @@ Observability is the "black box recorder" of the agentic era. Without it, you ar
 
 ## Related Patterns
 
-- [AI Gateway / Routing](ai-gateway-routing.md) — gateways are often the primary source of the data used for tracing and cost tracking.
-- [LLM-as-judge Evaluation](llm-as-judge-evaluation.md) — the scores from the judge are a key metric to track in an observability platform.
-- [Agentic Coding Workflows](agentic-coding-workflows.md) — observability is what makes these complex workflows debuggable and auditable.
+- [AI Gateway / Routing](../ai-gateway-routing/) — gateways are often the primary source of the data used for tracing and cost tracking.
+- [LLM-as-judge Evaluation](../llm-as-judge-evaluation/) — the scores from the judge are a key metric to track in an observability platform.
+- [Agentic Coding Workflows](../agentic-coding-workflows/) — observability is what makes these complex workflows debuggable and auditable.
 
 ## What Next
 
-After instrumenting your first agent, implement [LLM-as-judge Evaluation](llm-as-judge-evaluation.md) to begin automatically scoring the quality of the outputs captured in your observability platform.
+After instrumenting your first agent, implement [LLM-as-judge Evaluation](../llm-as-judge-evaluation/) to begin automatically scoring the quality of the outputs captured in your observability platform.
 
 ## Staging History
 

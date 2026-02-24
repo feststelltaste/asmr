@@ -76,13 +76,13 @@ In the agentic era, "Linting" is no longer just about semicolons and indentation
 
 ## Related Patterns
 
-- [Context Engineering](context-engineering.md) — the Pattern Catalog used by the Guardian is a primary output of context engineering.
-- [AI-driven Architectural Fitness Functions](ai-driven-architectural-fitness-functions.md) — these functions provide the "executable" part of the Guardian's verification logic.
-- [Agentic Coding Workflows](agentic-coding-workflows.md) — pattern enforcement is the "quality control" layer within a larger agentic workflow.
+- [Context Engineering](../context-engineering/) — the Pattern Catalog used by the Guardian is a primary output of context engineering.
+- [AI-driven Architectural Fitness Functions](../ai-driven-architectural-fitness-functions/) — these functions provide the "executable" part of the Guardian's verification logic.
+- [Agentic Coding Workflows](../agentic-coding-workflows/) — pattern enforcement is the "quality control" layer within a larger agentic workflow.
 
 ## What Next
 
-After implementing basic pattern enforcement, apply [AI-driven Architectural Fitness Functions](ai-driven-architectural-fitness-functions.md) to add "hard" executable assertions to your Guardian agent's toolkit.
+After implementing basic pattern enforcement, apply [AI-driven Architectural Fitness Functions](../ai-driven-architectural-fitness-functions/) to add "hard" executable assertions to your Guardian agent's toolkit.
 
 ## Staging History
 

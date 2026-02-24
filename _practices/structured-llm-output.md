@@ -79,13 +79,13 @@ Modernization is a "pipelined" activity—it involves taking information from on
 
 ## Related Patterns
 
-- [Agentic Coding Workflows](agentic-coding-workflows.md) — structured output is the "communication protocol" between different agents in a workflow.
-- [AI-driven Technical Debt Detection](ai-technical-debt-detection.md) — the detection agent produces its report in a structured format for easy import into a backlog.
-- [LLM-as-judge Evaluation](llm-as-judge-evaluation.md) — the judge provides its score and reasoning in a structured JSON format for easy analysis.
+- [Agentic Coding Workflows](../agentic-coding-workflows/) — structured output is the "communication protocol" between different agents in a workflow.
+- [AI-driven Technical Debt Detection](../ai-technical-debt-detection/) — the detection agent produces its report in a structured format for easy import into a backlog.
+- [LLM-as-judge Evaluation](../llm-as-judge-evaluation/) — the judge provides its score and reasoning in a structured JSON format for easy analysis.
 
 ## What Next
 
-After establishing your first structured output pipeline, implement [LLM-as-judge Evaluation](llm-as-judge-evaluation.md) to automatically score the quality of the structured data your agents are producing.
+After establishing your first structured output pipeline, implement [LLM-as-judge Evaluation](../llm-as-judge-evaluation/) to automatically score the quality of the structured data your agents are producing.
 
 ## Staging History
 

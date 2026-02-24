@@ -79,13 +79,13 @@ The Strangler Fig is the "industry standard" for safe legacy modernization. It i
 
 ## Related Patterns
 
-- [Anti-Corruption Layer](anti-corruption-layer.md) — the primary technical pattern for protecting the new "strangler" service from legacy data corruption.
-- [Domain-Driven Refactoring](domain-driven-refactoring.md) — provides the "cuts" for the slices that are strangled from the monolith.
-- [AI-generated Characterization Tests](ai-generated-characterization-tests.md) — provides the safety net needed to prove functional parity before switching traffic to the new service.
+- [Anti-Corruption Layer](../anti-corruption-layer/) — the primary technical pattern for protecting the new "strangler" service from legacy data corruption.
+- [Domain-Driven Refactoring](../domain-driven-refactoring/) — provides the "cuts" for the slices that are strangled from the monolith.
+- [AI-generated Characterization Tests](../ai-generated-characterization-tests/) — provides the safety net needed to prove functional parity before switching traffic to the new service.
 
 ## What Next
 
-After identifying your first "seam," apply [Anti-Corruption Layer](anti-corruption-layer.md) to protect your new service as you begin to migrate the logic from the monolith using the [Strangler Fig Pattern](strangler-fig-pattern.md).
+After identifying your first "seam," apply [Anti-Corruption Layer](../anti-corruption-layer/) to protect your new service as you begin to migrate the logic from the monolith using the [Strangler Fig Pattern](../strangler-fig-pattern/).
 
 ## Staging History
 

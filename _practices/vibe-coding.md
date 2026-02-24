@@ -80,13 +80,13 @@ Vibe Coding is the "high-velocity" layer of the agentic stack. For legacy modern
 
 ## Related Patterns
 
-- [Agentic Coding Workflows](agentic-coding-workflows.md) — vibe coding is the "interactive" version of an agentic workflow.
-- [Context Engineering](context-engineering.md) — the "vibe" is only as good as the context (rules, architecture docs) you provide the AI.
-- [Harness Engineering](harness-engineering.md) — for high-stakes projects, "vibe coding" must be paired with a "harness" to ensure correctness.
+- [Agentic Coding Workflows](../agentic-coding-workflows/) — vibe coding is the "interactive" version of an agentic workflow.
+- [Context Engineering](../context-engineering/) — the "vibe" is only as good as the context (rules, architecture docs) you provide the AI.
+- [Harness Engineering](../harness-engineering/) — for high-stakes projects, "vibe coding" must be paired with a "harness" to ensure correctness.
 
 ## What Next
 
-After prototyping your first service with [Vibe Coding](vibe-coding.md), implement [Harness Engineering](harness-engineering.md) to build the structured environment where the "vibe" code can be properly tested and verified.
+After prototyping your first service with [Vibe Coding](../vibe-coding/), implement [Harness Engineering](../harness-engineering/) to build the structured environment where the "vibe" code can be properly tested and verified.
 
 ## Staging History
 

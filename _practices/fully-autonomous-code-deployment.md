@@ -81,13 +81,13 @@ Fully autonomous deployment is the "North Star" of the agentic era—the point w
 
 ## Related Patterns
 
-- [Agentic Coding Workflows](agentic-coding-workflows.md) — autonomy is the final stage of an agentic workflow; most teams should stay at the "human review" stage for now.
-- [Agent Sandboxing](agent-sandboxing.md) — any agent with deploy keys must be run in a highly secure, isolated environment.
-- [Harness Engineering](harness-engineering.md) — the "harness" is what makes autonomous deployment safe by providing the verification and guardrails.
+- [Agentic Coding Workflows](../agentic-coding-workflows/) — autonomy is the final stage of an agentic workflow; most teams should stay at the "human review" stage for now.
+- [Agent Sandboxing](../agent-sandboxing/) — any agent with deploy keys must be run in a highly secure, isolated environment.
+- [Harness Engineering](../harness-engineering/) — the "harness" is what makes autonomous deployment safe by providing the verification and guardrails.
 
 ## What Next
 
-After successfully running [Agentic Coding Workflows](agentic-coding-workflows.md) with human review for several months, identify your lowest-risk use cases and begin experimenting with [Fully Autonomous Code Deployment](fully-autonomous-code-deployment.md) for those specific tasks.
+After successfully running [Agentic Coding Workflows](../agentic-coding-workflows/) with human review for several months, identify your lowest-risk use cases and begin experimenting with [Fully Autonomous Code Deployment](../fully-autonomous-code-deployment/) for those specific tasks.
 
 ## Staging History
 

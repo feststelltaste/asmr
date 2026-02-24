@@ -69,13 +69,13 @@ Legacy systems are unpredictable by nature — they contain undocumented side ef
 
 ## Related Patterns
 
-- [Human in the Loop](human-in-the-loop.md) — complementary control; sandboxing limits what an agent can do autonomously, HITL review adds explicit checkpoints for high-stakes decisions in the legacy environment.
-- [LLM Observability & Tracing](llm-observability-and-tracing.md) — sandboxed environments can capture complete audit logs of agent actions; observability tooling makes those logs useful for debugging when agent behavior on legacy code is unexpected.
-- [Agentic Coding Workflows](agentic-coding-workflows.md) — sandboxing is a prerequisite for safely running agents against legacy systems at any meaningful scale.
+- [Human in the Loop](../human-in-the-loop/) — complementary control; sandboxing limits what an agent can do autonomously, HITL review adds explicit checkpoints for high-stakes decisions in the legacy environment.
+- [LLM Observability & Tracing](../llm-observability-and-tracing/) — sandboxed environments can capture complete audit logs of agent actions; observability tooling makes those logs useful for debugging when agent behavior on legacy code is unexpected.
+- [Agentic Coding Workflows](../agentic-coding-workflows/) — sandboxing is a prerequisite for safely running agents against legacy systems at any meaningful scale.
 
 ## What Next
 
-After assessing sandboxing options, apply [Human in the Loop](human-in-the-loop.md) to define which agent actions always require explicit human confirmation — particularly those that touch legacy databases, infrastructure scripts, or production-adjacent systems.
+After assessing sandboxing options, apply [Human in the Loop](../human-in-the-loop/) to define which agent actions always require explicit human confirmation — particularly those that touch legacy databases, infrastructure scripts, or production-adjacent systems.
 
 ## Staging History
 

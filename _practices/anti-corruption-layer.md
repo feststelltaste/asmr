@@ -75,13 +75,13 @@ When AI agents generate new code against a legacy system without an ACL, they wi
 
 ## Related Patterns
 
-- [Strangler Fig Pattern](strangler-fig-pattern.md) — the ACL is a prerequisite; once it is in place, you can strangle the legacy system slice by slice without new code absorbing legacy concepts.
+- [Strangler Fig Pattern](../strangler-fig-pattern/) — the ACL is a prerequisite; once it is in place, you can strangle the legacy system slice by slice without new code absorbing legacy concepts.
 - **Shared Database** — an anti-pattern the ACL helps avoid; direct shared DB access bypasses the translation boundary and lets legacy schema bleed into new services.
-- [Agentic Coding Workflows](agentic-coding-workflows.md) — agents generating new services against a legacy system should be given the ACL interface as their target contract, not the raw legacy schema.
+- [Agentic Coding Workflows](../agentic-coding-workflows/) — agents generating new services against a legacy system should be given the ACL interface as their target contract, not the raw legacy schema.
 
 ## What Next
 
-With an ACL in place at a legacy boundary, use [Strangler Fig Pattern](strangler-fig-pattern.md) to begin routing functionality to the new system — the ACL provides the translation infrastructure you need to migrate incrementally without a flag day.
+With an ACL in place at a legacy boundary, use [Strangler Fig Pattern](../strangler-fig-pattern/) to begin routing functionality to the new system — the ACL provides the translation infrastructure you need to migrate incrementally without a flag day.
 
 ## Staging History
 

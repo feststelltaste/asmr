@@ -79,9 +79,9 @@ In the era of autonomous AI agents, "it passes the tests" is no longer a high en
 
 ## Related Patterns
 
-- [AI-generated Characterization Tests](ai-generated-characterization-tests.md) — characterization tests provide a "best effort" safety net; formal verification provides a "proven" safety net.
-- [Harness Engineering](harness-engineering.md) — formal verification is part of the "advanced harness" used to verify agentic output.
-- [Agentic Coding Workflows](agentic-coding-workflows.md) — for high-stakes tasks, the agent's workflow must include a "verify with solver" step.
+- [AI-generated Characterization Tests](../ai-generated-characterization-tests/) — characterization tests provide a "best effort" safety net; formal verification provides a "proven" safety net.
+- [Harness Engineering](../harness-engineering/) — formal verification is part of the "advanced harness" used to verify agentic output.
+- [Agentic Coding Workflows](../agentic-coding-workflows/) — for high-stakes tasks, the agent's workflow must include a "verify with solver" step.
 
 ## What Next
 

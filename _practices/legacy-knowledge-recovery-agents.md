@@ -80,13 +80,13 @@ Modernization is as much about "recovering the past" as it is about "building th
 
 ## Related Patterns
 
-- [RAG (Retrieval-Augmented Generation)](rag-retrieval-augmented-generation.md) — the underlying technique for knowledge recovery.
-- [Knowledge Graph-Augmented Generation (GraphRAG)](knowledge-graph-augmented-generation.md) — provides a more structured way to link non-code context to code entities.
-- [AI-assisted Legacy Code Reading](ai-assisted-legacy-code-reading.md) — recovery agents provide the "why," while code reading agents provide the "what."
+- [RAG (Retrieval-Augmented Generation)](../rag-retrieval-augmented-generation/) — the underlying technique for knowledge recovery.
+- [Knowledge Graph-Augmented Generation (GraphRAG)](../knowledge-graph-augmented-generation/) — provides a more structured way to link non-code context to code entities.
+- [AI-assisted Legacy Code Reading](../ai-assisted-legacy-code-reading/) — recovery agents provide the "why," while code reading agents provide the "what."
 
 ## What Next
 
-After establishing a basic RAG system for your documentation, begin linking it to your codebase via [Knowledge Graph-Augmented Generation (GraphRAG)](knowledge-graph-augmented-generation.md) to provide a richer "context map" for your modernization agents.
+After establishing a basic RAG system for your documentation, begin linking it to your codebase via [Knowledge Graph-Augmented Generation (GraphRAG)](../knowledge-graph-augmented-generation/) to provide a richer "context map" for your modernization agents.
 
 ## Staging History
 

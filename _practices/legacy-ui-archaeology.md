@@ -78,13 +78,13 @@ The UI is the "face" of the business logic. In many older systems, it is the onl
 
 ## Related Patterns
 
-- [AI-assisted Legacy Code Reading](ai-assisted-legacy-code-reading.md) — UI archaeology provides the "visual" context that complements source code reading.
-- [Domain-Driven Refactoring](domain-driven-refactoring.md) — labels and flows in the UI are high-quality signals for identifying Bounded Contexts.
-- [AI-generated Characterization Tests](ai-generated-characterization-tests.md) — use the recovered UI rules to generate end-to-end tests for the new front-end.
+- [AI-assisted Legacy Code Reading](../ai-assisted-legacy-code-reading/) — UI archaeology provides the "visual" context that complements source code reading.
+- [Domain-Driven Refactoring](../domain-driven-refactoring/) — labels and flows in the UI are high-quality signals for identifying Bounded Contexts.
+- [AI-generated Characterization Tests](../ai-generated-characterization-tests/) — use the recovered UI rules to generate end-to-end tests for the new front-end.
 
 ## What Next
 
-After reconstructing your first legacy screen, apply [Vibe Coding](vibe-coding.md) to quickly iterate on the modern React/Angular implementation of that component.
+After reconstructing your first legacy screen, apply [Vibe Coding](../vibe-coding/) to quickly iterate on the modern React/Angular implementation of that component.
 
 ## Staging History
 

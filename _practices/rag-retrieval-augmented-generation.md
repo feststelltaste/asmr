@@ -78,13 +78,13 @@ Modernization is an information-intensive activity. Developers spend 80% of thei
 
 ## Related Patterns
 
-- [Vector Databases](vector-databases.md) — the underlying storage technology for RAG systems.
-- [Knowledge Graph-Augmented Generation (GraphRAG)](knowledge-graph-augmented-generation.md) — the "structural" evolution of RAG that captures deeper relationships.
-- [AI-assisted Legacy Code Reading](ai-assisted-legacy-code-reading.md) — RAG provides the "snippets" that the code reading agent uses to build its understanding.
+- [Vector Databases](../vector-databases/) — the underlying storage technology for RAG systems.
+- [Knowledge Graph-Augmented Generation (GraphRAG)](../knowledge-graph-augmented-generation/) — the "structural" evolution of RAG that captures deeper relationships.
+- [AI-assisted Legacy Code Reading](../ai-assisted-legacy-code-reading/) — RAG provides the "snippets" that the code reading agent uses to build its understanding.
 
 ## What Next
 
-After establishing a basic RAG system for your documentation, apply [Knowledge Graph-Augmented Generation (GraphRAG)](knowledge-graph-augmented-generation.md) to capture the deeper, structural dependencies of your codebase.
+After establishing a basic RAG system for your documentation, apply [Knowledge Graph-Augmented Generation (GraphRAG)](../knowledge-graph-augmented-generation/) to capture the deeper, structural dependencies of your codebase.
 
 ## Staging History
 

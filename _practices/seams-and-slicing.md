@@ -73,13 +73,13 @@ Modernization projects often fail because they try to fix everything at once. **
 
 ## Related Patterns
 
-- [Harness Engineering](harness-engineering.md) — seams are the "brackets" that hold the harness in place.
-- [AI-generated Characterization Tests](ai-generated-characterization-tests.md) — characterization tests prove the slice is correct; seams allow you to run those tests.
-- [Anti-Corruption Layer](anti-corruption-layer.md) — an ACL is often the permanent architectural implementation of an exploited seam.
+- [Harness Engineering](../harness-engineering/) — seams are the "brackets" that hold the harness in place.
+- [AI-generated Characterization Tests](../ai-generated-characterization-tests/) — characterization tests prove the slice is correct; seams allow you to run those tests.
+- [Anti-Corruption Layer](../anti-corruption-layer/) — an ACL is often the permanent architectural implementation of an exploited seam.
 
 ## What Next
 
-After identifying your first seam, apply [Harness Engineering](harness-engineering.md) to build the automated feedback loop around that specific functional slice.
+After identifying your first seam, apply [Harness Engineering](../harness-engineering/) to build the automated feedback loop around that specific functional slice.
 
 ## Staging History
 

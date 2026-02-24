@@ -79,13 +79,13 @@ Modernization is a high-volume activity. If we only rely on human review, the hu
 
 ## Related Patterns
 
-- [Human in the Loop](human-in-the-loop.md) — LLM-as-a-Judge is the primary assistant for the human reviewer, performing the first pass of quality control.
-- [AI-powered Code Review](ai-powered-code-review.md) — the "Judge" is the engine that drives the automated code review bot.
-- [LLM Observability & Tracing](llm-observability-and-tracing.md) — the evaluation scores from the judge are a key metric to track in an observability platform.
+- [Human in the Loop](../human-in-the-loop/) — LLM-as-a-Judge is the primary assistant for the human reviewer, performing the first pass of quality control.
+- [AI-powered Code Review](../ai-powered-code-review/) — the "Judge" is the engine that drives the automated code review bot.
+- [LLM Observability & Tracing](../llm-observability-and-tracing/) — the evaluation scores from the judge are a key metric to track in an observability platform.
 
 ## What Next
 
-After establishing a basic evaluation rubric, implement [LLM Observability & Tracing](llm-observability-and-tracing.md) to track your judge's scores over time and identify which modules are the hardest for your agents to modernize correctly.
+After establishing a basic evaluation rubric, implement [LLM Observability & Tracing](../llm-observability-and-tracing/) to track your judge's scores over time and identify which modules are the hardest for your agents to modernize correctly.
 
 ## Staging History
 

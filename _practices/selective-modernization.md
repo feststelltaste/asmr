@@ -74,13 +74,13 @@ Modernization is about the **Selective Allocation of Excellence**. As Eric Evans
 
 ## Related Patterns
 
-- [Domain-Driven Refactoring](domain-driven-refactoring.md) — the tactical counterpart; DDD refactoring is what you do *after* you've selected the target.
-- [Small Language Models (SLMs)](small-language-models.md) — the primary tool for "low-value" subdomain modernization.
-- [Anti-Corruption Layer](anti-corruption-layer.md) — used to isolate the Core Domain from the rest of the system.
+- [Domain-Driven Refactoring](../domain-driven-refactoring/) — the tactical counterpart; DDD refactoring is what you do *after* you've selected the target.
+- [Small Language Models (SLMs)](../small-language-models/) — the primary tool for "low-value" subdomain modernization.
+- [Anti-Corruption Layer](../anti-corruption-layer/) — used to isolate the Core Domain from the rest of the system.
 
 ## What Next
 
-After mapping your subdomains, apply [Domain-Driven Refactoring](domain-driven-refactoring.md) specifically to your **Core Domain** to begin its deep modernization.
+After mapping your subdomains, apply [Domain-Driven Refactoring](../domain-driven-refactoring/) specifically to your **Core Domain** to begin its deep modernization.
 
 ## Staging History
 

@@ -77,13 +77,13 @@ In an agentic workflow, the human developer's value shifts from "syntax expertis
 
 ## Related Patterns
 
-- [Agentic Coding Workflows](agentic-coding-workflows.md) — HITL is the "control layer" that makes these workflows safe and effective.
-- [AI-powered Code Review](ai-powered-code-review.md) — the primary tool that assists the human in their HITL role.
-- [Context Engineering](context-engineering.md) — the human's primary way of "directing" the agent is by engineering the context it operates in.
+- [Agentic Coding Workflows](../agentic-coding-workflows/) — HITL is the "control layer" that makes these workflows safe and effective.
+- [AI-powered Code Review](../ai-powered-code-review/) — the primary tool that assists the human in their HITL role.
+- [Context Engineering](../context-engineering/) — the human's primary way of "directing" the agent is by engineering the context it operates in.
 
 ## What Next
 
-After establishing a HITL process, implement [AI-powered Code Review](ai-powered-code-review.md) to provide the first layer of automated feedback for your human reviewers.
+After establishing a HITL process, implement [AI-powered Code Review](../ai-powered-code-review/) to provide the first layer of automated feedback for your human reviewers.
 
 ## Staging History
 

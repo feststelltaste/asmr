@@ -78,13 +78,13 @@ Modernization agents are token-hungry; they often read thousands of lines of cod
 
 ## Related Patterns
 
-- [Agentic Coding Workflows](agentic-coding-workflows.md) — gateways provide the reliable, cost-effective API surface these agents need to operate.
-- [LLM Observability & Tracing](llm-observability-and-tracing.md) — gateways are often the primary source of the data used for tracing and debugging agents.
-- [Self-hosted Open LLMs](self-hosted-open-llms.md) — gateways can route requests to internal, self-hosted models for sensitive legacy data.
+- [Agentic Coding Workflows](../agentic-coding-workflows/) — gateways provide the reliable, cost-effective API surface these agents need to operate.
+- [LLM Observability & Tracing](../llm-observability-and-tracing/) — gateways are often the primary source of the data used for tracing and debugging agents.
+- [Self-hosted Open LLMs](../self-hosted-open-llms/) — gateways can route requests to internal, self-hosted models for sensitive legacy data.
 
 ## What Next
 
-After setting up a gateway, implement [LLM Observability & Tracing](llm-observability-and-tracing.md) to begin auditing the cost and quality of your agent's interactions with the different routed models.
+After setting up a gateway, implement [LLM Observability & Tracing](../llm-observability-and-tracing/) to begin auditing the cost and quality of your agent's interactions with the different routed models.
 
 ## Staging History
 

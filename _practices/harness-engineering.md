@@ -78,13 +78,13 @@ Prompting an LLM to write code is only 20% of the job; the other 80% is the engi
 
 ## Related Patterns
 
-- [Agent Sandboxing](agent-sandboxing.md) — the "primitive" layer of the harness; providing the isolation.
-- [AI-generated Characterization Tests](ai-generated-characterization-tests.md) — the "verification" layer of the harness; proving the correctness of the work.
-- [Agentic Coding Workflows](agentic-coding-workflows.md) — the "operational" layer; defining how the agent uses the harness to complete its tasks.
+- [Agent Sandboxing](../agent-sandboxing/) — the "primitive" layer of the harness; providing the isolation.
+- [AI-generated Characterization Tests](../ai-generated-characterization-tests/) — the "verification" layer of the harness; proving the correctness of the work.
+- [Agentic Coding Workflows](../agentic-coding-workflows/) — the "operational" layer; defining how the agent uses the harness to complete its tasks.
 
 ## What Next
 
-After building your first harness, apply [Agentic Coding Workflows](agentic-coding-workflows.md) to begin running your first multi-step modernization tasks within that environment.
+After building your first harness, apply [Agentic Coding Workflows](../agentic-coding-workflows/) to begin running your first multi-step modernization tasks within that environment.
 
 ## Staging History
 

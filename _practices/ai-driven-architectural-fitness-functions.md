@@ -77,13 +77,13 @@ Modernization is not a one-time event; it is an evolutionary process. Without au
 
 ## Related Patterns
 
-- [Anti-Corruption Layer](anti-corruption-layer.md) — fitness functions are the primary tool for ensuring the ACL boundary is not breached.
-- [AI-driven Technical Debt Detection](ai-technical-debt-detection.md) — debt detection finds the problems; fitness functions prevent them from coming back.
-- [Continuous Modernization Agents](continuous-modernization-agents.md) — these agents use fitness functions as their "definition of done" for refactoring tasks.
+- [Anti-Corruption Layer](../anti-corruption-layer/) — fitness functions are the primary tool for ensuring the ACL boundary is not breached.
+- [AI-driven Technical Debt Detection](../ai-technical-debt-detection/) — debt detection finds the problems; fitness functions prevent them from coming back.
+- [Continuous Modernization Agents](../continuous-modernization-agents/) — these agents use fitness functions as their "definition of done" for refactoring tasks.
 
 ## What Next
 
-After establishing your first set of fitness functions, implement [Continuous Modernization Agents](continuous-modernization-agents.md) to automatically fix the violations the functions identify.
+After establishing your first set of fitness functions, implement [Continuous Modernization Agents](../continuous-modernization-agents/) to automatically fix the violations the functions identify.
 
 ## Staging History
 

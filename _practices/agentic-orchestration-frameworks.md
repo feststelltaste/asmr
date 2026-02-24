@@ -70,13 +70,13 @@ As modernization tasks grow from single-file edits to system-wide refactors, the
 
 ## Related Patterns
 
-- [Agentic Coding Workflows](agentic-coding-workflows.md) — orchestration frameworks provide the infrastructure for running these workflows at scale.
-- [Agent Sandboxing](agent-sandboxing.md) — any framework-orchestrated agent with shell access must still be sandboxed for security.
-- [Human in the Loop](human-in-the-loop.md) — orchestration frameworks should include explicit "interrupt" points for human review of agent decisions.
+- [Agentic Coding Workflows](../agentic-coding-workflows/) — orchestration frameworks provide the infrastructure for running these workflows at scale.
+- [Agent Sandboxing](../agent-sandboxing/) — any framework-orchestrated agent with shell access must still be sandboxed for security.
+- [Human in the Loop](../human-in-the-loop/) — orchestration frameworks should include explicit "interrupt" points for human review of agent decisions.
 
 ## What Next
 
-After selecting an orchestration framework, implement [Agentic Coding Workflows](agentic-coding-workflows.md) to begin executing your first multi-step modernization tasks.
+After selecting an orchestration framework, implement [Agentic Coding Workflows](../agentic-coding-workflows/) to begin executing your first multi-step modernization tasks.
 
 ## Staging History
 

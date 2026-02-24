@@ -81,13 +81,13 @@ Continuous modernization is the only way to avoid the "legacy trap" where a syst
 
 ## Related Patterns
 
-- [Automated Dead Code Removal](automated-dead-code-removal.md) — one of the primary tasks for a continuous modernization agent.
-- [AI-powered Code Review](ai-powered-code-review.md) — the "first responder" that checks the agent's PRs before a human looks at them.
-- [Agentic Coding Workflows](agentic-coding-workflows.md) — the underlying technique used by the janitor agent to plan and execute its tasks.
+- [Automated Dead Code Removal](../automated-dead-code-removal/) — one of the primary tasks for a continuous modernization agent.
+- [AI-powered Code Review](../ai-powered-code-review/) — the "first responder" that checks the agent's PRs before a human looks at them.
+- [Agentic Coding Workflows](../agentic-coding-workflows/) — the underlying technique used by the janitor agent to plan and execute its tasks.
 
 ## What Next
 
-After establishing a "Janitor Agent," apply [AI-powered Code Review](ai-powered-code-review.md) to ensure its PRs are always high quality before they reach the human team.
+After establishing a "Janitor Agent," apply [AI-powered Code Review](../ai-powered-code-review/) to ensure its PRs are always high quality before they reach the human team.
 
 ## Staging History
 

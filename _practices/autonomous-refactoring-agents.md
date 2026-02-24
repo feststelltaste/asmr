@@ -78,13 +78,13 @@ Legacy systems are often "frozen in time" because the cost of large-scale refact
 
 ## Related Patterns
 
-- [Agentic Coding Workflows](agentic-coding-workflows.md) — refactoring is one of the most powerful use cases for an agentic workflow.
-- [AI-generated Characterization Tests](ai-generated-characterization-tests.md) — provide the safety net that refactoring agents need to be truly autonomous.
-- [Agent Sandboxing](agent-sandboxing.md) — any agent with the power to refactor an entire codebase must be run in a secure, isolated environment.
+- [Agentic Coding Workflows](../agentic-coding-workflows/) — refactoring is one of the most powerful use cases for an agentic workflow.
+- [AI-generated Characterization Tests](../ai-generated-characterization-tests/) — provide the safety net that refactoring agents need to be truly autonomous.
+- [Agent Sandboxing](../agent-sandboxing/) — any agent with the power to refactor an entire codebase must be run in a secure, isolated environment.
 
 ## What Next
 
-After successfully automating your first large-scale refactor, implement [Continuous Modernization Agents](continuous-modernization-agents.md) to have "Janitor Agents" perform these kinds of refactorings on a schedule.
+After successfully automating your first large-scale refactor, implement [Continuous Modernization Agents](../continuous-modernization-agents/) to have "Janitor Agents" perform these kinds of refactorings on a schedule.
 
 ## Staging History
 

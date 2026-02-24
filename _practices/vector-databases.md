@@ -81,13 +81,13 @@ Vector search is the "search engine" of the agentic era. Without it, an AI agent
 
 ## Related Patterns
 
-- [RAG (Retrieval-Augmented Generation)](rag-retrieval-augmented-generation.md) — vector databases are the primary storage and retrieval engine for RAG.
-- [Knowledge Graph-Augmented Generation (GraphRAG)](knowledge-graph-augmented-generation.md) — GraphRAG combines vector search with a graph database for even richer context.
-- [AI-assisted Codebase Analytics](ai-assisted-codebase-analytics.md) — vector search can be used to find "duplicate" or "similar" logic across a massive codebase.
+- [RAG (Retrieval-Augmented Generation)](../rag-retrieval-augmented-generation/) — vector databases are the primary storage and retrieval engine for RAG.
+- [Knowledge Graph-Augmented Generation (GraphRAG)](../knowledge-graph-augmented-generation/) — GraphRAG combines vector search with a graph database for even richer context.
+- [AI-assisted Codebase Analytics](../ai-assisted-codebase-analytics/) — vector search can be used to find "duplicate" or "similar" logic across a massive codebase.
 
 ## What Next
 
-After establishing your first vector store (like [pgvector](https://github.com/pgvector/pgvector)), implement a [RAG (Retrieval-Augmented Generation)](rag-retrieval-augmented-generation.md) pipeline to provide your agents with live access to your code and documentation.
+After establishing your first vector store (like [pgvector](https://github.com/pgvector/pgvector)), implement a [RAG (Retrieval-Augmented Generation)](../rag-retrieval-augmented-generation/) pipeline to provide your agents with live access to your code and documentation.
 
 ## Staging History
 

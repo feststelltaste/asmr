@@ -73,13 +73,13 @@ In legacy modernization, "Stop the Bleeding" is the first priority. **Sprouting*
 
 ## Related Patterns
 
-- [Context Engineering](context-engineering.md) — defines the rules that apply inside the bubble.
-- [Anti-Corruption Layer](anti-corruption-layer.md) — the "skin" of the bubble that protects it from legacy corruption.
-- [Strangler Fig Pattern](strangler-fig-pattern.md) — the bubble is the starting point for a strangler fig migration.
+- [Context Engineering](../context-engineering/) — defines the rules that apply inside the bubble.
+- [Anti-Corruption Layer](../anti-corruption-layer/) — the "skin" of the bubble that protects it from legacy corruption.
+- [Strangler Fig Pattern](../strangler-fig-pattern/) — the bubble is the starting point for a strangler fig migration.
 
 ## What Next
 
-After sprouting your first modern capability, apply [Anti-Corruption Layer](anti-corruption-layer.md) to formalize the boundary of your new Bubble Context.
+After sprouting your first modern capability, apply [Anti-Corruption Layer](../anti-corruption-layer/) to formalize the boundary of your new Bubble Context.
 
 ## Staging History
 
