@@ -4,6 +4,7 @@ stage: trial
 category: Legacy Modernization
 description: "Using agents to automatically write and execute tests that enforce architectural boundaries and prevent newly refactored code from drifting back into legacy patterns."
 strategic_value: core
+evolution: genesis
 devops_phases: [plan, test]
 ---
 

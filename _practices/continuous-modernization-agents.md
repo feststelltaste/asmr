@@ -4,6 +4,7 @@ stage: trial
 category: Agentic AI Tools
 description: "Background 'Janitor' agents that incrementally pay down technical debt by updating dependencies, fixing linting errors, and improving tests on a schedule."
 strategic_value: core
+evolution: genesis
 devops_phases: [code, build, operate]
 ---
 

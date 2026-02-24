@@ -4,6 +4,7 @@ stage: apply
 category: Legacy Modernization
 description: "Using LLMs to explain, document, and map unknown legacy code — COBOL, old Java, undocumented PHP. Dramatically reduces the 'understanding' phase."
 strategic_value: core
+evolution: product
 devops_phases: [plan, code]
 ---
 

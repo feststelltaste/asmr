@@ -4,6 +4,7 @@ stage: trial
 category: AI Tooling Setup
 description: "Using a powerful LLM to evaluate quality of outputs from another LLM. Scales automated quality assessment but requires careful calibration."
 strategic_value: supporting
+evolution: custom-built
 devops_phases: [test, monitor]
 ---
 

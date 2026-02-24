@@ -4,6 +4,7 @@ stage: stop
 category: Agentic AI Tools
 description: "GitHub Copilot, Cursor, Windsurf — using IDE-embedded AI tools to assist developers with localized code generation and explanation during modernization efforts."
 strategic_value: supporting
+evolution: commodity
 devops_phases: [code]
 ---
 

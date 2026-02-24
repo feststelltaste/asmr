@@ -4,6 +4,7 @@ stage: apply
 category: Agentic AI Tools
 description: "Designing the information environment for AI agents — project rules files, architecture docs, and conventions that help AI understand your codebase and produce better output."
 strategic_value: core
+evolution: custom-built
 devops_phases: [plan, code]
 ---
 

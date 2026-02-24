@@ -4,6 +4,7 @@ stage: apply
 category: Legacy Modernization
 description: "Categorizing subdomains into Core, Supporting, and Generic to focus agentic effort and high-quality design where it matters most for business value."
 strategic_value: core
+evolution: commodity
 devops_phases: [plan, code]
 ---
 ## Problem

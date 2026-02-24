@@ -4,6 +4,7 @@ stage: apply
 category: Legacy Modernization
 description: "Adding new functionality by creating fresh, clean code ('Sprouting') and containing it within a protected 'Bubble Context' to prevent legacy patterns from polluting modern logic."
 strategic_value: core
+evolution: commodity
 devops_phases: [plan, code]
 ---
 ## Problem

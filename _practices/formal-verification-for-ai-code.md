@@ -4,6 +4,7 @@ stage: assess
 category: AI Tooling Setup
 description: "Using automated reasoning and mathematical proofs to ensure agent-generated refactorings are logically equivalent to the legacy code."
 strategic_value: supporting
+evolution: genesis
 devops_phases: [test, build]
 ---
 

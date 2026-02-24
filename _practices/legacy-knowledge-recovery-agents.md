@@ -4,6 +4,7 @@ stage: trial
 category: Legacy Modernization
 description: "Agents designed to ingest Jira, Slack, and old documentation to reconstruct the 'why' behind legacy code decisions."
 strategic_value: core
+evolution: genesis
 devops_phases: [plan, code]
 ---
 

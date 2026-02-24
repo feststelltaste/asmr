@@ -4,6 +4,7 @@ stage: trial
 category: AI Tooling Setup
 description: "Langfuse, LangSmith, Arize — tracking LLM calls, costs, latencies, and outputs in production. Necessary as soon as agents touch real workflows."
 strategic_value: supporting
+evolution: product
 devops_phases: [operate, monitor]
 ---
 

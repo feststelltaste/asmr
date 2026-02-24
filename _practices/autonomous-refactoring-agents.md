@@ -4,6 +4,7 @@ stage: trial
 category: Agentic AI Tools
 description: "AI agents that autonomously refactor large codebases (extract classes, rename, restructure). Powerful but needs human oversight for complex domains."
 strategic_value: core
+evolution: custom-built
 devops_phases: [code, test]
 ---
 

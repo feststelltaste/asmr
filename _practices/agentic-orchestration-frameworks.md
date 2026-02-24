@@ -4,6 +4,7 @@ stage: trial
 category: AI Tooling Setup
 description: "LangGraph, CrewAI, AutoGen — frameworks for multi-step, multi-agent pipelines. Useful but often add complexity; consider starting without them."
 strategic_value: supporting
+evolution: product
 devops_phases: [code, build]
 ---
 

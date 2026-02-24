@@ -4,6 +4,7 @@ stage: assess
 category: AI Tooling Setup
 description: "Fine-tuning models on internal proprietary code for better context-aware suggestions and code completion specific to your architecture."
 strategic_value: supporting
+evolution: custom-built
 devops_phases: [build, operate]
 ---
 

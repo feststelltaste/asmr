@@ -4,6 +4,7 @@ stage: assess
 category: AI Tooling Setup
 description: "Using smaller, specialized models (1B-8B parameters) for high-volume, low-complexity tasks. Not yet mature enough for most enterprise modernization workflows."
 strategic_value: generic
+evolution: product
 devops_phases: [code, build]
 ---
 

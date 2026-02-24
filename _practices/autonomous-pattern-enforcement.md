@@ -4,6 +4,7 @@ stage: trial
 category: Agentic AI Tools
 description: "A multi-agent self-correction loop where a 'Guardian' agent monitors an 'Executor' agent, providing real-time feedback on convention violations to force autonomous improvement."
 strategic_value: core
+evolution: genesis
 devops_phases: [code, test]
 ---
 

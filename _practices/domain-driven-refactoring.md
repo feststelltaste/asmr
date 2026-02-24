@@ -4,6 +4,7 @@ stage: apply
 category: Legacy Modernization
 description: "Using DDD techniques (bounded contexts, ubiquitous language) to find the right cuts when splitting a monolith. LLMs can help identify domain concepts in code."
 strategic_value: supporting
+evolution: commodity
 devops_phases: [plan, code]
 ---
 

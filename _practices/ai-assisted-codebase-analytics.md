@@ -4,6 +4,7 @@ stage: apply
 category: Legacy Modernization
 description: "Using AI-assisted vibe coding to build custom, situation-specific analysis scripts that reveal how your legacy system actually behaves — hotspots, coupling, change frequency, and more."
 strategic_value: core
+evolution: custom-built
 devops_phases: [plan, monitor]
 ---
 

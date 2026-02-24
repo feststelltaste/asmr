@@ -4,6 +4,7 @@ stage: apply
 category: Agentic AI Tools
 description: "The essential role of humans in directing, verifying, and refining agentic workflows — shifting from coding to high-level architectural oversight."
 strategic_value: core
+evolution: commodity
 devops_phases: [code, test]
 ---
 

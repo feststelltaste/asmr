@@ -4,6 +4,7 @@ stage: trial
 category: Agentic AI Tools
 description: "Automated PR review using LLMs (CodeRabbit, etc.) that flags logic errors, security issues, and style violations."
 strategic_value: supporting
+evolution: product
 devops_phases: [build, test]
 ---
 

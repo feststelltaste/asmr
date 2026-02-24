@@ -4,6 +4,7 @@ stage: apply
 category: Legacy Modernization
 description: "Providing a dedicated translation boundary between a legacy system and new code to prevent outdated data structures and naming from polluting a modern domain model."
 strategic_value: supporting
+evolution: commodity
 devops_phases: [plan, code]
 ---
 

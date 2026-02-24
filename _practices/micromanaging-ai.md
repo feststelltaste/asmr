@@ -4,6 +4,7 @@ stage: remove
 category: Agentic AI Tools
 description: "The anti-pattern of manually reviewing and correcting every individual line of AI-generated code rather than using automated guardrails and high-level architectural oversight."
 strategic_value: generic
+evolution: genesis
 devops_phases: [code, test]
 ---
 

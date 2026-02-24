@@ -4,6 +4,7 @@ stage: apply
 category: Agentic AI Tools
 description: "Auto-generating API docs, changelogs, architecture summaries, and README files from code and commit history."
 strategic_value: supporting
+evolution: product
 devops_phases: [code, release]
 ---
 

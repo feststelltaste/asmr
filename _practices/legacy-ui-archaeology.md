@@ -4,6 +4,7 @@ stage: trial
 category: Legacy Modernization
 description: "Using multi-modal vision models to reconstruct business rules from legacy screens (Mainframe, VB6, PowerBuilder) and generate modern front-end equivalents."
 strategic_value: core
+evolution: genesis
 devops_phases: [plan, code]
 ---
 

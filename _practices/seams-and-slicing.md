@@ -4,6 +4,7 @@ stage: apply
 category: Legacy Modernization
 description: "Identifying and exploiting 'seams' to break dependencies and extracting vertical 'slices' of functionality to make legacy code testable and refactorable by agents."
 strategic_value: core
+evolution: commodity
 devops_phases: [plan, code, test]
 ---
 ## Problem
