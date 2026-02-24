@@ -34,19 +34,19 @@
     syncWidth();
     window.addEventListener('resize', syncWidth);
 
-    // Sync top -> bottom
+    // Sync top -> bottom (passive: true lets the browser handle touch scroll natively)
     wrapper.addEventListener('scroll', function() {
       if (scroll.scrollLeft !== wrapper.scrollLeft) {
         scroll.scrollLeft = wrapper.scrollLeft;
       }
-    });
+    }, { passive: true });
 
     // Sync bottom -> top
     scroll.addEventListener('scroll', function() {
       if (wrapper.scrollLeft !== scroll.scrollLeft) {
         wrapper.scrollLeft = scroll.scrollLeft;
       }
-    });
+    }, { passive: true });
   }
 
   /* ------------------------------------------------------------------
@@ -125,11 +125,11 @@
         // Exit focus mode first so all stages are visible/laid out
         if (resetStageFocus) resetStageFocus();
 
-        // Wait one frame for the DOM to repaint before measuring positions
+        // Double rAF: first frame applies DOM changes, second measures stable layout
         requestAnimationFrame(function () {
-          var tr = target.getBoundingClientRect();
-          var sr = scroll.getBoundingClientRect();
-          scroll.scrollBy({ left: tr.left - sr.left, behavior: 'smooth' });
+          requestAnimationFrame(function () {
+            target.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+          });
         });
       });
     });
