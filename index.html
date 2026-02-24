@@ -176,7 +176,6 @@ layout: default
             >
               <div class="tcard-meta">
                 <span class="tcard-cat">{{ tech.category }}</span>
-                {% if tech.strategic_value %}<span class="sv-badge sv-{{ tech.strategic_value }}">{{ tech.strategic_value }}</span>{% endif %}
               </div>
               <span class="tcard-name">{{ tech.title }}</span>
               {% if tech.description %}<span class="tcard-desc">{{ tech.description }}</span>{% endif %}
@@ -187,6 +186,7 @@ layout: default
                     <span class="dsq{% if tech.devops_phases contains p %} dsq-on{% endif %}" title="{{ p }}">{{ p | slice: 0 | upcase }}</span>
                   {% endfor %}
                 </div>
+                {% if tech.strategic_value %}<span class="sv-badge sv-{{ tech.strategic_value }}">{{ tech.strategic_value }}</span>{% endif %}
                 {% if tech.evolution %}<span class="ev-badge ev-{{ tech.evolution | slugify }}">{{ tech.evolution }}</span>{% endif %}
               </div>
             </a>
