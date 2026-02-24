@@ -64,22 +64,6 @@ layout: default
   </details>
 </div>
 
-<!-- Stats -->
-<div class="stats-row">
-  <div class="stat">
-    <span class="stat-num">{{ total_techs }}</span>
-    <span class="stat-lbl">Practices</span>
-  </div>
-  <div class="stat">
-    <span class="stat-num">{{ site.data.roadmap.stages | size }}</span>
-    <span class="stat-lbl">Stages</span>
-  </div>
-  <div class="stat">
-    <span class="stat-num">{{ categories | size }}</span>
-    <span class="stat-lbl">Categories</span>
-  </div>
-</div>
-
 <!-- Controls -->
 <div class="controls">
   <div class="search-wrap">
@@ -109,6 +93,7 @@ layout: default
 </div>
 
 <!-- Phase navigation -->
+<p class="nav-label">Navigation</p>
 <nav class="phase-nav" aria-label="Jump to stage">
   {% for stage in site.data.roadmap.stages %}
     {% unless forloop.first %}

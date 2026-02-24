@@ -375,6 +375,15 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 /* ================================================================
    PHASE NAV
    ================================================================ */
+.nav-label {
+  font-size: .7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--c-faint);
+  margin-bottom: .35rem;
+}
+
 .phase-nav {
   position: sticky;
   top: 0;
