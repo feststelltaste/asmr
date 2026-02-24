@@ -2,7 +2,7 @@
 title: "AI Coding Assistants"
 stage: stop
 category: Agentic AI Tools
-description: "Using IDE-embedded, completion-centric AI tools to assist developers with localized code generation and explanation during modernization efforts."
+description: "GitHub Copilot, Cursor, Windsurf — using IDE-embedded AI tools to assist developers with localized code generation and explanation during modernization efforts."
 strategic_value: supporting
 devops_phases: [code]
 ---
