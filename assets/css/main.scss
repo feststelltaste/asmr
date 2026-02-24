@@ -936,6 +936,60 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 /* ================================================================
+   STAGE FOCUS MODE
+   ================================================================ */
+
+/* Stage header is now a clickable trigger */
+.stage-hd {
+  cursor: pointer;
+  user-select: none;
+
+  &:hover { filter: brightness(1.05); }
+}
+
+/* State 1 & 2 — one stage fills the viewport */
+.roadmap-scroll.is-stage-focused {
+  /* Hide the connectors between stages */
+  .connector { display: none; }
+
+  /* Hide every stage that isn't active */
+  .stage:not(.is-stage-active) { display: none; }
+
+  /* Active stage stretches to fill available width */
+  .stage.is-stage-active {
+    width: auto;
+    min-width: 0;
+    flex: 1;
+
+    /* 4-column card grid */
+    .stage-bd {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: .625rem;
+
+      /* empty messages span all four columns */
+      .stage-empty { grid-column: 1 / -1; }
+    }
+  }
+}
+
+/* State 1 — collapsed: cards show title only */
+.roadmap-scroll.is-stage-focused.is-stage-collapsed {
+  .stage.is-stage-active {
+    .tcard-meta,
+    .tcard-desc,
+    .tcard-footer { display: none; }
+  }
+}
+
+/* Hide the scroll hint and top scrollbar in focused mode */
+.roadmap.is-stage-focused {
+  .top-scrollbar-wrapper { display: none; }
+
+  & + .roadmap-hint { display: none; }
+}
+
+/* ================================================================
    SCROLL HINT
    ================================================================ */
 .roadmap-hint {

@@ -7,6 +7,7 @@
     initSearch();
     initDrawer();
     initTopScrollbar();
+    initStageFocus();
   });
 
   /* ------------------------------------------------------------------
@@ -159,6 +160,57 @@
       el.style.display = show ? 'flex' : 'none';
       el.setAttribute('aria-hidden', String(!show));
     });
+  }
+
+  /* ------------------------------------------------------------------
+     Stage focus — click stage header to cycle through 3 view states:
+       0 → normal (all stages, single column)
+       1 → focused + collapsed (only this stage, 4-col grid, title only)
+       2 → focused + expanded  (only this stage, 4-col grid, full cards)
+       back to 0 on third click
+  ------------------------------------------------------------------ */
+  function initStageFocus() {
+    var scroll  = document.querySelector('.roadmap-scroll');
+    var roadmap = document.querySelector('.roadmap');
+    if (!scroll || !roadmap) return;
+
+    var activeStage = null;
+    var focusState  = 0; // 0 | 1 | 2
+
+    document.querySelectorAll('.stage-hd').forEach(function (hd) {
+      hd.addEventListener('click', function () {
+        var stage = hd.closest('.stage');
+        if (!stage) return;
+
+        if (!activeStage || activeStage !== stage) {
+          // New stage selected — always enter state 1
+          if (activeStage) activeStage.classList.remove('is-stage-active');
+          activeStage = stage;
+          focusState  = 1;
+        } else {
+          // Same stage — advance: 1 → 2 → 0
+          focusState = focusState < 2 ? focusState + 1 : 0;
+        }
+
+        applyFocusState();
+        window.dispatchEvent(new Event('resize'));
+      });
+    });
+
+    function applyFocusState() {
+      if (focusState === 0) {
+        // Reset everything
+        if (activeStage) activeStage.classList.remove('is-stage-active');
+        activeStage = null;
+        scroll.classList.remove('is-stage-focused', 'is-stage-collapsed');
+        roadmap.classList.remove('is-stage-focused');
+      } else {
+        activeStage.classList.add('is-stage-active');
+        scroll.classList.add('is-stage-focused');
+        roadmap.classList.add('is-stage-focused');
+        scroll.classList.toggle('is-stage-collapsed', focusState === 1);
+      }
+    }
   }
 
 })();
