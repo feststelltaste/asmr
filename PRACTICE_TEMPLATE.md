@@ -57,11 +57,11 @@
 
 ## Known Uses
 
-> Documented instances of this practice in the wild — case studies, field reports, and published accounts of real adoption. **Every entry must link to a source.** Unverifiable anecdotes do not belong here.
+> Documented instances of this practice in the wild — case studies, field reports, and published accounts of real adoption. **Every entry must link to a source.** Unverifiable anecdotes do not belong here. **Prefer open-source projects and community adoptions over proprietary vendor case studies.**
 
 ## References
 
-> Reading and watching material for practitioners who want to go deeper.
+> Reading and watching material for practitioners who want to go deeper. **Prefer open-source tools and community resources over vendor or commercial products.** When a commercial product is the only meaningful example, name it but note the open-source alternative where one exists.
 
 [Books, papers, blog posts, talk recordings, and documentation relevant to this practice. Each entry should include a brief note on why it is worth reading.]
 
@@ -86,72 +86,76 @@
 ---
 ---
 
-# Example: Strangler Fig Migration
+# Example: AI-Generated Characterization Tests
 
 ---
 
 ## Problem
 
-How do you replace a legacy system without halting ongoing business operations?
+How do you safely refactor or replace legacy code that has no test coverage and whose full behavior cannot be understood from reading the source alone?
 
 *This problem is difficult because:*
 
-- The legacy system is deeply integrated with many other systems and processes.
-- A full rewrite takes years, during which the old system still needs maintenance.
-- Stakeholders cannot tolerate extended downtime or feature freezes.
+- Legacy codebases often have zero test coverage for critical paths — the original authors relied on manual testing or never wrote tests at all.
+- Reading the code is insufficient: years of implicit behavior (special cases, silent error suppression, undocumented rounding) is invisible until something breaks.
+- Without a safety net, every refactoring step is a gamble — and AI agents making autonomous changes to untested code amplify this risk dramatically.
 
 *Yet, solving this problem is feasible because:*
 
-- Most systems can be decomposed into independent functional areas.
-- Modern APIs and routing layers allow traffic to be redirected incrementally.
+- LLMs can read a legacy function and generate test cases that call it with varied inputs and assert on its current outputs, capturing behavior without requiring the developer to understand it first.
+- Generating mechanical test coverage is exactly the repetitive, pattern-following work where AI agents outperform humans in speed while requiring little domain knowledge.
 
 ## Solution
 
-1. Identify a functional slice of the legacy system that can be isolated.
-2. Build the replacement for that slice in the new system.
-3. Route traffic/requests for that slice to the new implementation.
-4. Repeat until the legacy system is fully replaced, then decommission it.
+Use an AI coding agent to generate characterization tests — also called golden master tests — before any modernization change is made:
+
+1. **Identify the target unit** — select a function, class, or module that must change. Prefer units with clear inputs and outputs.
+2. **Generate tests against current behavior** — prompt an agent to call the code with diverse inputs and assert on whatever the code currently produces, right or wrong.
+3. **Run and commit the baseline** — confirm all generated tests pass against the unchanged code, then commit them as the refactoring safety net.
+4. **Modernize under the net** — make the change; any deviation from captured behavior immediately causes a failure.
+5. **Replace incrementally** — as domain understanding grows, swap characterization tests for intentional unit tests that assert on correct behavior rather than current behavior.
 
 ## Tradeoffs
 
 **Pros:**
 
-- Risk is reduced because you migrate in small, testable increments.
-- The business continues to operate throughout the migration.
+- Provides a refactoring safety net in minutes rather than days for untested legacy code.
+- Once in place, AI agents can make further autonomous changes with the characterization tests as a guard rail.
+- No domain knowledge required to generate the initial suite — the agent reads the code, not the requirements.
 
 **Cons:**
 
-- You must maintain two systems in parallel for a potentially long period, increasing operational complexity.
+- Characterization tests codify bugs alongside correct behavior and must not be treated as a specification.
+- Test quality depends on input diversity — an agent may miss edge cases that only appear in production data.
 
 **Difficulties:**
 
-- Finding clean boundaries in the legacy system to "strangle" can be challenging, especially with tightly coupled code or shared databases.
-
+- Output-sensitive code (timestamps, random IDs, external calls) requires manual wrapping or mocking before tests can be stabilized.
+- Agents tend toward happy-path inputs; prompting explicitly for boundary conditions and error paths is necessary for useful coverage.
 
 ## Rationale
 
-A big-bang rewrite is one of the riskiest strategies in software engineering. By migrating incrementally, each step is small, reversible, and independently verifiable. The legacy system continues to serve as a fallback until the new system proves itself.
+Autonomous AI agents changing legacy code without a test harness is the highest-risk combination in modernization work. Characterization tests change the economics: an agent can generate them faster than any human, and once in place they make subsequent agentic changes safe and auditable. This practice is the prerequisite that unlocks confident agentic refactoring — not a nice-to-have, but the foundation the rest of the agentic workflow depends on.
 
 ## Known Uses
 
-- [Amazon — decomposing the retail monolith](https://aws.amazon.com/solutions/case-studies/) — routed traffic to new services incrementally over several years while the legacy system remained live; a canonical large-scale strangler fig.
-- [Shopify — extracting checkout into a standalone service](https://shopify.engineering/shopify-monolith) — migrated payments and checkout without downtime by strangling the monolith slice by slice.
+- [Diffblue Cover — automated Java test generation](https://www.diffblue.com/products/) — generates characterization tests for legacy Java codebases automatically; adopted by large financial institutions to establish baseline coverage before modernization programs.
 
 ## References
 
-- [Martin Fowler — "Strangler Fig Application"](https://martinfowler.com/bliki/StranglerFigApplication.html) — the original write-up that named the pattern; explains the biological metaphor and migration mechanics.
-- [Sam Newman — *Building Microservices*](https://samnewman.io/books/building_microservices/) — chapter on decomposing monoliths covers the strangler fig as the primary migration strategy.
+- [Michael Feathers — *Working Effectively with Legacy Code*](https://www.oreilly.com/library/view/working-effectively-with/0131177052/) — introduced characterization testing as the primary technique for safely modifying untested legacy code; the conceptual foundation for this practice.
+- [Approval Tests](https://approvaltests.com/) — a test framework built specifically for golden master / characterization testing; useful when AI-generated assertions need a structured output-comparison mechanism.
 
 ## Related Patterns
 
-- **If It Ain't Broke, Don't Fix It** — prioritize which parts actually need migration.
-- **Fix Problems, Not Symptoms** — ensure you're addressing root causes, not just moving technical debt.
-- **Branch by Abstraction** — an alternative incremental migration technique.
+- **Harness Engineering** — characterization tests are the inner loop of a broader test harness; this practice provides the automated safety net that makes the harness trustworthy.
+- **Agentic Coding Workflows** — agents making autonomous refactoring changes depend on characterization tests as their guard rail; this practice is a prerequisite for safe agentic operation on legacy code.
+- **Human-in-the-Loop Review** — reviewing AI-generated characterization tests before committing is a critical checkpoint; a missed edge case in the baseline propagates silently into every subsequent change.
 
 ## What Next
 
-Consider applying **Most Valuable First** to decide which slice of the legacy system to migrate first.
+With a characterization test baseline in place, apply **Agentic Coding Workflows** to begin autonomous refactoring — the agent now has a safety net it can run after every change.
 
 ## Staging History
 
-**Apply (Feb 2026):** The Strangler Fig pattern is well-established, broadly documented, and has extensive real-world validation across major migrations (Amazon, Shopify, Netflix). Teams facing legacy replacement have reliable tooling and implementation guidance. Immediate adoption is recommended.
+**Apply (Feb 2026):** AI-assisted characterization test generation is well-validated in practice and directly addresses the most dangerous gap in agentic legacy modernization: agents changing untested code. The underlying technique is proven; LLMs make the generation step fast enough to apply routinely. Immediate adoption is recommended for any team running agents against a legacy codebase.
