@@ -9,6 +9,7 @@
     initFilters();
     initSearch();
     initDrawer();
+    initPocDrawer();
     initTopScrollbar();
     initStageFocus();
   });
@@ -69,6 +70,36 @@
     overlay.addEventListener('click', function() { toggleDrawer(false); });
 
     document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && drawer.classList.contains('is-active')) {
+        toggleDrawer(false);
+      }
+    });
+  }
+
+  /* ------------------------------------------------------------------
+     PoC Warning drawer
+  ------------------------------------------------------------------ */
+  function initPocDrawer() {
+    var openBtn  = document.getElementById('open-poc-drawer');
+    var closeBtn = document.getElementById('close-poc-drawer');
+    var overlay  = document.getElementById('poc-drawer-overlay');
+    var drawer   = document.getElementById('poc-drawer');
+
+    if (!openBtn || !drawer) return;
+
+    function toggleDrawer(isOpen) {
+      drawer.classList.toggle('is-active', isOpen);
+      overlay.classList.toggle('is-active', isOpen);
+      drawer.setAttribute('aria-hidden', !isOpen);
+      overlay.setAttribute('aria-hidden', !isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    }
+
+    openBtn.addEventListener('click', function () { toggleDrawer(true); });
+    closeBtn.addEventListener('click', function () { toggleDrawer(false); });
+    overlay.addEventListener('click', function () { toggleDrawer(false); });
+
+    document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && drawer.classList.contains('is-active')) {
         toggleDrawer(false);
       }

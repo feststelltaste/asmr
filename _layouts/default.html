@@ -5,13 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% if page.title and page.title != site.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description" content="{{ page.description | default: site.description }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&family=DM+Mono:wght@400;500&display=swap">
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 </head>
 <body>
-  <div class="poc-banner" role="alert">
-    ⚠️ <strong>Proof of Concept — Not Validated.</strong> This roadmap is an early draft. Content has not been reviewed, validated, or endorsed by any organization. Use as a starting point for discussion only.
-  </div>
-
   <header class="site-header">
     <div class="header-inner">
       <div class="header-brand">
@@ -24,6 +23,10 @@
         </div>
       </div>
       <div class="header-actions">
+        <button id="open-poc-drawer" class="header-info-btn header-poc-btn" aria-label="Proof of Concept Warning">
+          <span aria-hidden="true">⚠️</span>
+          <span>PoC</span>
+        </button>
         <button id="open-drawer" class="header-info-btn" aria-label="About this Roadmap">
           <span class="info-icon" aria-hidden="true">i</span>
           <span>About</span>
@@ -37,10 +40,18 @@
   </main>
 
   {% include about-drawer.html %}
+  {% include poc-drawer.html %}
 
   <footer class="site-footer">
     <p>
-      Inspired by <a href="https://cards42.org/roadmap/" target="_blank" rel="noopener">cards42's technology roadmap</a> and this <a href="https://www.thoughtworks.com/radar" target="_blank" rel="noopener">ThoughtWorks Technology Radar</a> 
+      Made by <a href="https://markusharrer.de" target="_blank" rel="noopener">Markus Harrer</a>
+      &middot;
+      <a href="https://github.com/feststelltaste/asmr" target="_blank" rel="noopener">GitHub</a>
+      &middot;
+      Licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>
+    </p>
+    <p>
+      Inspired by <a href="https://cards42.org/roadmap/" target="_blank" rel="noopener">cards42's technology roadmap</a> and the <a href="https://www.thoughtworks.com/radar" target="_blank" rel="noopener">ThoughtWorks Technology Radar</a>
     </p>
   </footer>
 

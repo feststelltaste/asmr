@@ -5,8 +5,8 @@
    TOKENS  — Slate-based neutral palette, professional blue accent
    ================================================================ */
 :root {
-  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
-  --font-mono: "JetBrains Mono", "Fira Code", "SFMono-Regular", Consolas, monospace;
+  --font-sans: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  --font-mono: "DM Mono", "JetBrains Mono", "Fira Code", Consolas, monospace;
 
   /* Neutral scale — Tailwind Slate */
   --n-0:   #ffffff;
@@ -145,6 +145,40 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   &:hover {
     background: rgba(255, 255, 255, .2);
     border-color: rgba(255, 255, 255, .3);
+  }
+}
+
+.header-poc-btn {
+  background: rgba(251, 191, 36, .1);
+  border-color: rgba(251, 191, 36, .3);
+  color: #fbbf24;
+
+  &:hover {
+    background: rgba(251, 191, 36, .2);
+    border-color: rgba(251, 191, 36, .45);
+  }
+}
+
+.poc-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: .45rem;
+  margin-bottom: 1.25rem;
+
+  li {
+    font-size: .875rem;
+    color: var(--c-muted);
+    padding-left: 1.1rem;
+    position: relative;
+    line-height: 1.5;
+
+    &::before {
+      content: '–';
+      position: absolute;
+      left: 0;
+      color: var(--c-faint);
+    }
   }
 }
 
@@ -468,7 +502,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   padding: .5rem 0;
   margin-bottom: .875rem;
   background: var(--c-bg);
-  border-bottom: 1px solid var(--c-border);
   overflow-x: auto;
   scrollbar-width: none;
   &::-webkit-scrollbar { display: none; }
