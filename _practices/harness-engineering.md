@@ -1,6 +1,6 @@
 ---
 title: "Harness Engineering"
-stage: assess
+stage: trial
 category: Agentic AI Tools
 description: "Designing structured environments, constraints, and automated feedback loops (the 'harness') that allow AI agents to operate reliably in complex codebases."
 strategic_value: core

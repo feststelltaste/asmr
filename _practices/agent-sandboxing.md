@@ -1,6 +1,6 @@
 ---
 title: "Agent Sandboxing"
-stage: assess
+stage: apply
 category: AI Tooling Setup
 description: "Executing AI agents within secure, ephemeral compute environments to prevent unintended shell side effects or data exfiltration when modifying fragile legacy systems."
 strategic_value: supporting

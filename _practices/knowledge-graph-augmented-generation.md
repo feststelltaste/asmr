@@ -1,6 +1,6 @@
 ---
 title: "Knowledge Graph-Augmented Generation (GraphRAG)"
-stage: trial
+stage: apply
 category: AI Tooling Setup
 description: "Combining vector search with structured graph databases to help agents navigate complex codebase dependencies and domain relationships."
 strategic_value: supporting
