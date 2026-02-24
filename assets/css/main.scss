@@ -1009,6 +1009,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     .stage-bd {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
+      align-items: start;
       gap: .625rem;
 
       /* empty messages span all four columns */
@@ -1023,6 +1024,17 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     .tcard-meta,
     .tcard-desc,
     .tcard-footer { display: none; }
+
+    /* Accordion preview: one card expanded inline */
+    .tcard--preview {
+      .tcard-meta   { display: flex; }
+      .tcard-desc   { display: block; }
+      .tcard-footer { display: flex; }
+      box-shadow: var(--sh-md);
+      border-color: var(--sc);
+      outline: 2px solid var(--sc);
+      outline-offset: 1px;
+    }
   }
 }
 

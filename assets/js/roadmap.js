@@ -2,7 +2,9 @@
   'use strict';
 
   // Shared handle so nav buttons can reset focus mode before scrolling
-  var resetStageFocus = null;
+  var resetStageFocus  = null;
+  // Shared handle so focus mode can clear the card preview on state change
+  var clearCardPreview = null;
 
   document.addEventListener('DOMContentLoaded', function () {
     initPhaseNav();
@@ -12,6 +14,7 @@
     initPocDrawer();
     initTopScrollbar();
     initStageFocus();
+    initCardPreview();
   });
 
   /* ------------------------------------------------------------------
@@ -247,6 +250,9 @@
     });
 
     function applyFocusState() {
+      // Clear card preview whenever leaving collapsed state
+      if (focusState !== 1 && clearCardPreview) clearCardPreview();
+
       if (focusState === 0) {
         if (activeStage) activeStage.classList.remove('is-stage-active');
         activeStage = null;
@@ -267,6 +273,46 @@
       focusState = 0;
       applyFocusState();
     };
+  }
+
+  /* ------------------------------------------------------------------
+     Card preview — accordion expand in collapsed focus mode.
+     First click on a card title: expand it (show full content).
+     Second click: navigate to the practice page.
+     Clicking a different card: collapse the open one, expand the new one.
+  ------------------------------------------------------------------ */
+  function initCardPreview() {
+    var previewCard = null;
+
+    clearCardPreview = function () {
+      if (previewCard) {
+        previewCard.classList.remove('tcard--preview');
+        previewCard = null;
+      }
+    };
+
+    document.querySelectorAll('.tcard').forEach(function (card) {
+      card.addEventListener('click', function (e) {
+        // Only intercept clicks while in collapsed focus mode
+        if (!document.querySelector('.is-stage-collapsed')) return;
+
+        if (previewCard === card) {
+          // Second click on already-expanded card → navigate normally
+          previewCard = null;
+          card.classList.remove('tcard--preview');
+          return;
+        }
+
+        // First click (or different card) → expand, don't navigate
+        e.preventDefault();
+
+        if (previewCard) {
+          previewCard.classList.remove('tcard--preview');
+        }
+        previewCard = card;
+        card.classList.add('tcard--preview');
+      });
+    });
   }
 
 })();
