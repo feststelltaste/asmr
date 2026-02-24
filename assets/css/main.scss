@@ -610,6 +610,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   min-width: 290px;
   flex-shrink: 0;
   scroll-snap-align: start;
+  /* Leave room for the sticky phase nav when scrolled into view */
+  scroll-margin-top: 3.5rem;
+  scroll-margin-inline-start: 0;
 }
 
 .stage-hd {

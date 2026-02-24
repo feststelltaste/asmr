@@ -128,7 +128,7 @@
         // Double rAF: first frame applies DOM changes, second measures stable layout
         requestAnimationFrame(function () {
           requestAnimationFrame(function () {
-            target.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+            target.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'start' });
           });
         });
       });
