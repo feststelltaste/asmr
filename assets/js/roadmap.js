@@ -5,7 +5,71 @@
     initPhaseNav();
     initFilters();
     initSearch();
+    initDrawer();
+    initTopScrollbar();
   });
+
+  /* ------------------------------------------------------------------
+     Top scrollbar — mirror the main roadmap scroll
+  ------------------------------------------------------------------ */
+  function initTopScrollbar() {
+    var wrapper = document.querySelector('.top-scrollbar-wrapper');
+    var inner   = document.querySelector('.top-scrollbar');
+    var scroll  = document.querySelector('.roadmap-scroll');
+
+    if (!wrapper || !inner || !scroll) return;
+
+    function syncWidth() {
+      inner.style.width = scroll.scrollWidth + 'px';
+    }
+
+    syncWidth();
+    window.addEventListener('resize', syncWidth);
+
+    // Sync top -> bottom
+    wrapper.addEventListener('scroll', function() {
+      if (scroll.scrollLeft !== wrapper.scrollLeft) {
+        scroll.scrollLeft = wrapper.scrollLeft;
+      }
+    });
+
+    // Sync bottom -> top
+    scroll.addEventListener('scroll', function() {
+      if (wrapper.scrollLeft !== scroll.scrollLeft) {
+        wrapper.scrollLeft = scroll.scrollLeft;
+      }
+    });
+  }
+
+  /* ------------------------------------------------------------------
+     Drawer — About this roadmap side-panel
+  ------------------------------------------------------------------ */
+  function initDrawer() {
+    var openBtn    = document.getElementById('open-drawer');
+    var closeBtn   = document.getElementById('close-drawer');
+    var overlay    = document.getElementById('about-drawer-overlay');
+    var drawer     = document.getElementById('about-drawer');
+
+    if (!openBtn || !drawer) return;
+
+    function toggleDrawer(isOpen) {
+      drawer.classList.toggle('is-active', isOpen);
+      overlay.classList.toggle('is-active', isOpen);
+      drawer.setAttribute('aria-hidden', !isOpen);
+      overlay.setAttribute('aria-hidden', !isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    }
+
+    openBtn.addEventListener('click', function() { toggleDrawer(true); });
+    closeBtn.addEventListener('click', function() { toggleDrawer(false); });
+    overlay.addEventListener('click', function() { toggleDrawer(false); });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && drawer.classList.contains('is-active')) {
+        toggleDrawer(false);
+      }
+    });
+  }
 
   /* ------------------------------------------------------------------
      Phase nav — scroll to stage + highlight active

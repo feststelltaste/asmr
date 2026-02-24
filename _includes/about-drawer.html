@@ -1,0 +1,60 @@
+<div id="about-drawer-overlay" class="drawer-overlay" aria-hidden="true"></div>
+<aside id="about-drawer" class="drawer" aria-labelledby="drawer-title" aria-hidden="true">
+  <div class="drawer-header">
+    <h2 id="drawer-title" class="drawer-title">About this Roadmap</h2>
+    <button id="close-drawer" class="drawer-close" aria-label="Close drawer">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  
+  <div class="drawer-content">
+    <div class="ref-text">
+      <p>
+        This roadmap tracks tools, techniques, and patterns for <strong>modernizing software using agentic AI</strong> —
+        from AI coding assistants and autonomous agents to legacy migration techniques that get a revival
+        because of the new way we program with LLMs.
+        It uses the six-stage model from <a href="https://cards42.org/roadmap/" target="_blank" rel="noopener">cards42's technology roadmap</a>,
+        extending the ThoughtWorks Technology Radar with explicit <strong>Stop</strong> and <strong>Remove</strong> stages
+        to cover the full technology lifecycle.
+      </p>
+
+      <p class="ref-legend-heading">Roadmap stages</p>
+      <ul class="stage-legend">
+        {% for stage in site.data.roadmap.stages %}
+        <li style="--stage-color: {{ stage.color }}">
+          <span class="legend-icon">{% include stage-icon.html id=stage.id %}</span>
+          <span class="legend-name">{{ stage.name }}</span>
+          <span class="legend-desc">{{ stage.description }}</span>
+        </li>
+        {% endfor %}
+      </ul>
+
+      <p class="ref-legend-heading">DDD strategic relevance</p>
+      <ul class="sv-legend">
+        <li><span class="sv-badge sv-core">core</span> — Uniquely enabled by agentic AI</li>
+        <li><span class="sv-badge sv-supporting">supporting</span> — Important enablers</li>
+        <li><span class="sv-badge sv-generic">generic</span> — Commodity or anti-patterns</li>
+      </ul>
+
+      <p class="ref-legend-heading">Wardley evolution</p>
+      <ul class="sv-legend">
+        <li><span class="ev-badge ev-genesis">genesis</span> — Unique, experimental</li>
+        <li><span class="ev-badge ev-custom-built">custom-built</span> — Emerging patterns</li>
+        <li><span class="ev-badge ev-product">product</span> — Standardized tools</li>
+        <li><span class="ev-badge ev-commodity">commodity</span> — Ubiquitous utility</li>
+      </ul>
+
+      <p class="ref-legend-heading">DevOps cycle coverage</p>
+      <p class="ref-legend-desc">Each card shows which DevOps phases the practice affects.</p>
+      <div class="dsq-legend">
+        {% assign dp_labels = "plan,code,build,test,release,deploy,operate,monitor" | split: "," %}
+        {% for p in dp_labels %}
+          <span class="dsq-legend-item">
+            <span class="dsq dsq-on">{{ p | slice: 0 | upcase }}</span>
+            <span class="dsq-legend-name">{{ p | capitalize }}</span>
+          </span>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</aside>

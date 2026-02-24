@@ -108,6 +108,46 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .header-brand { display: flex; align-items: center; gap: .875rem; }
 .header-icon  { font-size: 2rem; line-height: 1; }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-info-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .4rem .9rem;
+  background: rgba(255, 255, 255, .1);
+  border: 1px solid rgba(255, 255, 255, .2);
+  border-radius: 999px;
+  color: #fff;
+  font-size: .8rem;
+  font-weight: 600;
+  transition: all .15s;
+
+  .info-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    background: #fff;
+    color: var(--hdr-bg);
+    border-radius: 50%;
+    font-size: .75rem;
+    font-weight: 800;
+    font-family: serif;
+    font-style: italic;
+  }
+
+  &:hover {
+    background: rgba(255, 255, 255, .2);
+    border-color: rgba(255, 255, 255, .3);
+  }
+}
+
 .site-home-link {
   display: block;
   text-decoration: none;
@@ -155,61 +195,91 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 /* ================================================================
-   REFERENCE CARD
+   DRAWER
    ================================================================ */
-.reference-card-wrapper { margin-bottom: 1.5rem; }
+.drawer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.4);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s ease;
 
-.reference-card {
-  background: var(--c-surface);
-  border: 1px solid var(--c-border);
-  border-radius: var(--r-lg);
-  overflow: hidden;
-  box-shadow: var(--sh-xs);
+  &.is-active {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
-.reference-card summary {
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 420px;
+  max-width: 90vw;
+  height: 100%;
+  background: var(--c-surface);
+  box-shadow: -10px 0 40px rgba(0,0,0,0.15);
+  z-index: 1001;
+  transform: translateX(100%);
+  transition: transform .3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+
+  &.is-active {
+    transform: translateX(0);
+  }
+}
+
+.drawer-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--c-border);
   display: flex;
   align-items: center;
-  gap: .625rem;
-  padding: .875rem 1.25rem;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: .9rem;
+  justify-content: space-between;
+}
+
+.drawer-title {
+  font-size: 1.125rem;
+  font-weight: 800;
   color: var(--c-text);
-  list-style: none;
-  user-select: none;
-  transition: background .15s;
-  &::-webkit-details-marker { display: none; }
 }
-.reference-card summary:hover { background: var(--n-50); }
 
-.ref-icon { font-size: 1.05rem; }
-
-.ref-toggle-hint {
-  margin-left: auto;
-  font-size: .725rem;
-  font-weight: 400;
-  color: var(--c-faint);
-}
-.reference-card[open] summary .ref-toggle-hint { display: none; }
-
-.ref-content {
+.drawer-close {
+  width: 32px;
+  height: 32px;
   display: flex;
-  gap: 2rem;
-  padding: 1.25rem 1.5rem 1.5rem;
-  border-top: 1px solid var(--c-border);
-  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  color: var(--c-muted);
+  background: var(--n-50);
+  transition: all .15s;
+
+  &:hover {
+    background: var(--n-100);
+    color: var(--c-text);
+  }
+}
+
+.drawer-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.5rem;
 }
 
 .ref-text {
-  flex: 1;
-  min-width: 260px;
-
   p {
     font-size: .875rem;
     color: var(--c-muted);
-    margin-bottom: 1rem;
-    line-height: 1.65;
+    margin-bottom: 1.25rem;
+    line-height: 1.6;
   }
 
   a { color: var(--accent); }
@@ -220,22 +290,23 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: .45rem;
+  gap: .65rem;
 
   li {
     display: flex;
     align-items: baseline;
-    gap: .5rem;
+    gap: .75rem;
     font-size: .85rem;
   }
 
   .legend-icon {
     display: inline-flex;
     align-items: center;
-    width: .875rem;
-    height: .875rem;
+    width: 1rem;
+    height: 1rem;
     color: var(--stage-color, #333);
     flex-shrink: 0;
+    margin-top: .15rem;
     svg { width: 100%; height: 100%; display: block; }
   }
 
@@ -245,8 +316,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     min-width: 72px;
   }
 
-  .legend-desc { color: var(--c-muted); font-size: .775rem; }
+  .legend-desc { color: var(--c-muted); font-size: .775rem; line-height: 1.4; }
 }
+
 
 .ref-visual {
   display: flex;
@@ -440,6 +512,23 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
    ROADMAP  (horizontal scroll)
    ================================================================ */
 .roadmap { position: relative; }
+
+.top-scrollbar-wrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: var(--c-border) transparent;
+  height: 12px;
+  margin-bottom: 4px;
+  
+  &::-webkit-scrollbar { height: 5px; }
+  &::-webkit-scrollbar-track { background: transparent; }
+  &::-webkit-scrollbar-thumb { background: var(--c-border); border-radius: 3px; }
+}
+
+.top-scrollbar {
+  height: 1px;
+}
 
 .roadmap-scroll {
   display: flex;

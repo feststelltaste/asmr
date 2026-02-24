@@ -23,12 +23,20 @@
           </a>
         </div>
       </div>
+      <div class="header-actions">
+        <button id="open-drawer" class="header-info-btn" aria-label="About this Roadmap">
+          <span class="info-icon" aria-hidden="true">i</span>
+          <span>About</span>
+        </button>
+      </div>
     </div>
   </header>
 
   <main class="site-main">
     {{ content }}
   </main>
+
+  {% include about-drawer.html %}
 
   <footer class="site-footer">
     <p>
