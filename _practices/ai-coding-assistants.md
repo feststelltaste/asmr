@@ -1,57 +1,66 @@
 ---
 title: "AI Coding Assistants"
-stage: apply
+stage: stop
 category: Agentic AI Tools
-description: "GitHub Copilot, Cursor, Windsurf — AI pair-programming that accelerates writing, refactoring, and understanding of existing code."
+description: "Using IDE-embedded, completion-centric AI tools to assist developers with localized code generation and explanation during modernization efforts."
 strategic_value: supporting
 devops_phases: [code]
 ---
 
-## Overview
+## Problem
 
-AI coding assistants embed LLM capabilities directly into the IDE, providing inline completions, chat-based Q&A about code, and whole-function generation. They are now a proven productivity multiplier for most development tasks.
+How do you accelerate the reading, comprehension, and modification of legacy codebases that are too large and underdocumented for any single developer to fully understand?
 
-## Key Tools
+*This problem is difficult because:*
 
-| Tool | Vendor | Strength |
-|------|--------|----------|
-| GitHub Copilot | GitHub / Microsoft | Broadest IDE support, team management |
-| Cursor | Cursor Inc. | Deep codebase context, multi-file edits |
-| Windsurf | Codeium | Fast, free tier, agentic flows |
-| JetBrains AI | JetBrains | Native integration with JetBrains IDEs |
+- Legacy codebases contain decades of implicit knowledge — naming is often inconsistent, logic is scattered, and the original developers are no longer available.
+- Reading and understanding legacy code consumes the majority of a modernization engineer's time before any safe change can be made.
+- Generating the necessary boilerplate for a modernization effort (adapters, mappers, test stubs, migration scripts) is unavoidable but tedious and error-prone.
 
-## When to Use
+*Yet, solving this problem is feasible because:*
 
-- Accelerating routine code (boilerplate, CRUD, tests)
-- Understanding unfamiliar legacy code quickly
-- Generating first drafts of documentation or migration scripts
+- LLMs trained on vast code corpora can explain, summarize, and continue legacy code patterns without requiring full codebase comprehension.
+- IDE-embedded assistants put this capability inline, providing immediate context-aware help during the development process.
 
-## Core Collaboration Patterns
+## Solution
 
-- **Prompt-then-review loop** — Describe intent → review output → refine. Never accept on the first pass for non-trivial code.
-- **Write the tests first** — Describe expected behavior or write unit tests, then let the AI implement. This gives you a correctness check you control.
-- **Scaffold with AI, own the logic** — Use AI for boilerplate and data wiring; write the core domain logic yourself.
-- **Paste errors directly** — Paste the full error message and stack trace back into the conversation for better AI responses.
-- **Ask for explanations** — "Explain what this function does and any risks" catches issues that a silent review might miss.
-- **Reject and re-ask** — Don't fix AI output line by line. Say "this is wrong because X — try again" and let it regenerate.
+Inline AI coding assistants (e.g., GitHub Copilot, Cursor, Windsurf) integrate LLM capabilities directly into the development environment:
 
-## Anti-patterns
+1. **Leverage code completion** to generate boilerplate (e.g., DTOs, getters, setters, or test stubs) that follows the established patterns in the current file.
+2. **Utilize inline chat** to summarize unfamiliar functions or explain complex legacy logic during initial exploration.
+3. **Apply localized refactoring tools** to rename variables or extract methods within a single file based on developer intent.
+4. **Iterate on generated snippets** through a manual "prompt-review-accept" loop, where the developer drives every individual edit.
 
-- **Merge without reading** — AI code must be reviewed as carefully as any other PR.
-- **Accepting hallucinated APIs** — Verify every method and import the AI uses actually exists.
-- **Over-prompting** — Giant prompts often produce worse results than focused, sequential prompts.
+## Tradeoffs
 
-## Risks & Considerations
+**Pros:** Facilitates faster comprehension of unfamiliar legacy code and reduces friction for simple boilerplate generation. Lower barrier to entry for developers who are already familiar with the IDE.
 
-- **Hallucinations**: Generated code must be reviewed — LLMs confidently produce plausible-looking but wrong code
-- **Over-reliance**: Junior developers may skip learning fundamentals
-- **IP / data privacy**: Check whether code is sent to third-party servers; use self-hosted models for sensitive IP
+**Cons:** Inline assistants treat legacy modernization as a series of disconnected, individual edits. They cannot reason across the full scope of a migration task, run tests to verify their own output, or coordinate changes across multiple files simultaneously.
 
-## Resources
+**Difficulties:** Developers may build "prompt-then-accept" habits that lead to the uncritical acceptance of plausible-but-wrong suggestions for unfamiliar legacy APIs. These habits can also hinder the transition to more efficient agentic workflows.
 
-- [GitHub Copilot documentation](https://docs.github.com/en/copilot) — official guide and feature reference
-- [Cursor — the AI-first code editor](https://www.cursor.com/) — homepage and docs
-- [Kent Beck — "Taming the AI"](https://tidyfirst.substack.com/p/taming-the-ai) — practical patterns for AI-assisted TDD
-- [Harper Reed — My AI Pair Programming Setup](https://harperreed.com/posts/2024-07-16-my-llm-codegen-workflow/) — real-world workflow
-- [Simon Willison — AI-assisted programming](https://simonwillison.net/tags/ai-assisted-programming/) — ongoing critical analysis
+## Rationale
 
+Inline AI coding assistants were an important first step, demonstrating that LLMs could provide useful suggestions at the speed of editing. However, legacy modernization tasks are inherently multi-step and multi-file — such as extracting a service, updating all callers, and verifying with tests. Inline assistants require a human to manually drive every individual step in that sequence. 
+
+In a legacy context, the bottleneck is rarely the individual keystroke; it is the coordination of correct changes across a complex system. Agentic tools (like Claude Code) address this by executing entire sequences from a single intent. Investing in inline assistant workflows for legacy modernization optimizes the wrong part of the process.
+
+## Known Uses
+
+- GitHub reported 55% faster task completion for routine coding with Copilot (2023–2024), though primarily on greenfield boilerplate rather than complex legacy modification.
+- [Simon Willison — AI-assisted programming](https://simonwillison.net/tags/ai-assisted-programming/) — noted a shift from inline assistants toward more agentic workflows as modernization tasks grew in complexity.
+- [Kent Beck — "Taming the AI"](https://tidyfirst.substack.com/p/taming-the-ai) — emphasizes a test-first discipline that has become the conceptual foundation for modern agentic TDD workflows.
+
+## Related Patterns
+
+- **Agentic Coding Agents** — the logical successor; agents that execute multi-step modernization tasks autonomously rather than requiring a human-driven loop for every change.
+- **Human-in-the-Loop Review** — the review discipline established with inline assistants is foundational and should be maintained when transitioning to agentic workflows.
+- **Agentic Orchestration Frameworks** — the infrastructure that enables more sophisticated autonomous agents to handle legacy codebase tasks.
+
+## What Next
+
+Transition to **Agentic Coding Agents** — utilizing tools that can autonomously plan and execute modernization goals across files, run tests, and manage version control directly.
+
+## Staging History
+
+**Stop (Feb 2026):** Agentic coding tools now handle multi-file edits, test runs, and PR creation autonomously, making the manual prompt-review-accept loop of inline assistants a significant bottleneck. Teams should move directly to agentic workflows rather than reinforcing habits centered on localized completions that will need to be unlearned.
