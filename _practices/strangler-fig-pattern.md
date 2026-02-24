@@ -7,31 +7,86 @@ strategic_value: supporting
 devops_phases: [plan, code, deploy, operate]
 ---
 
-## Overview
+# Strangler Fig Pattern
 
-Named after the strangler fig tree that grows around a host tree and eventually replaces it, this pattern wraps the legacy system with a routing layer, then incrementally redirects individual features to new implementations. The old system continues to run until it is fully replaced.
+## Problem
 
-## How It Works
+How do you replace a massive, mission-critical legacy monolith without a high-risk "big bang" rewrite that would take years to complete and could cause catastrophic production failures?
 
-1. **Facade** — Place a proxy/router in front of the legacy system
-2. **Intercept** — Route specific paths or features to new implementations
-3. **Migrate** — Move functionality piece by piece, testing each
-4. **Retire** — Once all traffic is routed, decommission the legacy system
+*This problem is difficult because:*
 
-## AI Acceleration
+- Legacy monoliths are "too big to fail"—they are deeply coupled, poorly understood, and have thousands of "undocumented" business rules that are hard to replicate from scratch.
+- A "big bang" rewrite (starting from scratch) is the most common cause of modernization failure: the business loses patience before the new system is ready to go live.
+- "Feature parity" is a moving target: as you rewrite the old system, new requirements are added to it, making the "finish line" constantly recede as you build.
+- Direct database sharing between the legacy and modern systems is a high-risk "anti-pattern" that leads to data corruption and tight coupling, preventing true independence.
+- The "fear of the unknown" keeps teams from touching critical modules, leading to a state of "architectural paralysis."
 
-LLMs are now useful at every step:
-- Analyzing legacy code to identify bounded contexts and seams
-- Generating equivalent implementations in modern languages
-- Writing integration tests to verify parity before switching traffic
+*Yet, solving this problem is feasible because:*
 
-## Risks & Considerations
+- The **Strangler Fig Pattern** allows for an "incremental" migration where individual features or modules are "strangled" from the monolith and moved to new services one by one.
+- AI agents can accelerate every step of the strangler fig: identifying the logical "seams" in the code, generating equivalent implementations in modern languages, and writing the integration tests to prove functional parity.
+- Routing layers and API gateways (like NGINX, Kong, or custom proxies) allow for the transparent, side-by-side execution of old and new code during the transition.
+- Modernization can be prioritized by "business value," delivering new features in the modern system while the legacy monolith is still running.
 
-- The facade layer adds latency and complexity
-- Defining clean seams in a deeply coupled monolith is hard
-- Requires discipline to not expand legacy dependencies during migration
+## Solution
 
-## Resources
+Implement an incremental migration using a routing layer to "strangle" the legacy monolith slice by slice:
 
-- [Martin Fowler — StranglerFigApplication](https://martinfowler.com/bliki/StranglerFigApplication.html) — the original pattern description
-- [Sam Newman — Monolith to Microservices](https://www.oreilly.com/library/view/monolith-to-microservices/9781492047834/) — book covering strangler fig and related decomposition patterns
+1. **Establish a Facade** — Place a proxy/router in front of the legacy monolith to intercept all incoming requests (API, web, or message).
+2. **Identify the first "Seam"** — Use **Domain-Driven Refactoring** and **AI-assisted Codebase Analytics** to find a well-scoped, high-value feature that can be extracted with minimal dependencies.
+3. **Build the New Service** — Implement the extracted feature in your modern target stack. Protect it with an **Anti-Corruption Layer (ACL)** to prevent legacy concepts from bleeding in.
+4. **Synchronize the Data** — Use "Event Interception" or "Change Data Capture (CDC)" to keep the data in sync between the old and new systems during the transition.
+5. **Redirect the Traffic** — Configure the facade to route requests for the extracted feature to the new service. Use **AI-powered Code Review** and **Canary Deployments** to ensure a safe rollout.
+6. **Retire and Repeat** — Once the new service is stable, decommission the corresponding logic in the legacy monolith. Repeat the process for the next feature until the monolith is gone.
+
+**Key Strangler Fig stages:**
+
+- **Transform** — Building the new feature in the modern stack.
+- **Coexist** — Running both old and new implementations side-by-side.
+- **Eliminate** — Removing the legacy implementation once the new one is proven.
+
+## Tradeoffs
+
+**Pros:**
+
+- Dramatically reduces the risk of failure compared to a "big bang" rewrite.
+- Delivers business value early and often by modernizing the most important features first.
+- Provides a continuous feedback loop that allows the team to learn and adjust their modernization strategy as they go.
+
+**Cons:**
+
+- Increases the complexity of the architecture during the migration (due to the facade and data sync).
+- The "strangling" process can take a long time, leading to a state of "two systems" that must be maintained simultaneously.
+
+**Difficulties:**
+
+- Untangling the "shared database" that often binds different parts of a monolith together.
+- Ensuring functional parity between the old and new systems for complex, undocumented edge cases.
+
+## Rationale
+
+The Strangler Fig is the "industry standard" for safe legacy modernization. It is named after the strangler fig tree that grows around a host tree and eventually replaces it, leaving only a hollow trunk. In a software context, it allows for a "risk-managed" transition where the old system provides the safety net for the new. AI agents turn this from a "years-long" manual effort into a "months-long" automated process, making it the primary pattern for any large-scale modernization program.
+
+## Known Uses
+
+- [Martin Fowler — StranglerFigApplication](https://martinfowler.com/bliki/StranglerFigApplication.html) — the original pattern description that has become the foundational text for legacy migration.
+- [Sam Newman — Monolith to Microservices](https://www.oreilly.com/library/view/monolith-to-microservices/9781492047834/) — a comprehensive book covering the strangler fig and related patterns for system decomposition.
+
+## References
+
+- [Microsoft Azure — Strangler Fig Pattern](https://learn.microsoft.com/en-us/azure/architecture/patterns/strangler-fig) — architectural guidance on implementing the pattern in a cloud environment.
+- [Google Cloud — Modernizing Monolithic Applications](https://cloud.google.com/architecture/modernizing-monolithic-applications-to-microservices) — a guide to using strangler fig for cloud-native migrations.
+
+## Related Patterns
+
+- **Anti-Corruption Layer (ACL)** — the primary technical pattern for protecting the new "strangler" service from legacy data corruption.
+- **Domain-Driven Refactoring** — provides the "cuts" for the slices that are strangled from the monolith.
+- **AI-Generated Characterization Tests** — provides the safety net needed to prove functional parity before switching traffic to the new service.
+
+## What Next
+
+After identifying your first "seam," apply **Anti-Corruption Layer (ACL)** to protect your new service as you begin to migrate the logic from the monolith using the **Strangler Fig Pattern**.
+
+## Staging History
+
+**Apply (Feb 2026):** The Strangler Fig Pattern is a foundational and well-proven practice for any serious modernization effort. It is the only reliable way to replace a large, mission-critical monolith without a high risk of failure. Immediate adoption is recommended for any large-scale modernization program.

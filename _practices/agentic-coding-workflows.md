@@ -7,33 +7,75 @@ strategic_value: core
 devops_phases: [plan, code, test]
 ---
 
-## Overview
+# Agentic Coding Workflows
 
-Agentic coding goes beyond autocomplete: the agent reads the task, plans a solution, writes files, runs tests, reads error output, and iterates — often completing non-trivial tickets end-to-end. Human oversight remains essential for review and direction.
+## Problem
 
-## Key Tools
+How do you move beyond simple code completion to handle complex, multi-file modernization tasks that require planning, execution, and verification?
 
-- **Claude Code** — Terminal-based agent with deep file/shell access
-- **Devin** — Dedicated agentic software engineer environment
-- **SWE-agent** — Open-source agent evaluated on SWE-bench
-- **OpenHands (OpenDevin)** — Open-source multi-agent platform
+*This problem is difficult because:*
 
-## When to Use
+- Legacy modernization tasks (e.g., migrating a service to a new framework or refactoring a shared library) are rarely self-contained in a single file; they involve coordinated changes across dozens of files and call sites.
+- A human developer manually driving every individual edit with a basic AI assistant becomes the bottleneck, spending more time on coordination and boilerplate than on high-value architectural decisions.
+- Verifying that a large-scale change hasn't introduced regressions requires a tight, repetitive loop of "edit-compile-test" that is slow and error-prone for humans to perform manually across a large system.
 
-- Well-scoped, self-contained tasks with clear acceptance criteria
-- Repetitive modernization work: dependency upgrades, API migrations, adding tests
-- Exploration tasks: "understand this module and explain it"
+*Yet, solving this problem is feasible because:*
 
-## Risks & Considerations
+- Frontier LLMs have developed the reasoning capability to plan multi-step sequences and use tools (shell, file system, compilers) to execute them.
+- Agentic loops can autonomously handle the repetitive "mechanical" work of modernization—renaming, moving, and updating—while reporting back for human guidance only when they encounter ambiguity or high-risk decisions.
 
-- Requires careful scoping — vague tasks produce poor results
-- Agents can go down wrong paths silently; progress monitoring is important
-- Security: agents with shell access can make destructive changes — use sandboxes
+## Solution
 
-## Resources
+Deploy autonomous AI agents that operate directly on the codebase, using a "plan-act-verify" loop to complete modernization goals:
 
-- [Anthropic — Claude Code documentation](https://docs.anthropic.com/en/docs/claude-code) — official docs for the terminal-based coding agent
-- [SWE-bench leaderboard](https://www.swebench.com/) — benchmark for evaluating agentic coding systems
-- [OpenHands (formerly OpenDevin)](https://github.com/All-Hands-AI/OpenHands) — open-source multi-agent platform
-- [Devin by Cognition](https://cognition.ai/) — AI software engineer product
+1. **Define a clear goal** — provide the agent with a high-level intent (e.g., "Migrate all JUnit 4 tests in the `payment` module to JUnit 5 and ensure they pass").
+2. **Let the agent plan** — the agent explores the codebase, identifies the scope of change, and proposes a multi-step sequence of actions.
+3. **Execute via tool use** — the agent uses shell and file system tools to make changes, compile code, and run tests.
+4. **Autonomous debugging** — when a test fails or a build breaks, the agent reads the error output and iterates on its own solution without human intervention.
+5. **Human-in-the-loop review** — the developer reviews the final PR or the session transcript, providing a final quality gate before the change is merged.
 
+## Tradeoffs
+
+**Pros:**
+
+- Dramatically increases the speed of mechanical modernization tasks.
+- Agents can work in parallel on different modules, accelerating the overall migration timeline.
+- The "edit-compile-test" loop is executed with higher frequency and consistency than a human developer.
+
+**Cons:**
+
+- Vague goals or poorly specified constraints can lead to "agent drift," where the agent makes unnecessary or incorrect changes.
+- Agents can consume significant API tokens if they get stuck in an infinite debugging loop.
+
+**Difficulties:**
+
+- Setting up the necessary environment (compilers, test runners, sandboxes) so the agent can actually run the code it is modifying.
+- Monitoring agent progress without becoming the bottleneck yourself requires a shift in developer mindset from "coder" to "orchestrator."
+
+## Rationale
+
+In legacy modernization, the bottleneck is rarely the individual keystroke; it is the coordination of correct changes across a complex system. Agentic workflows shift the developer's role from manual executor to strategic reviewer. By allowing an agent to handle the high-volume, repetitive parts of a migration—while keeping a human in the loop for architectural decisions—teams can tackle modernization projects that were previously considered too expensive or time-consuming to attempt.
+
+## Known Uses
+
+- [SWE-bench](https://www.swebench.com/) — an industry-standard benchmark where agents like Devin and Claude Code are evaluated on their ability to solve real-world GitHub issues autonomously.
+- [OpenHands (formerly OpenDevin)](https://github.com/All-Hands-AI/OpenHands) — a community-driven platform used by modernization teams to build custom agentic pipelines for large-scale refactoring.
+
+## References
+
+- [Anthropic — Claude Code documentation](https://docs.anthropic.com/en/docs/claude-code) — documentation for the terminal-based agent that demonstrates the power of direct shell and file system access.
+- [Cognition — Devin](https://cognition.ai/) — the first widely publicized autonomous AI software engineer, establishing the category of agentic coding.
+
+## Related Patterns
+
+- **Agent Sandboxing** — a prerequisite for safely running agentic workflows that have shell and file system access.
+- **Human-in-the-Loop Review** — the critical quality gate that makes autonomous agent work trustworthy in a production codebase.
+- **AI-Generated Characterization Tests** — provides the safety net that agents need to refactor legacy code without fear of regression.
+
+## What Next
+
+Once comfortable with basic agentic workflows, implement **Agent Sandboxing** to ensure these agents can run and test code in a secure, isolated environment without risking the host system.
+
+## Staging History
+
+**Trial (Feb 2026):** Agentic coding tools have moved beyond simple prototypes to being capable of solving non-trivial tickets. However, they require careful setup of build environments and sandboxing. Teams should trial them on well-scoped modernization tasks (like dependency upgrades or test migrations) before deploying them for core architectural changes.

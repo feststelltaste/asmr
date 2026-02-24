@@ -7,45 +7,83 @@ strategic_value: core
 devops_phases: [plan, monitor]
 ---
 
-## Overview
+# AI-assisted Codebase Analytics
 
-Every legacy system has unique problems that generic tools don't surface. Vibe coding makes it practical to build custom analysis tools tailored to your specific situation: a Python notebook that maps which modules change together, a script that identifies the 10% of code causing 80% of bugs, or a query that traces data flows through undocumented tables.
+## Problem
 
-This is Software Analytics applied at development speed — you describe what insight you need, the AI writes the analysis code, and you iterate on the results.
+How do you move beyond generic static analysis to build custom, situation-specific insights that reveal how your legacy system actually behaves—and where its hidden risks lie?
 
-## What You Can Build
+*This problem is difficult because:*
 
-- **Hotspot analysis** — Combine code complexity with change frequency (git log) to find where effort concentrates
-- **Coupling maps** — Identify files that always change together (logical coupling) even without direct code dependencies
-- **Temporal coupling detectors** — Find implicit dependencies not visible in the call graph
-- **Dead code finders** — Custom scripts that cross-reference static analysis with production access logs
-- **Architecture conformance checks** — Verify that module dependencies match intended architecture
-- **Dependency age trackers** — Flag libraries that haven't been updated and assess their risk
+- Legacy systems often have unique, non-standard architectural patterns that generic tools (like SonarQube or standard linters) fail to understand or misinterpret as "clean" code.
+- The most dangerous risks in a legacy system are often behavioral—hotspots of frequent change, high coupling, or "tribal knowledge" silos—rather than simple code smells.
+- Building custom analysis scripts to extract these behavioral insights from git history, logs, and code has traditionally been too slow and expensive for a modernization team to justify.
+- Modernization teams often guess where to focus their effort based on anecdotes rather than empirical data because the data is too hard to reach.
 
-## Workflow
+*Yet, solving this problem is feasible because:*
 
-1. Identify a question about your system you can't answer with existing tools
-2. Describe the analysis to an AI assistant — what data sources, what output format
-3. Iterate quickly: run → refine → extend
-4. Once useful, share the script with the team or add to your CI pipeline
+- AI-assisted "vibe coding" makes it practical to generate custom, one-off analysis scripts in minutes, tailored to a specific codebase's quirks.
+- LLMs can quickly write complex Python, SQL, or shell queries to cross-reference data sources (git logs, issue trackers, source code) that would take hours for a developer to write manually.
 
-## Data Sources to Combine
+## Solution
 
-- Git history (change frequency, co-change, authorship)
-- Static analysis output (complexity metrics, dependency graphs)
-- Test coverage data
-- Production logs and traces
-- Issue tracker data (bugs per file)
+Use an AI coding assistant to build "disposable" or situation-specific analysis tools that surface empirical data about your system:
 
-## Risks & Considerations
+1. **Identify a hypothesis** — ask a specific question (e.g., "Which 10% of our code is involved in 80% of our production incidents?") or identify a hunch about the system's hidden complexity.
+2. **Describe the analysis to an LLM** — provide the data sources (e.g., "Write a Python script that combines git log data with our `incidents.csv` to find files with high change frequency and high bug count").
+3. **Iterate via vibe coding** — run the script, check the results, and refine the analysis (e.g., "Now filter out files that are mostly auto-generated boilerplate").
+4. **Visualize the findings** — use the AI to generate a quick visualization (e.g., "Generate a D3.js treemap or a simple CSV I can import into Excel to show the findings").
+5. **Act on the data** — use the resulting "hotspot map" to prioritize which parts of the legacy system to refactor or replace first.
 
-- Custom scripts need maintenance as the codebase evolves
-- Correlation in metrics is not causation — validate findings with the team
-- Start with questions you already have a hypothesis for; avoid pure fishing expeditions
+**Types of analysis you can build:**
 
-## Resources
+- **Hotspot analysis** — mapping code complexity against change frequency (git log) to find where effort is concentrated.
+- **Coupling maps** — identifying files that always change together (logical coupling) even without direct code dependencies.
+- **Temporal coupling** — finding implicit dependencies not visible in the call graph.
+- **Dead code finders** — cross-referencing static analysis with production access logs to find truly unused code.
 
-- [Markus Harrer — Software Analytics](https://softwareanalytics.de/) — practical software analytics for developers, with notebooks and katas
-- [Adam Tornhill — Your Code as a Crime Scene](https://pragprog.com/titles/atcrime2/your-code-as-a-crime-scene-second-edition/) — behavioral code analysis techniques using git history
-- [CodeScene](https://codescene.com/) — commercial tool built on behavioral code analysis principles
-- [jQAssistant](https://jqassistant.org/) — graph-based architecture analysis and constraint checking
+## Tradeoffs
+
+**Pros:**
+
+- Replaces "gut feeling" with empirical data when prioritizing modernization efforts.
+- Custom-built scripts are often more accurate than generic tools for specific legacy quirks.
+- Low cost: scripts are "disposable" and can be regenerated or updated as the system evolves.
+
+**Cons:**
+
+- Results are only as good as the data sources (e.g., if git history is messy, the analysis will be too).
+- Custom scripts require validation to ensure they aren't misinterpreting the data.
+
+**Difficulties:**
+
+- Getting the right data into the AI's context (e.g., providing samples of git log output or CSV headers) to ensure it writes correct queries.
+- Avoiding "analysis paralysis"—using data to support decisions rather than delaying them.
+
+## Rationale
+
+Every legacy system has its own unique "scars"—undocumented dependencies, fragile modules, and areas of high churn. Generic tools are designed for general cases, but modernization is a specific, surgical intervention. AI-assisted analytics turns software engineering into an empirical science: by making it nearly free to build custom tools, it allows teams to find and fix the problems that actually matter to their specific system, rather than just fixing whatever the linter flags.
+
+## Known Uses
+
+- [Adam Tornhill — Your Code as a Crime Scene](https://pragprog.com/titles/atcrime2/your-code-as-a-crime-scene-second-edition/) — the conceptual foundation for behavioral code analysis using git history, now made significantly faster with AI.
+- [CodeScene](https://codescene.com/) — a commercial tool built on these principles; teams often use AI to build "lite" versions of these analyses for specific tasks.
+
+## References
+
+- [Markus Harrer — Software Analytics](https://softwareanalytics.de/) — practical guidance on using data to drive software engineering decisions.
+- [jQAssistant](https://jqassistant.org/) — a graph-based tool for architectural analysis that can be queried with AI-generated Cypher queries.
+
+## Related Patterns
+
+- **AI-driven Technical Debt Detection** — analytics provides the empirical data to prioritize the debt that the LLM identifies.
+- **Agentic Coding Workflows** — once hotspots are identified, agents can be tasked with refactoring those specific high-risk areas.
+- **Vibe Coding** — the technique used to rapidly build and iterate on these custom analysis scripts.
+
+## What Next
+
+After identifying hotspots, apply **AI-driven Technical Debt Detection** to those specific areas to get a detailed, prioritized list of refactoring tasks.
+
+## Staging History
+
+**Trial (Feb 2026):** AI-assisted analytics is a powerful technique for any modernization lead. While the tools are custom and sometimes "disposable," the insights they provide are durable. Teams should trial this approach on a single module to validate its predictive power before applying it codebase-wide.

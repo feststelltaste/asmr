@@ -7,44 +7,85 @@ strategic_value: core
 devops_phases: [plan, code, test, operate]
 ---
 
-## Overview
+# Harness Engineering
 
-Harness Engineering shifts the focus from writing better prompts to building better *systems* for agents. A "harness" is the set of tools, mocks, sandbox environments, and automated tests that surround an agent, providing it with the precise context it needs and the immediate feedback required to self-correct.
+## Problem
 
-If Context Engineering is about what the agent *knows*, Harness Engineering is about what the agent can *do* and how it *verifies* its actions.
+How do you design and maintain the "execution environment" that an AI agent needs to safely and reliably interact with a legacy codebase, including the tools, mocks, and feedback loops it needs to self-correct?
 
-## Core Components
+*This problem is difficult because:*
 
-- **Deterministic Environments** — Ephemeral, reproducible sandboxes (Docker, E2B) where agents can run code without side effects.
-- **Verification Loops** — Automated test suites (unit, integration, and characterization) that the agent must pass before proposing a change.
-- **Context Injection** — Dynamically providing only the relevant 5% of a codebase that an agent needs for a specific task.
-- **Action Guardrails** — Rules that intercept agent commands (e.g., preventing `rm -rf /` or unauthorized API calls).
-- **Observability** — Detailed logging of agent "thoughts" and tool calls to diagnose where the "harness" failed to guide the agent.
+- Legacy systems are "brittle"—they have undocumented side effects, fragile build processes, and environmental dependencies that an agent can trigger unexpectedly.
+- AI agents need "high-fidelity" feedback (compilers, test runners, linters, error logs) to be effective, but setting up these tools in a secure, isolated environment is a significant engineering challenge.
+- Mocks and stubs in legacy systems are often out of sync with reality, leading an agent to "hallucinate" success in its sandbox while failing in production.
+- Providing an agent with "too much power" (e.g., direct database access or network egress) is a high security risk, while "too little power" (e.g., no shell access) prevents it from being useful.
 
-## Infrastructure Prerequisites
+*Yet, solving this problem is feasible because:*
 
-To build an effective harness, the following classic engineering disciplines are non-negotiable:
+- Container and micro-VM technologies (Docker, E2B, Firecracker) provide fast, disposable environments that can be "pre-provisioned" with the legacy build tools an agent needs.
+- Modern observability (OpenTelemetry) can capture every tool call and "thought" of an agent, providing the audit log needed to debug a failing harness.
+- "Verification loops" can be integrated into the harness, forcing the agent to pass a full suite of tests before its proposed change is even presented to a human.
 
-- **CI/CD Pipelines** — The automated referee. Every agent-generated PR must pass a full suite of build, test, and security checks before human review.
-- **Feature Flags** — The kill switch. AI-generated code should be released behind flags to allow for instant rollback and side-by-side comparison in production.
-- **Distributed Tracing (OpenTelemetry)** — The black-box recorder. Since agentic flows are multi-step and non-deterministic, you need granular tracing to understand exactly where a chain failed or became slow.
+## Solution
 
-## Why It Matters
+Build a "harness" that surrounds the AI agent, providing it with the necessary tools and feedback while strictly constraining its impact on the system:
 
-- **Reliability** — Moves AI from "probabilistic" to "deterministic" by surrounding it with traditional engineering gates.
-- **Autonomy** — Agents can work longer without human intervention if they have a harness to catch and report their own errors.
-- **Scale** — Allows teams to deploy dozens of agents across a large codebase with confidence that they won't violate architectural patterns.
+1. **Provision an ephemeral sandbox** — Use **Agent Sandboxing** to create a disposable, isolated environment (e.g., a Docker container or E2B micro-VM) for every agent session.
+2. **Inject the "high-fidelity" tools** — Pre-install the compilers, test runners, and linters the agent needs to verify its own work. Ensure the environment matches the production environment as closely as possible.
+3. **Define strict "verification loops"** — Configure the harness to automatically run a suite of **AI-Generated Characterization Tests** and unit tests every time the agent makes a change.
+4. **Implement command guardrails** — Intercept and gate high-risk commands (e.g., database migrations or schema changes) on explicit human approval.
+5. **Capture detailed observability** — Record all agent "thoughts," tool calls, and shell output to an audit log for debugging and forensic analysis.
 
-## Risks & Considerations
+**Core components of an agent harness:**
 
-- **Harness Complexity** — Building a robust harness for a legacy system can be as much work as the modernization itself.
-- **Brittle Mocks** — If the harness uses mocks that don't match reality, the agent will "hallucinate" success in the sandbox but fail in production.
-- **Over-constraining** — A harness that is too tight might prevent the agent from finding creative solutions to refactoring problems.
+- **Deterministic Environments** — Ephemeral, reproducible sandboxes where agents can run code without side effects.
+- **Verification Loops** — Automated test suites that the agent must pass before proposing a change.
+- **Action Guardrails** — Rules that intercept and gate high-risk agent commands.
+- **Observability** — Detailed logging of agent behavior and tool usage.
 
-## Resources
+## Tradeoffs
 
-- [Regression Test After Every Change (OORP)](https://oorp.github.io/#regression-test-after-every-change) — (Classic) The foundational discipline for safe modernization.
-- [OpenAI — Harness Engineering: Leveraging Codex in an Agent-First World](https://openai.com/index/harness-engineering/)
-- [Martin Fowler — Harness Engineering: Making AI Reliable](https://martinfowler.com/articles/exploring-gen-ai/harness-engineering.html)
-- [Authentica — Harness Engineering: Making AI Reliable for Supply Chain](https://authenti.ca/news/harness-engineering)
-- [No Vibes Allowed: Solving Hard Problems in Complex Codebases – Dex Horthy, HumanLayer](https://www.youtube.com/watch?v=rmvDxxNubIg)
+**Pros:**
+
+- Dramatically improves the reliability and "first-time quality" of agent-generated code.
+- Reduces the risk of an agent causing "catastrophic damage" to a legacy system.
+- Provides a consistent, auditable environment for all agentic modernization tasks.
+
+**Cons:**
+
+- Building a robust harness for a complex legacy system can be as much work as the modernization itself.
+- Brittle mocks or environmental mismatches in the harness can lead to "false confidence" in the agent's work.
+
+**Difficulties:**
+
+- Replicating a complex legacy build environment (with archaic compilers and proprietary dependencies) inside a modern containerized sandbox.
+- Balancing the agent's need for "real-world" data with the security requirements of data isolation and privacy.
+
+## Rationale
+
+Prompting an LLM to write code is only 20% of the job; the other 80% is the engineering work of making sure that code actually works in the context of a complex system. Harness engineering is the practice of building the "safety net" and "feedback loop" that allows a probabilistic AI agent to behave like a deterministic software engineer. It is the shift from "hoping" the AI is right to "proving" it is right within the constraints of a high-fidelity environment.
+
+## Known Uses
+
+- [E2B](https://e2b.dev/) — a cloud sandbox SDK built specifically for AI agents, providing ephemeral micro-VM environments for agentic coding.
+- [OpenHands (formerly OpenDevin)](https://github.com/All-Hands-AI/OpenHands) — an open-source platform that includes a robust Docker-based harness for agentic tasks.
+- [Devin by Cognition](https://cognition.ai/) — uses a proprietary "agent environment" that is a classic example of harness engineering.
+
+## References
+
+- [Martin Fowler — Harness Engineering](https://martinfowler.com/articles/exploring-gen-ai/harness-engineering.html) — explores the concept of building environments for AI agents to operate in.
+- [No Vibes Allowed: Solving Hard Problems in Complex Codebases – Dex Horthy, HumanLayer](https://www.youtube.com/watch?v=rmvDxxNubIg) — discusses the move from "vibes" to "harnesses" for reliable agentic work.
+
+## Related Patterns
+
+- **Agent Sandboxing** — the "primitive" layer of the harness; providing the isolation.
+- **AI-Generated Characterization Tests** — the "verification" layer of the harness; proving the correctness of the work.
+- **Agentic Coding Workflows** — the "operational" layer; defining how the agent uses the harness to complete its tasks.
+
+## What Next
+
+After building your first harness, apply **Agentic Coding Workflows** to begin running your first multi-step modernization tasks within that environment.
+
+## Staging History
+
+**Assess (Feb 2026):** Harness engineering is a critical but often overlooked part of the agentic stack. While the underlying tools (Docker, CI/CD) are mature, the specific discipline of building "agent-friendly" environments is new and evolving. Teams should assess their current environment's readiness for agentic automation before attempting broad rollout.
