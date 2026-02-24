@@ -42,6 +42,8 @@ Contributions in the form of new practices, refined descriptions, or maturity ad
 
 Inspired by [cards42's card called "Roadmap"](https://cards42.org/roadmap/), which was itself inspired by the [ThoughtWorks Technology Radar](https://www.thoughtworks.com/radar).
 
+The practice description format is inspired by [Object-Oriented Reengineering Patterns](https://www.oscar.nierstrasz.org/oorp/) (Demeyer, Ducasse, Nierstrasz — 2003), which introduced a structured problem/solution/tradeoff format for describing software reengineering practices. Also available as a [community online version](https://oorp.github.io/).
+
 ## License
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
