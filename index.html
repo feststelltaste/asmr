@@ -34,8 +34,8 @@ layout: default
 </div>
 
 <!-- Phase navigation -->
-<p class="nav-label">Navigation</p>
 <nav class="phase-nav" aria-label="Jump to stage">
+  <span class="nav-label" aria-hidden="true">Navigate</span>
   {% for stage in site.data.roadmap.stages %}
     {% unless forloop.first %}
     <span class="phase-nav-sep" aria-hidden="true">›</span>
@@ -43,7 +43,7 @@ layout: default
     <button
       class="phase-nav-btn"
       data-target="stage-{{ stage.id }}"
-      style="--sc: {{ stage.color }}"
+      style="--sc: {{ stage.color }}; --sbg: {{ stage.bg_color }}"
       type="button"
       title="{{ stage.name }}: {{ stage.description }}"
     >

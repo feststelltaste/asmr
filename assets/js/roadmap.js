@@ -1,6 +1,9 @@
 (function () {
   'use strict';
 
+  // Shared handle so nav buttons can reset focus mode before scrolling
+  var resetStageFocus = null;
+
   document.addEventListener('DOMContentLoaded', function () {
     initPhaseNav();
     initFilters();
@@ -81,20 +84,36 @@
 
     navBtns.forEach(function (btn) {
       btn.addEventListener('click', function () {
-        var target = document.getElementById(this.dataset.target);
+        var targetId = this.dataset.target;
+        var target   = document.getElementById(targetId);
         if (!target || !scroll) return;
-        scroll.scrollTo({ left: target.offsetLeft - scroll.offsetLeft, behavior: 'smooth' });
+
+        // Exit focus mode first so all stages are visible/laid out
+        if (resetStageFocus) resetStageFocus();
+
+        // Wait one frame for the DOM to repaint before measuring positions
+        requestAnimationFrame(function () {
+          var tr = target.getBoundingClientRect();
+          var sr = scroll.getBoundingClientRect();
+          scroll.scrollBy({ left: tr.left - sr.left, behavior: 'smooth' });
+        });
       });
     });
 
     if (!scroll) return;
 
+    var visibleStages = new Set();
+
     var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
-        if (!entry.isIntersecting) return;
-        navBtns.forEach(function (btn) {
-          btn.classList.toggle('is-active', btn.dataset.target === entry.target.id);
-        });
+        if (entry.isIntersecting) {
+          visibleStages.add(entry.target.id);
+        } else {
+          visibleStages.delete(entry.target.id);
+        }
+      });
+      navBtns.forEach(function (btn) {
+        btn.classList.toggle('is-active', visibleStages.has(btn.dataset.target));
       });
     }, { root: scroll, threshold: 0.5 });
 
@@ -193,13 +212,11 @@
         }
 
         applyFocusState();
-        window.dispatchEvent(new Event('resize'));
       });
     });
 
     function applyFocusState() {
       if (focusState === 0) {
-        // Reset everything
         if (activeStage) activeStage.classList.remove('is-stage-active');
         activeStage = null;
         scroll.classList.remove('is-stage-focused', 'is-stage-collapsed');
@@ -210,7 +227,15 @@
         roadmap.classList.add('is-stage-focused');
         scroll.classList.toggle('is-stage-collapsed', focusState === 1);
       }
+      window.dispatchEvent(new Event('resize'));
     }
+
+    // Expose reset so other modules (e.g. phase nav) can call it
+    resetStageFocus = function () {
+      if (focusState === 0) return;
+      focusState = 0;
+      applyFocusState();
+    };
   }
 
 })();
