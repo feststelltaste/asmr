@@ -67,13 +67,13 @@ Autonomous AI agents changing legacy code without a test harness is the highest-
 
 ## Related Patterns
 
-- **Harness Engineering** — characterization tests are the inner loop of a broader test harness; this practice provides the automated safety net that makes the harness trustworthy.
-- **Agentic Coding Workflows** — agents making autonomous refactoring changes depend on characterization tests as their guard rail; this practice is a prerequisite for safe agentic operation on legacy code.
-- **Human-in-the-Loop Review** — reviewing AI-generated characterization tests before committing is a critical checkpoint; a missed edge case in the baseline propagates silently into every subsequent change.
+- [Harness Engineering](harness-engineering.md) — characterization tests are the inner loop of a broader test harness; this practice provides the automated safety net that makes the harness trustworthy.
+- [Agentic Coding Workflows](agentic-coding-workflows.md) — agents making autonomous refactoring changes depend on characterization tests as their guard rail; this practice is a prerequisite for safe agentic operation on legacy code.
+- [Human in the Loop](human-in-the-loop.md) — reviewing AI-generated characterization tests before committing is a critical checkpoint; a missed edge case in the baseline propagates silently into every subsequent change.
 
 ## What Next
 
-With a characterization test baseline in place, apply **Agentic Coding Workflows** to begin autonomous refactoring — the agent now has a safety net it can run after every change.
+With a characterization test baseline in place, apply [Agentic Coding Workflows](agentic-coding-workflows.md) to begin autonomous refactoring — the agent now has a safety net it can run after every change.
 
 ## Staging History
 

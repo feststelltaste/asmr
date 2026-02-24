@@ -65,13 +65,13 @@ In a legacy context, the bottleneck is rarely the individual keystroke; it is th
 
 ## Related Patterns
 
-- **Agentic Coding Agents** — the logical successor; agents that execute multi-step modernization tasks autonomously rather than requiring a human-driven loop for every change.
-- **Human-in-the-Loop Review** — the review discipline established with inline assistants is foundational and should be maintained when transitioning to agentic workflows.
-- **Agentic Orchestration Frameworks** — the infrastructure that enables more sophisticated autonomous agents to handle legacy codebase tasks.
+- [Agentic Coding Workflows](agentic-coding-workflows.md) — the logical successor; agents that execute multi-step modernization tasks autonomously rather than requiring a human-driven loop for every change.
+- [Human in the Loop](human-in-the-loop.md) — the review discipline established with inline assistants is foundational and should be maintained when transitioning to agentic workflows.
+- [Agentic Orchestration Frameworks](agentic-orchestration-frameworks.md) — the infrastructure that enables more sophisticated autonomous agents to handle legacy codebase tasks.
 
 ## What Next
 
-Transition to **Agentic Coding Agents** — utilizing tools that can autonomously plan and execute modernization goals across files, run tests, and manage version control directly.
+Transition to [Agentic Coding Workflows](agentic-coding-workflows.md) — utilizing tools that can autonomously plan and execute modernization goals across files, run tests, and manage version control directly.
 
 ## Staging History
 

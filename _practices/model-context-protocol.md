@@ -80,9 +80,9 @@ Modernization agents are only as powerful as the tools they can use. If an agent
 
 ## Related Patterns
 
-- **Agentic Coding Workflows** — MCP provides the "tool and context" layer that makes these workflows possible.
-- **Legacy Knowledge Recovery Agents** — discovery agents use MCP servers to query Jira, Slack, and old documentation.
-- **Agent Sandboxing** — MCP servers that run local tools must be sandboxed to ensure they don't have unauthorized access to the host system.
+- [Agentic Coding Workflows](agentic-coding-workflows.md) — MCP provides the "tool and context" layer that makes these workflows possible.
+- [Legacy Knowledge Recovery Agents](legacy-knowledge-recovery-agents.md) — discovery agents use MCP servers to query Jira, Slack, and old documentation.
+- [Agent Sandboxing](agent-sandboxing.md) — MCP servers that run local tools must be sandboxed to ensure they don't have unauthorized access to the host system.
 
 ## What Next
 

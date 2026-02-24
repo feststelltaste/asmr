@@ -78,13 +78,13 @@ The quality of AI-generated code is determined as much by the *environment* in w
 
 ## Related Patterns
 
-- **Harness Engineering** — context is what the agent *knows*; the harness is what the agent can *do* and how it *verifies* its work.
-- **Agentic Coding Workflows** — the workflow provides the "dynamic" context (current task, error logs), while context engineering provides the "static" context (architectural rules).
-- **Human-in-the-Loop Review** — review is the primary feedback loop for updating the engineered context (e.g., "The AI keeps making this mistake, let's add a rule for it").
+- [Harness Engineering](harness-engineering.md) — context is what the agent *knows*; the harness is what the agent can *do* and how it *verifies* its work.
+- [Agentic Coding Workflows](agentic-coding-workflows.md) — the workflow provides the "dynamic" context (current task, error logs), while context engineering provides the "static" context (architectural rules).
+- [Human in the Loop](human-in-the-loop.md) — review is the primary feedback loop for updating the engineered context (e.g., "The AI keeps making this mistake, let's add a rule for it").
 
 ## What Next
 
-After establishing your first project rules file, implement **Harness Engineering** to build the execution environment where the agent can run and verify the code it writes based on those rules.
+After establishing your first project rules file, implement [Harness Engineering](harness-engineering.md) to build the execution environment where the agent can run and verify the code it writes based on those rules.
 
 ## Staging History
 

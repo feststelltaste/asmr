@@ -76,13 +76,13 @@ In any legacy modernization project, the "understanding" phase is the largest si
 
 ## Related Patterns
 
-- **AI-Generated Characterization Tests** — the logical follow-up; once you understand the code with AI, use AI to generate the tests that prove it.
-- **Knowledge Graph-Augmented Generation (KGAG)** — for very large systems, a knowledge graph can help provide the "global" context that an LLM needs for accurate code reading.
-- **AI Documentation Generation** — once the AI has explained the code, use it to generate the permanent documentation that was missing.
+- [AI-generated Characterization Tests](ai-generated-characterization-tests.md) — the logical follow-up; once you understand the code with AI, use AI to generate the tests that prove it.
+- [Knowledge Graph-Augmented Generation (GraphRAG)](knowledge-graph-augmented-generation.md) — for very large systems, a knowledge graph can help provide the "global" context that an LLM needs for accurate code reading.
+- [AI Documentation Generation](ai-documentation-generation.md) — once the AI has explained the code, use it to generate the permanent documentation that was missing.
 
 ## What Next
 
-After understanding the legacy module with AI assistance, apply **AI-Generated Characterization Tests** to create a safety net before attempting any changes.
+After understanding the legacy module with AI assistance, apply [AI-generated Characterization Tests](ai-generated-characterization-tests.md) to create a safety net before attempting any changes.
 
 ## Staging History
 

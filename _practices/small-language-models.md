@@ -80,13 +80,13 @@ Modernization is a "wide" problem—it involves millions of small, routine tasks
 
 ## Related Patterns
 
-- **AI Gateway / Routing** — the gateway is what enables the "routing" of simple tasks to an SLM.
-- **Self-hosted Open LLMs** — SLMs are the most practical models for self-hosting on standard consumer-grade hardware.
-- **Continuous Modernization Agents** — many background "janitor" tasks (like linting or doc generation) are perfect for SLMs.
+- [AI Gateway / Routing](ai-gateway-routing.md) — the gateway is what enables the "routing" of simple tasks to an SLM.
+- [Self-hosted Open LLMs](self-hosted-open-llms.md) — SLMs are the most practical models for self-hosting on standard consumer-grade hardware.
+- [Continuous Modernization Agents](continuous-modernization-agents.md) — many background "janitor" tasks (like linting or doc generation) are perfect for SLMs.
 
 ## What Next
 
-After establishing an **AI Gateway / Routing** system, begin routing your simplest, highest-volume tasks (like docstring generation) to a small, self-hosted model like **Phi-4** or **Llama 3.2**.
+After establishing an [AI Gateway / Routing](ai-gateway-routing.md) system, begin routing your simplest, highest-volume tasks (like docstring generation) to a small, self-hosted model like **Phi-4** or **Llama 3.2**.
 
 ## Staging History
 

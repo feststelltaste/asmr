@@ -78,13 +78,13 @@ Modernization projects often fail because they try to fix everything at once, or
 
 ## Related Patterns
 
-- **AI-assisted Codebase Analytics** — provides the empirical data (hotspots, churn) used to prioritize the debt identified by the AI.
-- **AI-assisted Legacy Code Reading** — the technique used to feed the "debt detector" the context it needs to be accurate.
-- **Agentic Coding Workflows** — once debt is identified and prioritized, agents can be tasked with the mechanical work of refactoring it.
+- [AI-assisted Codebase Analytics](ai-assisted-codebase-analytics.md) — provides the empirical data (hotspots, churn) used to prioritize the debt identified by the AI.
+- [AI-assisted Legacy Code Reading](ai-assisted-legacy-code-reading.md) — the technique used to feed the "debt detector" the context it needs to be accurate.
+- [Agentic Coding Workflows](agentic-coding-workflows.md) — once debt is identified and prioritized, agents can be tasked with the mechanical work of refactoring it.
 
 ## What Next
 
-After identifying and prioritizing technical debt, apply **AI-assisted Codebase Analytics** to verify which debt items are in the most active parts of the codebase, then use **Agentic Coding Workflows** to begin the refactoring work.
+After identifying and prioritizing technical debt, apply [AI-assisted Codebase Analytics](ai-assisted-codebase-analytics.md) to verify which debt items are in the most active parts of the codebase, then use [Agentic Coding Workflows](agentic-coding-workflows.md) to begin the refactoring work.
 
 ## Staging History
 

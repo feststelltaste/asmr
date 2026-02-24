@@ -78,13 +78,13 @@ Dead code is the "dark matter" of legacy systems—it has mass and gravity (it s
 
 ## Related Patterns
 
-- **AI-assisted Codebase Analytics** — provides the "hotspot" and coverage data needed to find dead code candidates.
-- **AI-driven Technical Debt Detection** — dead code is a primary form of technical debt that the detection agent should flag.
-- **Continuous Modernization Agents** — dead code removal is a perfect task for a background "Janitor" agent to perform on a schedule.
+- [AI-assisted Codebase Analytics](ai-assisted-codebase-analytics.md) — provides the "hotspot" and coverage data needed to find dead code candidates.
+- [AI-driven Technical Debt Detection](ai-technical-debt-detection.md) — dead code is a primary form of technical debt that the detection agent should flag.
+- [Continuous Modernization Agents](continuous-modernization-agents.md) — dead code removal is a perfect task for a background "Janitor" agent to perform on a schedule.
 
 ## What Next
 
-After pruning dead code, apply **AI-driven Technical Debt Detection** to the remaining "live" code to identify more complex refactoring opportunities.
+After pruning dead code, apply [AI-driven Technical Debt Detection](ai-technical-debt-detection.md) to the remaining "live" code to identify more complex refactoring opportunities.
 
 ## Staging History
 

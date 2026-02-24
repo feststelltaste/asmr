@@ -78,13 +78,13 @@ Code review is the primary gate for ensuring that modernization actually improve
 
 ## Related Patterns
 
-- **Human-in-the-Loop Review** — AI-powered review is the primary assistant for the human reviewer; they work together to ensure quality.
-- **AI-driven Technical Debt Detection** — the review bot should be configured to flag new technical debt that is being introduced during a refactor.
-- **Agentic Coding Workflows** — review bots are the "first responders" that verify the output of autonomous agents before a human looks at them.
+- [Human in the Loop](human-in-the-loop.md) — AI-powered review is the primary assistant for the human reviewer; they work together to ensure quality.
+- [AI-driven Technical Debt Detection](ai-technical-debt-detection.md) — the review bot should be configured to flag new technical debt that is being introduced during a refactor.
+- [Agentic Coding Workflows](agentic-coding-workflows.md) — review bots are the "first responders" that verify the output of autonomous agents before a human looks at them.
 
 ## What Next
 
-After establishing AI-powered review, implement **Human-in-the-Loop Review** to define the final approval process for high-stakes architectural changes.
+After establishing AI-powered review, implement [Human in the Loop](human-in-the-loop.md) to define the final approval process for high-stakes architectural changes.
 
 ## Staging History
 

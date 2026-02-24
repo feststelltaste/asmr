@@ -76,13 +76,13 @@ Every legacy system has its own unique "scars"—undocumented dependencies, frag
 
 ## Related Patterns
 
-- **AI-driven Technical Debt Detection** — analytics provides the empirical data to prioritize the debt that the LLM identifies.
-- **Agentic Coding Workflows** — once hotspots are identified, agents can be tasked with refactoring those specific high-risk areas.
-- **Vibe Coding** — the technique used to rapidly build and iterate on these custom analysis scripts.
+- [AI-driven Technical Debt Detection](ai-technical-debt-detection.md) — analytics provides the empirical data to prioritize the debt that the LLM identifies.
+- [Agentic Coding Workflows](agentic-coding-workflows.md) — once hotspots are identified, agents can be tasked with refactoring those specific high-risk areas.
+- [Vibe Coding](vibe-coding.md) — the technique used to rapidly build and iterate on these custom analysis scripts.
 
 ## What Next
 
-After identifying hotspots, apply **AI-driven Technical Debt Detection** to those specific areas to get a detailed, prioritized list of refactoring tasks.
+After identifying hotspots, apply [AI-driven Technical Debt Detection](ai-technical-debt-detection.md) to those specific areas to get a detailed, prioritized list of refactoring tasks.
 
 ## Staging History
 

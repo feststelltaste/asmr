@@ -78,13 +78,13 @@ Modernization is not just about changing the technology; it is about improving t
 
 ## Related Patterns
 
-- **Anti-Corruption Layer (ACL)** — the primary technical pattern for protecting a new domain model from legacy corruption.
-- **Strangler Fig Migration** — DDD provides the "cuts" for the slices that are strangled from the legacy monolith.
-- **AI-assisted Legacy Code Reading** — the technique used to perform the initial "semantic audit" of the legacy system.
+- [Anti-Corruption Layer](anti-corruption-layer.md) — the primary technical pattern for protecting a new domain model from legacy corruption.
+- [Strangler Fig Pattern](strangler-fig-pattern.md) — DDD provides the "cuts" for the slices that are strangled from the legacy monolith.
+- [AI-assisted Legacy Code Reading](ai-assisted-legacy-code-reading.md) — the technique used to perform the initial "semantic audit" of the legacy system.
 
 ## What Next
 
-After identifying your first bounded context, apply **Anti-Corruption Layer (ACL)** to protect the new service as you begin to migrate logic using the **Strangler Fig Migration** pattern.
+After identifying your first bounded context, apply [Anti-Corruption Layer](anti-corruption-layer.md) to protect the new service as you begin to migrate logic using the [Strangler Fig Pattern](strangler-fig-pattern.md).
 
 ## Staging History
 

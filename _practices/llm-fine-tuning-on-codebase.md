@@ -78,9 +78,9 @@ Fine-tuning is a "strategic investment" in the model's intelligence. For most mo
 
 ## Related Patterns
 
-- **RAG (Retrieval-Augmented Generation)** — fine-tuning and RAG are complementary techniques; use both for maximum effectiveness.
-- **LLM-as-Judge Evaluation** — essential for measuring the actual improvement (or regression) of a fine-tuned model.
-- **Self-hosted Open LLMs** — fine-tuned models are often self-hosted for security and cost reasons.
+- [RAG (Retrieval-Augmented Generation)](rag-retrieval-augmented-generation.md) — fine-tuning and RAG are complementary techniques; use both for maximum effectiveness.
+- [LLM-as-judge Evaluation](llm-as-judge-evaluation.md) — essential for measuring the actual improvement (or regression) of a fine-tuned model.
+- [Self-hosted Open LLMs](self-hosted-open-llms.md) — fine-tuned models are often self-hosted for security and cost reasons.
 
 ## What Next
 

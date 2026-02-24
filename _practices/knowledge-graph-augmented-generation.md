@@ -77,13 +77,13 @@ Legacy modernization is a "structural" problem—it is about untangling dependen
 
 ## Related Patterns
 
-- **RAG (Retrieval-Augmented Generation)** — GraphRAG is the "structural" evolution of basic vector RAG.
-- **AI-assisted Legacy Code Reading** — GraphRAG provides the "global" context that makes code reading more accurate.
-- **Agentic Coding Workflows** — complex agents use GraphRAG to navigate and plan their multi-file changes.
+- [RAG (Retrieval-Augmented Generation)](rag-retrieval-augmented-generation.md) — GraphRAG is the "structural" evolution of basic vector RAG.
+- [AI-assisted Legacy Code Reading](ai-assisted-legacy-code-reading.md) — GraphRAG provides the "global" context that makes code reading more accurate.
+- [Agentic Coding Workflows](agentic-coding-workflows.md) — complex agents use GraphRAG to navigate and plan their multi-file changes.
 
 ## What Next
 
-After establishing a basic vector RAG system, begin experimenting with **GraphRAG** by extracting a small graph of your core domain entities to see if it improves the quality of your agent's impact analyses.
+After establishing a basic vector RAG system, begin experimenting with [Knowledge Graph-Augmented Generation (GraphRAG)](knowledge-graph-augmented-generation.md) by extracting a small graph of your core domain entities to see if it improves the quality of your agent's impact analyses.
 
 ## Staging History
 

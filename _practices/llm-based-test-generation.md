@@ -79,13 +79,13 @@ Testing is the "engine" of modernization. Without it, the risks of change are to
 
 ## Related Patterns
 
-- **AI-Generated Characterization Tests** — the most critical "first step" in legacy test generation.
-- **Harness Engineering** — the harness is what allows the AI-generated tests to run and verify the codebase.
-- **Agentic Coding Workflows** — test generation is a primary task for an agentic workflow during the initial phase of modernization.
+- [AI-generated Characterization Tests](ai-generated-characterization-tests.md) — the most critical "first step" in legacy test generation.
+- [Harness Engineering](harness-engineering.md) — the harness is what allows the AI-generated tests to run and verify the codebase.
+- [Agentic Coding Workflows](agentic-coding-workflows.md) — test generation is a primary task for an agentic workflow during the initial phase of modernization.
 
 ## What Next
 
-After generating your first "baseline" of tests, apply **AI-Generated Characterization Tests** to your most critical modules to create a durable refactoring safety net.
+After generating your first "baseline" of tests, apply [AI-generated Characterization Tests](ai-generated-characterization-tests.md) to your most critical modules to create a durable refactoring safety net.
 
 ## Staging History
 

@@ -75,13 +75,13 @@ For organizations with high security requirements, cloud-based AI is often a "no
 
 ## Related Patterns
 
-- **AI Gateway / Routing** — the gateway provides the unified interface that connects agents to the self-hosted model.
-- **LLM Fine-tuning on Codebase** — open models are the primary target for internal fine-tuning projects.
-- **Small Language Models (SLMs)** — smaller open models are often self-hosted for high-volume, low-complexity tasks.
+- [AI Gateway / Routing](ai-gateway-routing.md) — the gateway provides the unified interface that connects agents to the self-hosted model.
+- [LLM Fine-tuning on Codebase](llm-fine-tuning-on-codebase.md) — open models are the primary target for internal fine-tuning projects.
+- [Small Language Models (SLMs)](small-language-models.md) — smaller open models are often self-hosted for high-volume, low-complexity tasks.
 
 ## What Next
 
-After successfully self-hosting your first general-purpose model, begin experimenting with **LLM Fine-tuning on Codebase** to improve its accuracy on your specific internal APIs and domain patterns.
+After successfully self-hosting your first general-purpose model, begin experimenting with [LLM Fine-tuning on Codebase](llm-fine-tuning-on-codebase.md) to improve its accuracy on your specific internal APIs and domain patterns.
 
 ## Staging History
 

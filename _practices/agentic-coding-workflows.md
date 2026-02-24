@@ -68,13 +68,13 @@ In legacy modernization, the bottleneck is rarely the individual keystroke; it i
 
 ## Related Patterns
 
-- **Agent Sandboxing** — a prerequisite for safely running agentic workflows that have shell and file system access.
-- **Human-in-the-Loop Review** — the critical quality gate that makes autonomous agent work trustworthy in a production codebase.
-- **AI-Generated Characterization Tests** — provides the safety net that agents need to refactor legacy code without fear of regression.
+- [Agent Sandboxing](agent-sandboxing.md) — a prerequisite for safely running agentic workflows that have shell and file system access.
+- [Human in the Loop](human-in-the-loop.md) — the critical quality gate that makes autonomous agent work trustworthy in a production codebase.
+- [AI-generated Characterization Tests](ai-generated-characterization-tests.md) — provides the safety net that agents need to refactor legacy code without fear of regression.
 
 ## What Next
 
-Once comfortable with basic agentic workflows, implement **Agent Sandboxing** to ensure these agents can run and test code in a secure, isolated environment without risking the host system.
+Once comfortable with basic agentic workflows, implement [Agent Sandboxing](agent-sandboxing.md) to ensure these agents can run and test code in a secure, isolated environment without risking the host system.
 
 ## Staging History
 
