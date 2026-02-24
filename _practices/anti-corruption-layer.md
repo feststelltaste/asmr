@@ -85,4 +85,4 @@ With an ACL in place at a legacy boundary, use [Strangler Fig Pattern](strangler
 
 ## Staging History
 
-**Apply (Feb 2026):** The Anti-Corruption Layer is a foundational DDD pattern with over two decades of documented use and a standard prerequisite for any serious legacy modernization effort. In the context of AI-assisted modernization it is doubly important: without a clean target model, agents will reproduce legacy concepts into new code. Immediate application is recommended.
+**Apply (Feb 2026):** The Anti-Corruption Layer is a foundational, well-proven practice for any serious modernization effort. It is a standard prerequisite for protecting new domain models from legacy data pollution and has become even more critical when using agents to generate new services.

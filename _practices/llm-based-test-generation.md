@@ -89,4 +89,4 @@ After generating your first "baseline" of tests, apply [AI-generated Characteriz
 
 ## Staging History
 
-**Trial (Feb 2026):** AI-based test generation is a powerful tool for any modernization team. While the quality of generated tests is high, they must still be reviewed by a human expert to ensure they align with the business's intent, not just the code's current behavior. Start with low-stakes modules to tune your generation prompts.
+**Trial (Feb 2026):** AI-based test generation is currently in the trial phase. While it excels at generating happy-path unit tests and initial mocks, human oversight is still required to ensure tests capture the true business intent rather than just codifying existing legacy bugs.

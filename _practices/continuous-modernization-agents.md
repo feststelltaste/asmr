@@ -91,4 +91,4 @@ After establishing a "Janitor Agent," apply [AI-powered Code Review](ai-powered-
 
 ## Staging History
 
-**Trial (Feb 2026):** Continuous modernization agents are a powerful way to maintain long-term system health. However, they require a high-quality CI pipeline and careful tuning to avoid noisy PRs. Teams should start with very simple tasks (like dependency updates) before moving to complex pattern refactorings.
+**Trial (Feb 2026):** Continuous modernization agents (background janitors) are being trialed to pay down technical debt incrementally. Early results are promising for routine tasks like dependency updates and test gap filling, but teams are still tuning the noise levels of these autonomous background processes.

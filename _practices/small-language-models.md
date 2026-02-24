@@ -90,4 +90,4 @@ After establishing an [AI Gateway / Routing](ai-gateway-routing.md) system, begi
 
 ## Staging History
 
-**Hold On (Feb 2026):** While the technology is advancing rapidly, most SLMs are not yet "mature" enough for the complex reasoning required in enterprise-scale legacy modernization. Teams should focus on using frontier models for their core work and only move to SLMs for very narrow, well-proven tasks.
+**Assess (Feb 2026):** Small Language Models (SLMs) are being assessed for high-volume, low-complexity modernization tasks. While they offer significant cost and latency advantages, teams must still evaluate their reasoning capabilities against the complex requirements of legacy codebases.

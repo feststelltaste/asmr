@@ -77,4 +77,4 @@ With a characterization test baseline in place, apply [Agentic Coding Workflows]
 
 ## Staging History
 
-**Apply (Feb 2026):** AI-assisted characterization test generation is well-validated in practice and directly addresses the most dangerous gap in agentic legacy modernization: agents changing untested code. The underlying technique is proven; LLMs make the generation step fast enough to apply routinely. Immediate adoption is recommended for any team running agents against a legacy codebase.
+**Apply (Feb 2026):** AI-assisted characterization test generation is now a standard requirement for safe modernization. It is the only proven way to establish a behavioral baseline for untested legacy code at the speed required by autonomous agents.

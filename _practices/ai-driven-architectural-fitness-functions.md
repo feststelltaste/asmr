@@ -87,4 +87,4 @@ After establishing your first set of fitness functions, implement [Continuous Mo
 
 ## Staging History
 
-**Assess (Feb 2026):** AI-driven architectural governance is an emerging but critical practice for enterprise-scale modernization. While the underlying tools are mature, using LLMs to autonomously define and evolve the "rules" is a new capability that teams should assess for their most critical modernization targets.
+**Trial (Feb 2026):** AI-driven fitness functions are being trialed to automate architectural governance during modernization. Early results show they are highly effective at preventing coupling regressions and enforcing context boundaries with minimal manual effort.

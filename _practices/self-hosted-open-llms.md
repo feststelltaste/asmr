@@ -85,4 +85,4 @@ After successfully self-hosting your first general-purpose model, begin experime
 
 ## Staging History
 
-**Trial (Feb 2026):** Self-hosting open models is a mature practice for organizations with high security needs. While the technology is accessible, the operational burden is real. Teams should trial a self-hosted model on a single project to validate the GPU performance and model quality before a wider rollout.
+**Trial (Feb 2026):** Self-hosting open-weight LLMs is currently being trialed by organizations with high security and privacy requirements. While the technology is maturing rapidly, the high operational cost and GPU infrastructure requirements mean it is still an emerging practice for most modernization teams.

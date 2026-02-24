@@ -88,4 +88,4 @@ After generating initial documentation, apply [Human in the Loop](human-in-the-l
 
 ## Staging History
 
-**Apply (Feb 2026):** AI-powered documentation generation is well-validated and provides immediate value to any team working on an underdocumented legacy system. It is a "low-effort, high-impact" practice that should be integrated early into any modernization workflow.
+**Apply (Feb 2026):** AI-powered documentation generation is a proven choice for reconstructing missing context in legacy systems. The ability to autonomously maintain READMEs, API docs, and architectural summaries has made it a foundational practice for preventing the accumulation of new technical debt.

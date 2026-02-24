@@ -90,4 +90,4 @@ After prototyping your first service with [Vibe Coding](vibe-coding.md), impleme
 
 ## Staging History
 
-**Trial (Feb 2026):** Vibe coding is a powerful technique for exploration and prototyping. However, it should be used with caution for "production-critical" legacy code. Teams should trial it on low-stakes projects or for initial scaffolding before moving to more structured **Agentic Coding Workflows** for the core modernization work.
+**Trial (Feb 2026):** Vibe coding is being trialed for rapid prototyping and exploration of new technologies. While it dramatically speeds up the initial scaffolding of modern services, teams are still evaluating the best practices for transitioning 'vibe' code into maintainable production systems.

@@ -88,4 +88,4 @@ After identifying your first bounded context, apply [Anti-Corruption Layer](anti
 
 ## Staging History
 
-**Apply (Feb 2026):** Domain-Driven Refactoring is a foundational practice for any serious modernization effort. While it requires human expertise to finalize the model, AI-assisted discovery makes the initial " archaeology" step much faster and more accurate. Use this approach to ensure your new services are built on a solid business foundation.
+**Apply (Feb 2026):** Domain-driven refactoring is a foundational, well-proven practice for managing the complexity of monolith decomposition. Using DDD principles to find stable business boundaries is a standard prerequisite for any successful strangler fig migration.

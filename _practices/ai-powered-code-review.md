@@ -88,4 +88,4 @@ After establishing AI-powered review, implement [Human in the Loop](human-in-the
 
 ## Staging History
 
-**Trial (Feb 2026):** AI-powered code review tools are mature and provide immediate value. However, they require careful configuration to avoid noise. Teams should trial them on a subset of repositories to tune the rules and "voice" of the bot before rolling them out across the entire modernization program.
+**Trial (Feb 2026):** AI-powered code review is currently in the trial phase for most organizations. While it provides immediate value in catching routine bugs and style violations, teams are still evaluating its effectiveness in enforcing complex architectural patterns and the human-in-the-loop review process required for high-stakes legacy refactoring.

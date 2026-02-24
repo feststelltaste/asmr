@@ -79,4 +79,4 @@ After assessing sandboxing options, apply [Human in the Loop](human-in-the-loop.
 
 ## Staging History
 
-**Assess (Feb 2026):** Sandboxing for AI agents is an emerging discipline. The underlying technologies (containers, micro-VMs) are mature, but their application to agentic legacy modernization workflows is new and evolving rapidly. Dedicated tooling (E2B, Firecracker-based sandboxes) is available but not yet standardized. Best practices for network isolation and pre-provisioning legacy build environments in sandboxes are still being established. Teams adopting agentic tools for legacy work should assess their exposure and experiment before broad CI/CD rollout.
+**Apply (Feb 2026):** Agent sandboxing has become a foundational security requirement for running autonomous agents in production-adjacent legacy environments. The maturity of micro-VM and container-based isolation has made it a reliable choice for preventing unintended side effects during agentic modernization.

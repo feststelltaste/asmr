@@ -88,4 +88,4 @@ After pruning dead code, apply [AI-driven Technical Debt Detection](ai-technical
 
 ## Staging History
 
-**Trial (Feb 2026):** Automated dead code removal is a high-leverage task, but the risk of breaking dynamic calls is real. Teams should start with "technically dead" code (unused private methods) before moving to higher-risk feature deletions. Always combine with a robust CI/CD pipeline and canary releases.
+**Trial (Feb 2026):** Automated dead code removal is showing promise as a high-leverage janitorial task. Early trials indicate that AI agents can safely identify and remove unused logic when guided by production coverage data, but broad application requires robust CI/CD and canary deployment patterns.

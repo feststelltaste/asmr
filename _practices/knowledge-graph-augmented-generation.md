@@ -87,4 +87,4 @@ After establishing a basic vector RAG system, begin experimenting with [Knowledg
 
 ## Staging History
 
-**Trial (Feb 2026):** GraphRAG is a powerful but emerging technique. While it offers superior structural understanding, the tooling and construction process are still more complex than standard RAG. Teams should trial it on a high-value module (like a complex monolith core) before applying it codebase-wide.
+**Apply (Feb 2026):** Knowledge Graph-Augmented Generation (GraphRAG) has become a proven choice for navigating the complex structural dependencies of legacy systems. The ability to provide agents with a traversable map of the system has significantly improved the accuracy of impact analysis and large-scale refactoring plans.

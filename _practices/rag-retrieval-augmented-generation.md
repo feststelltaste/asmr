@@ -88,4 +88,4 @@ After establishing a basic RAG system for your documentation, apply [Knowledge G
 
 ## Staging History
 
-**Apply (Feb 2026):** RAG is a foundational requirement for any serious AI-assisted modernization effort. It is the most effective way to give AI agents access to your proprietary code and documentation without the overhead of fine-tuning. Every team should have a RAG pipeline in place from day one.
+**Apply (Feb 2026):** Retrieval-Augmented Generation (RAG) is a foundational, well-proven practice for grounding AI agents in proprietary codebase facts. It is a standard requirement for any modernization effort, providing a low-cost and highly flexible alternative to fine-tuning for maintaining up-to-date context.

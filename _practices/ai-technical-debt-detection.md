@@ -88,4 +88,4 @@ After identifying and prioritizing technical debt, apply [AI-assisted Codebase A
 
 ## Staging History
 
-**Trial (Feb 2026):** AI-driven debt detection is a powerful strategic tool. While the initial reports can be noisy, the ability to scan an entire codebase in hours is transformative for modernization planning. Teams should start with a small module to tune the detection prompts before scanning the entire system.
+**Assess (Feb 2026):** AI-driven technical debt detection is being assessed as a strategic tool for modernization planning. The ability to scan an entire codebase for deep architectural violations is transformative, but teams must still evaluate the signal-to-noise ratio and calibrate the findings against their specific business context.

@@ -80,4 +80,4 @@ After selecting an orchestration framework, implement [Agentic Coding Workflows]
 
 ## Staging History
 
-**Trial (Feb 2026):** Orchestration frameworks are evolving rapidly. While they offer powerful primitives for complex tasks, many teams find that simple, well-written code is often more maintainable for early-stage agentic experiments. Start with a framework only when your branching logic or state management needs clearly exceed what a simple script can provide.
+**Trial (Feb 2026):** Orchestration frameworks like LangGraph and CrewAI are being trialed to manage the complexity of multi-agent modernization tasks. They are currently best suited for teams building custom, high-volume refactoring pipelines that exceed the capabilities of single-agent tools.

@@ -78,4 +78,4 @@ Once comfortable with basic agentic workflows, implement [Agent Sandboxing](agen
 
 ## Staging History
 
-**Trial (Feb 2026):** Agentic coding tools have moved beyond simple prototypes to being capable of solving non-trivial tickets. However, they require careful setup of build environments and sandboxing. Teams should trial them on well-scoped modernization tasks (like dependency upgrades or test migrations) before deploying them for core architectural changes.
+**Trial (Feb 2026):** Multi-step agentic workflows are showing high potential for automating repetitive modernization tasks. While the technology is maturing rapidly, teams should continue trialing these workflows on well-scoped modules to establish reliable human-in-the-loop patterns before broad application.

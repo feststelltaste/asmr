@@ -88,4 +88,4 @@ After setting up a gateway, implement [LLM Observability & Tracing](llm-observab
 
 ## Staging History
 
-**Assess (Feb 2026):** AI gateways are becoming a standard part of the "AI stack." Teams starting with a single model may not need one immediately, but as soon as they begin using multiple providers or scaling their agent usage, a gateway becomes a critical piece of infrastructure.
+**Trial (Feb 2026):** AI gateways are currently in the trial phase as teams move toward multi-model architectures. They provide significant value in managing API costs and providing failover reliability for modernization agents, but require dedicated infrastructure setup.

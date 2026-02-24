@@ -88,4 +88,4 @@ After building your first harness, apply [Agentic Coding Workflows](agentic-codi
 
 ## Staging History
 
-**Assess (Feb 2026):** Harness engineering is a critical but often overlooked part of the agentic stack. While the underlying tools (Docker, CI/CD) are mature, the specific discipline of building "agent-friendly" environments is new and evolving. Teams should assess their current environment's readiness for agentic automation before attempting broad rollout.
+**Trial (Feb 2026):** Harness engineering is being trialed as a critical prerequisite for reliable agentic work. Creating high-fidelity execution environments with integrated verification loops has proven essential for moving beyond simple 'vibes' toward deterministic software engineering results.

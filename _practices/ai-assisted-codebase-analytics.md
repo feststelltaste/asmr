@@ -86,4 +86,4 @@ After identifying hotspots, apply [AI-driven Technical Debt Detection](ai-techni
 
 ## Staging History
 
-**Trial (Feb 2026):** AI-assisted analytics is a powerful technique for any modernization lead. While the tools are custom and sometimes "disposable," the insights they provide are durable. Teams should trial this approach on a single module to validate its predictive power before applying it codebase-wide.
+**Apply (Feb 2026):** AI-assisted analytics has become a standard foundational practice for identifying modernization hotspots and measuring technical debt. The ability to generate custom analysis scripts at development speed has made it a proven choice for data-driven prioritization.

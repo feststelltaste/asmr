@@ -90,4 +90,4 @@ After instrumenting your first agent, implement [LLM-as-judge Evaluation](llm-as
 
 ## Staging History
 
-**Apply (Feb 2026):** LLM observability is a "day-one" requirement for any team using agentic tools on real codebases. The ability to audit, debug, and track the cost of agentic sessions is essential for moving from "vibes" to production-grade engineering.
+**Trial (Feb 2026):** LLM observability and tracing are being trialed to manage the operational complexity of multi-agent systems. Capturing detailed traces of agent 'thoughts' and tool calls is proving essential for debugging non-deterministic failures in complex modernization workflows.

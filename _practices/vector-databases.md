@@ -91,4 +91,4 @@ After establishing your first vector store (like [pgvector](https://github.com/p
 
 ## Staging History
 
-**Apply (Feb 2026):** Vector databases are a mature and foundational part of the "AI stack." Every team building agentic tools or RAG pipelines should have a vector store in place. Start with pgvector if you already use PostgreSQL; otherwise, pick a dedicated store based on your operational needs.
+**Apply (Feb 2026):** Vector databases are a mature and foundational part of the 'AI stack'. Every team building agentic tools or RAG pipelines has a vector store in place, with pgvector being the most popular choice for teams already using PostgreSQL.

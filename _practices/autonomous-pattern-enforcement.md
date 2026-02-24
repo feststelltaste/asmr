@@ -86,4 +86,4 @@ After implementing basic pattern enforcement, apply [AI-driven Architectural Fit
 
 ## Staging History
 
-**Trial (Feb 2026):** Autonomous pattern enforcement is a proven high-value practice for teams using agents at scale. While it increases token usage, the reduction in human review time makes it a net win for most modernization projects. Start with 2-3 "Non-Negotiable" patterns to validate the loop.
+**Trial (Feb 2026):** Autonomous pattern enforcement is being trialed to reduce human review friction during large-scale agentic transformations. Using a 'Guardian' agent to provide real-time feedback has proven effective in keeping agents aligned with project-specific conventions.

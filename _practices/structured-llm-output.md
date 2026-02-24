@@ -89,4 +89,4 @@ After establishing your first structured output pipeline, implement [LLM-as-judg
 
 ## Staging History
 
-**Apply (Feb 2026):** Structured LLM output is a well-validated and foundational practice for any serious AI-assisted modernization effort. It is the only way to build reliable, scalable pipelines that integrate AI with traditional software engineering tools. Immediate adoption is recommended.
+**Trial (Feb 2026):** Structured LLM output is being trialed to build reliable, typed modernization pipelines. Using JSON Mode and Tool Use to enforce schemas is proving essential for integrating agents into traditional software engineering workflows, but teams are still tuning schema flexibility.

@@ -91,4 +91,4 @@ After successfully running [Agentic Coding Workflows](agentic-coding-workflows.m
 
 ## Staging History
 
-**Hold On (Feb 2026):** Fully autonomous deployment to production is a high-stakes activity that is too risky for most modernization efforts today. While technically possible, the "blast radius" of a failure is too high. Teams should focus on perfecting their **Agentic Coding Workflows** with human review before moving to full autonomy.
+**Hold On (Feb 2026):** Fully autonomous deployment to production is placed in the 'Hold On' stage for enterprise modernization efforts. While technically possible for low-risk tasks, the 'trust gap' and the potential blast radius of autonomous failures mean that human-in-the-loop review is the necessary industry standard for production changes.

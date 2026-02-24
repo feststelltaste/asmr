@@ -89,4 +89,4 @@ After establishing a basic evaluation rubric, implement [LLM Observability & Tra
 
 ## Staging History
 
-**Trial (Feb 2026):** LLM-as-a-Judge is a powerful technique for scaling modernization. However, it requires careful "calibration" against human expert judgment before it can be trusted at scale. Teams should start by judging simple, low-stakes tasks before moving to architectural or security evaluations.
+**Trial (Feb 2026):** LLM-as-a-Judge is being trialed to scale the quality assessment of agentic modernization outputs. Early results show high correlation with human expert judgment for routine tasks, but teams are still calibrating rubrics for complex architectural decisions.

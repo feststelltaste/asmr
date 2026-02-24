@@ -88,4 +88,4 @@ After establishing your first project rules file, implement [Harness Engineering
 
 ## Staging History
 
-**Apply (Feb 2026):** Context engineering is a "must-have" for any team using agentic tools on a legacy codebase. It is the primary lever for improving agent quality and should be established as soon as an agentic tool is introduced into the project.
+**Apply (Feb 2026):** Context engineering has become a standard requirement for any successful agentic modernization effort. Providing agents with high-signal instruction files, architectural rules, and domain glossaries is a proven practice for maintaining high-quality outputs and reducing hallucinations.

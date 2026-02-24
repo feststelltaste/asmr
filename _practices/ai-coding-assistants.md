@@ -75,4 +75,4 @@ Transition to [Agentic Coding Workflows](agentic-coding-workflows.md) — utiliz
 
 ## Staging History
 
-**Stop (Feb 2026):** Agentic coding tools now handle multi-file edits, test runs, and PR creation autonomously, making the manual prompt-review-accept loop of inline assistants a significant bottleneck. Teams should move directly to agentic workflows rather than reinforcing habits centered on localized completions that will need to be unlearned.
+**Stop (Feb 2026):** Standard IDE-embedded AI coding assistants are now being phased out in favor of multi-step autonomous agents for complex modernization tasks. While still useful for general development, the manual prompt-review-accept loop of these assistants has become a bottleneck for teams executing large-scale legacy transformations.

@@ -89,4 +89,4 @@ After identifying your first "seam," apply [Anti-Corruption Layer](anti-corrupti
 
 ## Staging History
 
-**Apply (Feb 2026):** The Strangler Fig Pattern is a foundational and well-proven practice for any serious modernization effort. It is the only reliable way to replace a large, mission-critical monolith without a high risk of failure. Immediate adoption is recommended for any large-scale modernization program.
+**Apply (Feb 2026):** The Strangler Fig Pattern is the industry-standard, well-proven choice for safe monolith decomposition. Its incremental nature is a perfect match for agentic workflows, which can autonomously modernize and verify individual 'slices' of the legacy system.

@@ -88,4 +88,4 @@ After establishing a successful RAG pipeline, identify your most repetitive and 
 
 ## Staging History
 
-**Assess (Feb 2026):** Fine-tuning on internal code is a high-cost, high-reward activity. While the technology is more accessible than ever, most teams should focus on perfecting their RAG and prompt engineering before investing in a full fine-tuning pipeline. Start only when you have a clear, specialized need that generic models cannot meet.
+**Assess (Feb 2026):** Fine-tuning on internal code is assessed for specialized modernization tasks where RAG is insufficient. While techniques like LoRA have lowered the barrier to entry, the high cost of data curation and model maintenance means it is currently a specialized practice for large-scale, unique codebases.

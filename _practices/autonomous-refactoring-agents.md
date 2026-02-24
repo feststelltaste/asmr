@@ -88,4 +88,4 @@ After successfully automating your first large-scale refactor, implement [Contin
 
 ## Staging History
 
-**Trial (Feb 2026):** Autonomous refactoring agents are a transformative technology for legacy modernization. However, they are not a "silver bullet"—they require a robust test suite and a human-in-the-loop review process to ensure architectural quality. Start with well-scoped, mechanical refactorings before moving to complex domain-level restructuring.
+**Trial (Feb 2026):** Autonomous refactoring agents are showing high potential for automating large-scale structural changes. While they excel at mechanical tasks like class extraction and API migration, teams should continue trialing them on well-tested modules to establish the necessary review and verification guardrails.

@@ -88,4 +88,4 @@ After reconstructing your first legacy screen, apply [Vibe Coding](vibe-coding.m
 
 ## Staging History
 
-**Trial (Feb 2026):** Vision-to-Code capabilities have advanced dramatically with the release of frontier multi-modal models. While still requiring human verification, the speed of reconstructing legacy UIs is now high enough to be trialed on non-critical screens and workflows.
+**Trial (Feb 2026):** Legacy UI archaeology (Vision-to-Code) is placed in the trial phase. Early results from modernizing Mainframe and VB6 screens show that vision models can reliably extract business rules trapped in the UI layer, though human verification is essential for complex workflows.

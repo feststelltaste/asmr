@@ -90,4 +90,4 @@ After establishing a basic RAG system for your documentation, begin linking it t
 
 ## Staging History
 
-**Trial (Feb 2026):** Knowledge recovery is a powerful technique for reducing modernization risk. However, it requires a significant "ingestion" and "cleaning" effort for old data. Teams should start by indexing a single, critical project's Jira and Slack history to validate the value before scaling codebase-wide.
+**Trial (Feb 2026):** Legacy knowledge recovery agents are being trialed to bridge the gap between code and historical context. Early results show they are highly effective at preventing the removal of 'load-bearing' bug fixes, but teams are still evaluating the effort required to ingest and clean fragmented documentation sources.

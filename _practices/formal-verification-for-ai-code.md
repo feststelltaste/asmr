@@ -89,4 +89,4 @@ After assessing your need for formal verification, start by applying it to a sin
 
 ## Staging History
 
-**Assess (Feb 2026):** Formal verification for AI-generated code is an emerging and highly specialized discipline. While the potential for "zero-defect" autonomous refactoring is transformative, the current tooling and expertise required are too high for general use. Teams should assess this practice for their most critical modules but rely on testing for routine modernization.
+**Assess (Feb 2026):** Formal verification for AI-generated code is being assessed for mission-critical modernization tasks where testing is insufficient. The potential for 'zero-defect' refactoring is high, but the high specialized expertise and tooling required mean it is currently limited to high-stakes scenarios.
