@@ -1,6 +1,6 @@
 ---
 title: "AI Documentation Generation"
-stage: apply
+stage: stop
 category: Agentic AI Tools
 description: "Auto-generating API docs, changelogs, architecture summaries, and README files from code and commit history."
 strategic_value: supporting
@@ -89,4 +89,4 @@ After generating initial documentation, apply [Human in the Loop](../human-in-th
 
 ## Staging History
 
-**Apply (Feb 2026):** AI-powered documentation generation is a proven choice for reconstructing missing context in legacy systems. The ability to autonomously maintain READMEs, API docs, and architectural summaries has made it a foundational practice for preventing the accumulation of new technical debt.
+**Stop (Feb 2026):** In a legacy system context, nobody can verify whether the AI-generated output is actually correct — the implicit knowledge needed to validate it is precisely what's missing. On top of that, the sheer volume of generated documentation overwhelms teams; nobody reads it. The result is a false sense of coverage rather than real understanding. Ultimately, a repository of AI-generated documentation delivers no tangible value to customers: it does not ship faster, does not reduce defects, and does not improve the user experience. It is an internal artifact that consumes team effort without translating into customer outcomes.
