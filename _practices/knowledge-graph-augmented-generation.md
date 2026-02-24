@@ -36,5 +36,5 @@ Knowledge Graph-Augmented Generation (GraphRAG) maps the entities in your system
 ## Resources
 
 - [Microsoft Research — GraphRAG: Unlocking LLM discovery on narrative private data](https://www.microsoft.com/en-us/research/blog/graphrag-unlocking-llm-discovery-on-narrative-private-data/)
-- [Neo4j — Knowledge Graphs for LLMs](https://neo4j.com/generative-ai/)
+- [Neo4j — Knowledge Graphs for LLMs](https://neo4j.com/generativeai/)
 - [LlamaIndex — Property Graph Index](https://docs.llamaindex.ai/en/stable/module_guides/indexing/lpg_index_guide/)

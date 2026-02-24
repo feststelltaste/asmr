@@ -33,5 +33,5 @@ LLMs can read a function or class and generate a set of unit tests covering happ
 ## Resources
 
 - [CodiumAI / Qodo — AI test generation](https://www.qodo.ai/) — purpose-built LLM test generation tool
-- [Kent Beck — Taming the AI (TDD with AI)](https://tidyfirst.substack.com/p/taming-the-ai) — practical AI-assisted TDD patterns
+- [Kent Beck — Exploring AI (TDD with AI)](https://tidyfirst.substack.com/p/exploring-ai) — practical AI-assisted TDD patterns
 - [Diffblue Cover](https://www.diffblue.com/) — automated Java unit test generation

@@ -25,6 +25,6 @@ In mission-critical systems, "passing the test suite" is not sufficient evidence
 
 ## Resources
 
-- [Amazon — Using formal methods to verify code at scale](https://aws.amazon.com/blogs/opensource/formal-verification-at-scale/)
+- [Amazon — Lean into verified software development](https://aws.amazon.com/blogs/opensource/lean-into-verified-software-development/)
 - [Dafny — A language for provably correct code](https://github.com/dafny-lang/dafny)
 - [Microsoft Research — Z3 Theorem Prover](https://github.com/Z3Prover/z3)

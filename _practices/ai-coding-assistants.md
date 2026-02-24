@@ -61,7 +61,7 @@ In a legacy context, the bottleneck is rarely the individual keystroke; it is th
 ## References
 
 - [Simon Willison — AI-assisted programming](https://simonwillison.net/tags/ai-assisted-programming/) — ongoing field notes from a prolific practitioner; documents the observed shift from inline completion toward agentic workflows as task complexity grows.
-- [Kent Beck — "Taming the AI"](https://tidyfirst.substack.com/p/taming-the-ai) — argues for maintaining test-first discipline when working with AI-generated code; the conceptual foundation for agentic TDD workflows.
+- [Kent Beck — "Exploring AI"](https://tidyfirst.substack.com/p/exploring-ai) — argues for maintaining test-first discipline when working with AI-generated code; the conceptual foundation for agentic TDD workflows.
 
 ## Related Patterns
 

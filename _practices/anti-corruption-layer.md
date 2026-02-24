@@ -71,7 +71,7 @@ When AI agents generate new code against a legacy system without an ACL, they wi
 
 - [OORP — "Present the Right Interface"](https://oorp.github.io/#present-the-right-interface) — the object-oriented reengineering pattern that formalises wrapping a legacy component behind a clean abstraction; the direct structural ancestor of the ACL.
 - [Eric Evans — Domain-Driven Design (Blue Book)](https://www.domainlanguage.com/ddd/) — original formalization of the ACL as a strategic context mapping pattern; chapters on context maps and integration define the vocabulary.
-- [Vaughn Vernon — Implementing Domain-Driven Design](https://vaughnvernon.com/?page_id=168) — practical ACL implementation guidance covering adapters, gateways, and testing strategies in real systems.
+- [Vaughn Vernon — Implementing Domain-Driven Design](https://www.oreilly.com/library/view/implementing-domain-driven-design/9780133039900/) — practical ACL implementation guidance covering adapters, gateways, and testing strategies in real systems.
 
 ## Related Patterns
 

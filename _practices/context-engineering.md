@@ -47,4 +47,4 @@ In agentic setups, this is the difference between an agent that confidently does
 - [Anthropic — CLAUDE.md best practices](https://docs.anthropic.com/en/docs/claude-code/memory) — official guidance on project memory files
 - [Cursor rules documentation](https://docs.cursor.com/context/rules-for-ai) — how to write effective `.cursorrules`
 - [No Vibes Allowed: Solving Hard Problems in Complex Codebases – Dex Horthy, HumanLayer](https://www.youtube.com/watch?v=rmvDxxNubIg)
-- [Philipp Schmid — Prompt Engineering Guide](https://www.philschmid.de/prompt-engineering-llms) — practical patterns for shaping LLM behavior
+- [Philipp Schmid — Context Engineering](https://www.philschmid.de/context-engineering) — practical patterns for shaping LLM behavior through dynamic context construction rather than static prompts
