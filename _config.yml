@@ -25,3 +25,4 @@ exclude:
   - Gemfile.lock
   - vendor/
   - "*.sh"
+  - _config.local.yml
