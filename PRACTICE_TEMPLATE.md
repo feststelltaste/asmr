@@ -1,8 +1,26 @@
 # Practice Template
 
+```yaml
+---
+title: "Practice Name"
+stage: apply           # Roadmap stage: hold-on, assess, trial, apply, stop, remove
+category: Category Name  # e.g., AI Tooling Setup, Testing & Quality, Legacy Modernization
+description: "Intent statement: One sentence explaining why this practice exists and what it achieves."
+strategic_value: core  # core (AI-unique), supporting (enabler), generic (commodity)
+evolution: product     # Wardley stage: genesis, custom-built, product, commodity
+devops_phases: [code]  # any of: plan, code, build, test, release, deploy, operate, monitor
+---
+```
+
 > **Roadmap context:** Every practice in this roadmap is about modernizing legacy software systems using AI coding tools and AI agents. The `description` (Intent) and the **Problem** must fit this theme — not general software engineering advice, but guidance for teams actively replacing, refactoring, or augmenting legacy systems with the help of LLMs and autonomous agents.
 
 > **Note on Intent:** The `description` field in a practice's front matter serves as the **Intent** statement. It is rendered prominently on the detail page by the layout, so it is **not** repeated in the body.
+
+> **Evolution Stage:** Every practice must include an `evolution` field in its front matter, based on Simon Wardley's Evolution stages. This signals how mature and common the practice is in the industry:
+> - **Genesis:** Brand new, unique, experimental, and high uncertainty.
+> - **Custom-Built:** Patterns are emerging; teams are often building their own versions.
+> - **Product:** Standardized tools or well-defined, repeatable patterns exist.
+> - **Commodity:** Ubiquitous and standardized; a basic expectation for any modern project.
 
 ## [Practice Name]
 > The name is typically a noun phrase — a tool, technique, or concept (e.g., "Anti-Corruption Layer", "Agent Sandboxing", "Strangler Fig Migration").
@@ -87,6 +105,18 @@
 ---
 
 # Example: AI-Generated Characterization Tests
+
+```yaml
+---
+title: "AI-Generated Characterization Tests"
+stage: apply
+category: Testing & Quality
+description: "Creating an automated safety net for untested legacy code by using AI agents to capture and codify current behavior before refactoring."
+strategic_value: core
+evolution: product
+devops_phases: [test, code]
+---
+```
 
 ---
 
