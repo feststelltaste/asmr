@@ -55,6 +55,9 @@ layout: default
             <span class="dsq dsq-lg{% if page.devops_phases contains p %} dsq-on{% endif %}" title="{{ p }}">{{ p | slice: 0 | upcase }}</span>
           {% endfor %}
         </div>
+        {% if page.evolution %}
+        <span class="ev-badge ev-badge-lg ev-{{ page.evolution | slugify }}">{{ page.evolution }}</span>
+        {% endif %}
       </div>
     </div>
     {% endif %}

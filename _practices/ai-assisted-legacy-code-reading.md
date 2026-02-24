@@ -22,7 +22,7 @@ How do you accelerate the comprehension of unknown legacy code—COBOL, old Java
 
 *Yet, solving this problem is feasible because:*
 
-- Frontier LLMs (especially those with massive context windows like Gemini 1.5 Pro or Claude 3.5 Sonnet) can read and summarize thousands of lines of code in seconds, identifying patterns and business rules that would take a human developer days to map.
+- Frontier LLMs (especially those with massive context windows like Gemini 3.1 Pro or Claude Sonnet 4.6) can read and summarize thousands of lines of code in seconds, identifying patterns and business rules that would take a human developer days to map.
 - LLMs can explain unfamiliar or archaic syntax (e.g., COBOL, PL/I, old Perl) in plain language, bridging the technical gap for modern developers.
 
 ## Solution

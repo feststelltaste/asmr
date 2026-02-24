@@ -40,6 +40,14 @@ layout: default
           <li><span class="sv-badge sv-generic">generic</span> — Commodity or universal anti-patterns to avoid</li>
         </ul>
 
+        <p class="ref-legend-heading">Wardley evolution</p>
+        <ul class="sv-legend">
+          <li><span class="ev-badge ev-genesis">genesis</span> — Unique, experimental, high uncertainty</li>
+          <li><span class="ev-badge ev-custom-built">custom-built</span> — Emerging patterns, bespoke implementations</li>
+          <li><span class="ev-badge ev-product">product</span> — Standardized tools or repeatable patterns</li>
+          <li><span class="ev-badge ev-commodity">commodity</span> — Ubiquitous, invisible, standard utility</li>
+        </ul>
+
         <p class="ref-legend-heading">DevOps cycle coverage</p>
         <p class="ref-legend-desc">Each card shows which DevOps phases the practice affects. Filled square = relevant, empty = not in scope.</p>
         <div class="dsq-legend">
@@ -179,7 +187,7 @@ layout: default
                     <span class="dsq{% if tech.devops_phases contains p %} dsq-on{% endif %}" title="{{ p }}">{{ p | slice: 0 | upcase }}</span>
                   {% endfor %}
                 </div>
-                <span class="tcard-arrow" aria-hidden="true">→</span>
+                {% if tech.evolution %}<span class="ev-badge ev-{{ tech.evolution | slugify }}">{{ tech.evolution }}</span>{% endif %}
               </div>
             </a>
             {% endfor %}

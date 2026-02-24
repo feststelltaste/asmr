@@ -15,7 +15,7 @@ How do you utilize powerful LLMs for modernization tasks on highly sensitive, pr
 
 *This problem is difficult because:*
 
-- Frontier models (like GPT-4o, Claude 3.5 Sonnet) are only available via third-party APIs, which often require sending your code to a cloud provider's servers for processing.
+- Frontier models (like GPT-5.2, Claude Sonnet 4.6) are only available via third-party APIs, which often require sending your code to a cloud provider's servers for processing.
 - Organizations in highly regulated industries (finance, healthcare, government, defense) often have strict "no-cloud" or "no-data-sharing" policies for their core intellectual property (the source code).
 - Self-hosting a large model (e.g., 70B+ parameters) requires significant GPU infrastructure, specialized MLOps expertise, and ongoing operational maintenance.
 - There is traditionally a "quality gap" between the best open-weight models and the best closed-source frontier models for complex architectural reasoning and long-context tasks.
@@ -23,7 +23,7 @@ How do you utilize powerful LLMs for modernization tasks on highly sensitive, pr
 
 *Yet, solving this problem is feasible because:*
 
-- The performance gap between open-weight models (Llama 3, Mistral, Qwen, DeepSeek) and frontier models has narrowed dramatically in 2024–2025.
+- The performance gap between open-weight models (Mistral's Devstral, Qwen, DeepSeek) and frontier models has narrowed dramatically in 2024–2025.
 - Efficient inference servers (vLLM, Ollama, Hugging Face TGI) and "quantization" techniques allow high-performance models to run on more modest, on-premise hardware.
 - Self-hosting gives an organization total control over its data, model versions, and "fine-tuning" pipeline, ensuring 100% data residency and privacy compliance.
 - Open models can be "fine-tuned" on internal data more easily and cheaply than closed-source models, allowing them to specialize in a specific legacy domain.
@@ -32,7 +32,7 @@ How do you utilize powerful LLMs for modernization tasks on highly sensitive, pr
 
 Deploy and manage open-weight LLMs within your own secure infrastructure to power modernization agents:
 
-1. **Select an Open-Weight Model** — Choose a model based on your specific task (e.g., **Llama 3** or **Qwen 2.5** for general reasoning, or **DeepSeek-Coder** for specialized code generation).
+1. **Select an Open-Weight Model** — Choose a model based on your specific task (e.g., **Qwen 3 series** for general reasoning, or **DeepSeek-Coder** for specialized code generation).
 2. **Provision the GPU Infrastructure** — Set up internal GPU servers (e.g., NVIDIA H100s or A100s) to host the model. Use **quantization** (4-bit or 8-bit) to reduce the VRAM requirements if needed.
 3. **Deploy an Inference Server** — Use **vLLM** (production-grade) or **Ollama** (for local development) to serve the model via an OpenAI-compatible API.
 4. **Implement an AI Gateway** — Use an **AI Gateway / Routing** layer (like LiteLLM) to provide a unified interface for your agents, allowing them to switch between local and (if allowed) cloud models seamlessly.

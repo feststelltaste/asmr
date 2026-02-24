@@ -15,7 +15,7 @@ How do you efficiently and cost-effectively handle high-volume, low-complexity m
 
 *This problem is difficult because:*
 
-- Frontier models (like GPT-4o, Claude 3.5 Sonnet) are "overkill" for simple, repetitive "pattern-matching" tasks and can be 10x-50x more expensive per token than smaller models.
+- Frontier models (like Claude Opus 4.6) are "overkill" for simple, repetitive "pattern-matching" tasks and can be 10x-50x more expensive per token than smaller models.
 - High-volume tasks (e.g., generating Javadoc for 100,000 legacy functions or cleaning up minor linting errors) can lead to massive API bills if performed with the most powerful models.
 - The latency of massive frontier models can slow down interactive developer workflows that only require a "quick" check, classification, or suggestion.
 - Most "Small Language Models" (SLMs) in the 1B-8B parameter range traditionally lacked the instruction-following and reasoning capabilities needed for even "simple" software engineering tasks.
@@ -23,7 +23,7 @@ How do you efficiently and cost-effectively handle high-volume, low-complexity m
 
 *Yet, solving this problem is feasible because:*
 
-- A new generation of highly capable SLMs (like **Phi-4**, **Llama 3.2**, **Gemma 2**, or **Qwen 2.5**) has emerged that can perform narrow, well-defined tasks with high accuracy and low latency.
+- A new generation of highly capable SLMs (like **Phi-4**, **Gemma 3**, or **Qwen 3**) has emerged that can perform narrow, well-defined tasks with high accuracy and low latency.
 - SLMs can be self-hosted on a developer's local machine or a modest internal server (using tools like Ollama), providing "nearly free" inference for high-volume tasks.
 - **AI Gateway / Routing** tools can automatically "route" simple, well-defined tasks to an SLM while reserving complex, multi-step reasoning for a frontier model.
 

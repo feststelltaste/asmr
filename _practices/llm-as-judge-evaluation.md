@@ -22,7 +22,7 @@ How do you objectively evaluate the quality, correctness, and safety of thousand
 
 *Yet, solving this problem is feasible because:*
 
-- A powerful, independent LLM (e.g., GPT-4o or Claude 3.5 Sonnet) can be used as a "Judge" to evaluate the outputs of a smaller, faster model against a detailed rubric.
+- A powerful, independent LLM (e.g., GPT-5.3-Codex or Claude Sonnet 4.6) can be used as a "Judge" to evaluate the outputs of a smaller, faster model against a detailed rubric.
 - LLM-as-a-Judge can provide structured, consistent scores and detailed reasoning for its evaluations, making its decisions auditable and tunable.
 - Automated "evaluations" (evals) can run in parallel across thousands of samples, providing immediate feedback on model or prompt changes during a modernization project.
 

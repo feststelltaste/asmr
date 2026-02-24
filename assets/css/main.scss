@@ -629,6 +629,34 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .sv-supporting { background: #e5e7eb; color: #374151; border: 1px solid #d1d5db; }
 .sv-generic    { background: #ffffff; color: #6b7280; border: 1px solid #e5e7eb; }
 
+/* Evolution badges */
+.ev-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 13px;
+  padding: 0 4px;
+  font-size: .55rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  border-radius: 2px;
+  line-height: 1;
+  white-space: nowrap;
+}
+.ev-genesis      { background: #ffffff; color: #64748b; border: 1px solid #e2e8f0; }
+.ev-custom-built { background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; }
+.ev-product      { background: #94a3b8; color: #ffffff; border: 1px solid #64748b; }
+.ev-commodity    { background: #334155; color: #ffffff; border: 1px solid #0f172a; }
+
+/* Large variant for detail page */
+.ev-badge-lg {
+  height: 20px;
+  padding: 0 6px;
+  font-size: .65rem;
+  border-radius: 3px;
+}
+
 .tcard-desc {
   font-size: .75rem;
   color: var(--c-muted);
@@ -637,16 +665,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .tcard-arrow {
-  align-self: flex-end;
-  font-size: .8rem;
-  color: var(--c-faint);
-  margin-top: .3rem;
-  transition: color .15s, transform .15s;
+  display: none;
 }
 
 .tcard:hover .tcard-arrow {
-  color: var(--sc);
-  transform: translateX(2px);
+  display: none;
 }
 
 /* ================================================================

@@ -22,7 +22,7 @@ How do you modernize legacy systems (Mainframe green screens, VB6, PowerBuilder)
 
 *Yet, solving this problem is feasible because:*
 
-- Multi-modal frontier models (like Claude 3.5 Sonnet or Gemini 1.5 Pro) can "see" and interpret screenshots or UI recordings of legacy applications.
+- Multi-modal frontier models (like Claude Sonnet 4.6 or Gemini 3.1 Pro) can "see" and interpret screenshots or UI recordings of legacy applications.
 - AI can reconstruct the "logical intent" of a screen (e.g., "This is an insurance claim entry form with 15 mandatory fields") just by looking at it.
 - LLMs can analyze archaic UI definition code (like PowerBuilder or Delphi) and translate it into clean, modern component structures and state models.
 - Agents can "watch" a recording of a subject matter expert (SME) using the legacy system and document the end-to-end business process flow automatically.
