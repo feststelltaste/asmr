@@ -1418,6 +1418,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .tech-body { padding: 1.25rem; }
   .tech-hd   { padding: 1.25rem; }
   .tech-title { font-size: 1.5rem; }
+
+  /* Stage focus: 2 columns on tablet */
+  .roadmap-scroll.is-stage-focused .stage.is-stage-active .stage-bd {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 480px) {
@@ -1450,4 +1455,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   /* Detail page */
   .tech-footer { flex-direction: column; align-items: flex-start; }
   .tech-title  { font-size: 1.3rem; }
+
+  /* Stage focus: 1 column on mobile */
+  .roadmap-scroll.is-stage-focused .stage.is-stage-active .stage-bd {
+    grid-template-columns: 1fr;
+  }
 }
