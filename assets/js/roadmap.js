@@ -291,6 +291,15 @@
       }
     };
 
+    // Collapse button inside each card
+    document.querySelectorAll('.tcard-collapse-btn').forEach(function (btn) {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        if (clearCardPreview) clearCardPreview();
+      });
+    });
+
     document.querySelectorAll('.tcard').forEach(function (card) {
       card.addEventListener('click', function (e) {
         // Only intercept clicks while in collapsed focus mode

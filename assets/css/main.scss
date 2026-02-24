@@ -722,6 +722,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   border-left: 3px solid var(--sc, #607D8B);
   box-shadow: var(--sh-xs);
   text-decoration: none;
+  position: relative;
   transition: transform .15s ease, box-shadow .15s ease, border-color .15s;
 
   &:hover {
@@ -816,6 +817,34 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   color: var(--c-muted);
   line-height: 1.5;
   margin-top: .2rem;
+}
+
+.tcard-collapse-btn {
+  display: none;
+  position: absolute;
+  top: .35rem;
+  right: .35rem;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--c-border);
+  color: var(--c-muted);
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  z-index: 1;
+  transition: background .15s, color .15s;
+
+  svg { width: 10px; height: 10px; display: block; }
+
+  &:hover {
+    background: var(--c-text);
+    color: #fff;
+  }
+}
+
+.tcard--preview .tcard-collapse-btn {
+  display: inline-flex;
 }
 
 .tcard-arrow {
