@@ -42,11 +42,22 @@ Implement a translation layer — the Anti-Corruption Layer — at every boundar
 
 ## Tradeoffs
 
-**Pros:** New and agent-generated code remains clean and free from legacy naming constraints. The legacy system and new system can evolve independently. Core domain logic becomes easier to test in isolation — and easier for AI agents to reason about and modify correctly.
+**Pros:**
 
-**Cons:** The ACL introduces an additional layer to maintain. If the legacy schema changes frequently, the ACL becomes a significant ongoing cost. Teams may underestimate translation complexity until they encounter subtle legacy edge cases.
+- New and agent-generated code remains clean and free from legacy naming constraints.
+- The legacy system and new system can evolve independently.
+- Core domain logic becomes easier to test in isolation — and easier for AI agents to reason about and modify correctly.
 
-**Difficulties:** Identifying precise boundaries in a tightly coupled legacy system — especially if agents have already begun generating code that mixes legacy and domain concepts. Preventing ACL concepts from drifting into the domain over time requires consistent architectural discipline and fitness functions.
+**Cons:**
+
+- The ACL introduces an additional layer to maintain.
+- If the legacy schema changes frequently, the ACL becomes a significant ongoing cost.
+- Teams may underestimate translation complexity until they encounter subtle legacy edge cases.
+
+**Difficulties:**
+
+- Identifying precise boundaries in a tightly coupled legacy system — especially if agents have already begun generating code that mixes legacy and domain concepts.
+- Preventing ACL concepts from drifting into the domain over time requires consistent architectural discipline and fitness functions.
 
 ## Rationale
 
@@ -54,10 +65,13 @@ When AI agents generate new code against a legacy system without an ACL, they wi
 
 ## Known Uses
 
-- [OORP — "Present the Right Interface"](https://oorp.github.io/#present-the-right-interface) — the foundational object-oriented reengineering pattern for wrapping legacy services to export clean abstractions.
-- [Eric Evans — Domain-Driven Design (Blue Book)](https://www.domainlanguage.com/ddd/) — original formalization of the ACL concept as part of strategic context mapping.
-- [Vaughn Vernon — Implementing Domain-Driven Design](https://vaughnvernon.com/?page_id=168) — practical ACL implementation guidance including testing strategies.
-- Widely applied in microservices migrations: each new service wraps its dependency on the legacy monolith behind an ACL before the monolith is strangled slice by slice.
+- [Hschwentner.io — Domain-Driven Refactorings](https://hschwentner.io/domain-driven-refactorings/) — catalogues ACL-based refactoring moves applied in real legacy codebases, with concrete before/after examples of wrapping legacy models behind clean domain interfaces.
+
+## References
+
+- [OORP — "Present the Right Interface"](https://oorp.github.io/#present-the-right-interface) — the object-oriented reengineering pattern that formalises wrapping a legacy component behind a clean abstraction; the direct structural ancestor of the ACL.
+- [Eric Evans — Domain-Driven Design (Blue Book)](https://www.domainlanguage.com/ddd/) — original formalization of the ACL as a strategic context mapping pattern; chapters on context maps and integration define the vocabulary.
+- [Vaughn Vernon — Implementing Domain-Driven Design](https://vaughnvernon.com/?page_id=168) — practical ACL implementation guidance covering adapters, gateways, and testing strategies in real systems.
 
 ## Related Patterns
 

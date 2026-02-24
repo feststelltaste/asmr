@@ -31,11 +31,23 @@
 
 > Each practice entails some positive and negative tradeoffs.
 
-**Pros:** [Positive consequences of applying this practice.]
+**Pros:** [Positive consequences of applying this practice. This section could contain a list of multiple items (2 - 5).]
 
-**Cons:** [Negative consequences or risks.]
+- Item 1
+- Item 2
+- Item 3
 
-**Difficulties:** [Practical challenges in applying this practice — including any specific to AI-assisted execution.]
+**Cons:** [Negative consequences or risks. This section could contain a list of multiple items (2 - 5).]
+
+- Item 1
+- Item 2
+- Item 3
+
+**Difficulties:** [Practical challenges in applying this practice — including any specific to AI-assisted execution. This section could contain a list of multiple items (2 - 5).]
+
+- Item 1
+- Item 2
+- Item 3
 
 ## Rationale
 
@@ -45,9 +57,13 @@
 
 ## Known Uses
 
-> We list some well-documented instances of this practice.
+> Documented instances of this practice in the wild — case studies, field reports, and published accounts of real adoption. **Every entry must link to a source.** Unverifiable anecdotes do not belong here.
 
-[References to real-world examples, books, case studies. Prefer examples from legacy modernization or AI-assisted development where they exist.]
+## References
+
+> Reading and watching material for practitioners who want to go deeper.
+
+[Books, papers, blog posts, talk recordings, and documentation relevant to this practice. Each entry should include a brief note on why it is worth reading.]
 
 ## Related Patterns
 
@@ -98,11 +114,19 @@ How do you replace a legacy system without halting ongoing business operations?
 
 ## Tradeoffs
 
-**Pros:** Risk is reduced because you migrate in small, testable increments. The business continues to operate throughout.
+**Pros:**
 
-**Cons:** You must maintain two systems in parallel for a potentially long period, increasing operational complexity.
+- Risk is reduced because you migrate in small, testable increments.
+- The business continues to operate throughout the migration.
 
-**Difficulties:** Finding clean boundaries in the legacy system to "strangle" can be challenging, especially with tightly coupled code or shared databases.
+**Cons:**
+
+- You must maintain two systems in parallel for a potentially long period, increasing operational complexity.
+
+**Difficulties:**
+
+- Finding clean boundaries in the legacy system to "strangle" can be challenging, especially with tightly coupled code or shared databases.
+
 
 ## Rationale
 
@@ -110,8 +134,13 @@ A big-bang rewrite is one of the riskiest strategies in software engineering. By
 
 ## Known Uses
 
-- Martin Fowler coined the term "Strangler Fig Application" based on the natural pattern of strangler fig trees.
-- Many organizations have used this approach to migrate from monoliths to microservices (e.g., Amazon, Shopify).
+- [Amazon — decomposing the retail monolith](https://aws.amazon.com/solutions/case-studies/) — routed traffic to new services incrementally over several years while the legacy system remained live; a canonical large-scale strangler fig.
+- [Shopify — extracting checkout into a standalone service](https://shopify.engineering/shopify-monolith) — migrated payments and checkout without downtime by strangling the monolith slice by slice.
+
+## References
+
+- [Martin Fowler — "Strangler Fig Application"](https://martinfowler.com/bliki/StranglerFigApplication.html) — the original write-up that named the pattern; explains the biological metaphor and migration mechanics.
+- [Sam Newman — *Building Microservices*](https://samnewman.io/books/building_microservices/) — chapter on decomposing monoliths covers the strangler fig as the primary migration strategy.
 
 ## Related Patterns
 

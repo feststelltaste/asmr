@@ -36,11 +36,22 @@ Run each agent session in an ephemeral, isolated environment that constrains the
 
 ## Tradeoffs
 
-**Pros:** The blast radius of any agent error is strictly contained. Reproducible environments make agent behavior auditable. Compliance requirements for automated processes touching legacy infrastructure are more easily satisfied.
+**Pros:**
 
-**Cons:** Spinning up fresh environments adds execution latency. Cloud-based sandboxes introduce external infrastructure dependencies. Replicating a complex legacy build environment within a sandbox requires significant upfront engineering.
+- The blast radius of any agent error is strictly contained.
+- Reproducible environments make agent behavior auditable.
+- Compliance requirements for automated processes touching legacy infrastructure are more easily satisfied.
 
-**Difficulties:** Granular network isolation is difficult to configure correctly — agents need enough access to build against legacy systems but must be blocked from exfiltration. Agents may struggle to troubleshoot environment-related failures inside the sandbox if they lack the context to understand the isolation constraints.
+**Cons:**
+
+- Spinning up fresh environments adds execution latency.
+- Cloud-based sandboxes introduce external infrastructure dependencies.
+- Replicating a complex legacy build environment within a sandbox requires significant upfront engineering.
+
+**Difficulties:**
+
+- Granular network isolation is difficult to configure correctly — agents need enough access to build against legacy systems but must be blocked from exfiltration.
+- Agents may struggle to troubleshoot environment-related failures inside the sandbox if they lack the context to understand the isolation constraints.
 
 ## Rationale
 
@@ -48,10 +59,13 @@ Legacy systems are unpredictable by nature — they contain undocumented side ef
 
 ## Known Uses
 
-- [E2B](https://e2b.dev/) — cloud-based SDK purpose-built for running AI agents in secure, ephemeral environments; used by several agentic coding product teams.
-- [OpenHands (formerly OpenDevin)](https://github.com/All-Hands-AI/OpenHands) — open-source agentic coding platform with a documented sandboxing architecture using Docker for agent execution isolation.
-- [OWASP LLM Security Top 10](https://owasp.org/www-project-top-10-for-large-language-model-applications/) — "Insecure Output Handling" and "Excessive Agency" risks directly motivate sandboxing as a control when agents operate on production-adjacent systems.
-- Claude Code's built-in permission system — a lightweight form of command interception that gates tool use on human approval before the agent touches files or runs shell commands.
+- [OpenHands (formerly OpenDevin)](https://github.com/All-Hands-AI/OpenHands) — open-source agentic coding platform that publicly documents its sandboxing architecture; each agent session runs in an isolated Docker container with controlled file system and network access.
+
+## References
+
+- [E2B](https://e2b.dev/) — cloud sandbox SDK built specifically for AI agents; supports ephemeral micro-VM environments with fast spin-up for agentic coding workloads.
+- [OWASP LLM Top 10 — Excessive Agency](https://owasp.org/www-project-top-10-for-large-language-model-applications/) — frames the security risks that sandboxing directly mitigates: unbounded tool use, unintended side effects, and data exfiltration.
+- [Anthropic — Claude Code safety and permissions](https://docs.anthropic.com/en/docs/claude-code) — documents the built-in command interception model that gates high-risk tool use on explicit human approval.
 
 ## Related Patterns
 

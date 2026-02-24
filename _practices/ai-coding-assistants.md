@@ -33,11 +33,20 @@ Inline AI coding assistants (e.g., GitHub Copilot, Cursor, Windsurf) integrate L
 
 ## Tradeoffs
 
-**Pros:** Facilitates faster comprehension of unfamiliar legacy code and reduces friction for simple boilerplate generation. Lower barrier to entry for developers who are already familiar with the IDE.
+**Pros:**
 
-**Cons:** Inline assistants treat legacy modernization as a series of disconnected, individual edits. They cannot reason across the full scope of a migration task, run tests to verify their own output, or coordinate changes across multiple files simultaneously.
+- Facilitates faster comprehension of unfamiliar legacy code and reduces friction for simple boilerplate generation.
+- Lower barrier to entry for developers who are already familiar with the IDE.
 
-**Difficulties:** Developers may build "prompt-then-accept" habits that lead to the uncritical acceptance of plausible-but-wrong suggestions for unfamiliar legacy APIs. These habits can also hinder the transition to more efficient agentic workflows.
+**Cons:**
+
+- Inline assistants treat legacy modernization as a series of disconnected, individual edits.
+- They cannot reason across the full scope of a migration task, run tests to verify their own output, or coordinate changes across multiple files simultaneously.
+
+**Difficulties:**
+
+- Developers may build "prompt-then-accept" habits that lead to the uncritical acceptance of plausible-but-wrong suggestions for unfamiliar legacy APIs.
+- These habits can also hinder the transition to more efficient agentic workflows.
 
 ## Rationale
 
@@ -47,9 +56,12 @@ In a legacy context, the bottleneck is rarely the individual keystroke; it is th
 
 ## Known Uses
 
-- GitHub reported 55% faster task completion for routine coding with Copilot (2023–2024), though primarily on greenfield boilerplate rather than complex legacy modification.
-- [Simon Willison — AI-assisted programming](https://simonwillison.net/tags/ai-assisted-programming/) — noted a shift from inline assistants toward more agentic workflows as modernization tasks grew in complexity.
-- [Kent Beck — "Taming the AI"](https://tidyfirst.substack.com/p/taming-the-ai) — emphasizes a test-first discipline that has become the conceptual foundation for modern agentic TDD workflows.
+- [GitHub — "Research: quantifying GitHub Copilot's impact on developer productivity and happiness" (2022)](https://github.blog/news-insights/research/research-quantifying-github-copilots-impact-on-developer-productivity-and-happiness/) — controlled study showing 55% faster task completion for routine coding tasks; notably limited to isolated, greenfield-style exercises rather than complex legacy modification.
+
+## References
+
+- [Simon Willison — AI-assisted programming](https://simonwillison.net/tags/ai-assisted-programming/) — ongoing field notes from a prolific practitioner; documents the observed shift from inline completion toward agentic workflows as task complexity grows.
+- [Kent Beck — "Taming the AI"](https://tidyfirst.substack.com/p/taming-the-ai) — argues for maintaining test-first discipline when working with AI-generated code; the conceptual foundation for agentic TDD workflows.
 
 ## Related Patterns
 
