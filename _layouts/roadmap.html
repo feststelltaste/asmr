@@ -1,0 +1,224 @@
+---
+layout: default
+---
+
+{% if page.incubator %}
+  {% assign display_practices = site.incubating | sort: "title" %}
+{% else %}
+  {% assign display_practices = site.practices %}
+{% endif %}
+
+{% assign total_techs = display_practices | size %}
+{% assign categories = display_practices | map: "category" | uniq | sort %}
+
+<!-- Controls -->
+<div class="controls">
+  <div class="search-wrap">
+    <span class="search-icon" aria-hidden="true">🔎</span>
+    <input
+      type="search"
+      id="tech-search"
+      class="search-input"
+      placeholder="Search practices…"
+      aria-label="Search practices"
+    >
+  </div>
+  <div class="filter-wrap">
+    <span class="filter-label">Filter:</span>
+    <div class="filter-chips" role="group" aria-label="Filter by category">
+      <button class="chip active" data-category="all" type="button">
+        All <span class="chip-cnt">{{ total_techs }}</span>
+      </button>
+      {% for cat in categories %}
+        {% assign cat_count = display_practices | where: "category", cat | size %}
+        <button class="chip" data-category="{{ cat }}" type="button">
+          {{ cat }} <span class="chip-cnt">{{ cat_count }}</span>
+        </button>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<!-- Phase navigation -->
+<nav class="phase-nav" aria-label="Jump to stage">
+  <span class="nav-label" aria-hidden="true">Navigate</span>
+  {% if page.incubator %}
+    <button
+      class="phase-nav-btn"
+      data-target="stage-incubating"
+      style="--sc: #7c3aed; --sbg: #f5f3ff"
+      type="button"
+      title="Incubating: Stage not yet assigned"
+    >
+      <span class="pnav-icon">?</span>
+      <span class="pnav-name">Incubating</span>
+    </button>
+    <span class="phase-nav-sep" aria-hidden="true">›</span>
+  {% endif %}
+  {% for stage in site.data.roadmap.stages %}
+    {% unless forloop.first %}
+    <span class="phase-nav-sep" aria-hidden="true">›</span>
+    {% endunless %}
+    <button
+      class="phase-nav-btn"
+      data-target="stage-{{ stage.id }}"
+      style="--sc: {{ stage.color }}; --sbg: {{ stage.bg_color }}"
+      type="button"
+      title="{{ stage.name }}: {{ stage.description }}"
+    >
+      <span class="pnav-icon">{% include stage-icon.html id=stage.id %}</span>
+      <span class="pnav-name">{{ stage.name }}</span>
+    </button>
+  {% endfor %}
+</nav>
+
+<!-- Roadmap -->
+<div class="roadmap" id="roadmap" role="main" aria-label="{% if page.incubator %}Incubator{% else %}Technology Roadmap{% endif %}">
+  <div class="top-scrollbar-wrapper" aria-hidden="true">
+    <div class="top-scrollbar"></div>
+  </div>
+  <div class="roadmap-scroll">
+
+    {% if page.incubator %}
+
+      {% assign unstaged = site.incubating | where_exp: "p", "p.stage == blank" | sort: "title" %}
+
+      <div
+        class="stage"
+        id="stage-incubating"
+        data-stage="incubating"
+        style="--sc: #7c3aed; --sbg: #f5f3ff"
+        aria-label="Incubating practices"
+      >
+        <div class="stage-hd">
+          <span class="stage-step">?</span>
+          <div class="stage-title-row">
+            <h2 class="stage-name">Incubating</h2>
+            <span class="stage-count">{{ unstaged | size }}</span>
+          </div>
+          <p class="stage-desc">Stage not yet assigned. Under active discussion.</p>
+        </div>
+
+        <div class="stage-bd">
+          {% if unstaged.size > 0 %}
+            {% for tech in unstaged %}
+              {% include practice-card.html tech=tech color="#7c3aed" %}
+            {% endfor %}
+          {% else %}
+            <div class="stage-empty" aria-label="No unstaged practices">
+              <span class="empty-dot" aria-hidden="true">○</span>
+              <span>Empty</span>
+            </div>
+          {% endif %}
+
+          <div class="stage-empty stage-empty--filtered" style="display:none" aria-hidden="true">
+            <span class="empty-dot">◌</span>
+            <span>No match</span>
+          </div>
+        </div>
+      </div>
+
+      {% for stage in site.data.roadmap.stages %}
+        <div class="connector" aria-hidden="true">
+          <svg viewBox="0 0 50 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="0" y1="16" x2="38" y2="16" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/>
+            <path d="M30 8 L42 16 L30 24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+        </div>
+
+        {% assign stage_techs = site.incubating | where: "stage", stage.id | sort: "title" %}
+
+        <div
+          class="stage"
+          id="stage-{{ stage.id }}"
+          data-stage="{{ stage.id }}"
+          style="--sc: {{ stage.color }}; --sbg: {{ stage.bg_color }}"
+          aria-label="Stage: {{ stage.name }}"
+        >
+          <div class="stage-hd">
+            <span class="stage-step">{{ forloop.index }}</span>
+            <div class="stage-title-row">
+              <span class="stage-icon">{% include stage-icon.html id=stage.id %}</span>
+              <h2 class="stage-name">{{ stage.name }}</h2>
+              <span class="stage-count">{{ stage_techs | size }}</span>
+            </div>
+            <p class="stage-desc">{{ stage.description }}</p>
+          </div>
+
+          <div class="stage-bd">
+            {% if stage_techs.size > 0 %}
+              {% for tech in stage_techs %}
+                {% include practice-card.html tech=tech color=stage.color %}
+              {% endfor %}
+            {% else %}
+              <div class="stage-empty" aria-label="No technologies in this stage yet">
+                <span class="empty-dot" aria-hidden="true">○</span>
+                <span>Empty</span>
+              </div>
+            {% endif %}
+
+            <div class="stage-empty stage-empty--filtered" style="display:none" aria-hidden="true">
+              <span class="empty-dot">◌</span>
+              <span>No match</span>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+
+    {% else %}
+
+      {% for stage in site.data.roadmap.stages %}
+        {% unless forloop.first %}
+        <div class="connector" aria-hidden="true">
+          <svg viewBox="0 0 50 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="0" y1="16" x2="38" y2="16" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/>
+            <path d="M30 8 L42 16 L30 24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+        </div>
+        {% endunless %}
+
+        {% assign stage_techs = display_practices | where: "stage", stage.id | sort: "title" %}
+
+        <div
+          class="stage"
+          id="stage-{{ stage.id }}"
+          data-stage="{{ stage.id }}"
+          style="--sc: {{ stage.color }}; --sbg: {{ stage.bg_color }}"
+          aria-label="Stage: {{ stage.name }}"
+        >
+          <div class="stage-hd">
+            <span class="stage-step">{{ forloop.index }}</span>
+            <div class="stage-title-row">
+              <span class="stage-icon">{% include stage-icon.html id=stage.id %}</span>
+              <h2 class="stage-name">{{ stage.name }}</h2>
+              <span class="stage-count">{{ stage_techs | size }}</span>
+            </div>
+            <p class="stage-desc">{{ stage.description }}</p>
+          </div>
+
+          <div class="stage-bd">
+            {% if stage_techs.size > 0 %}
+              {% for tech in stage_techs %}
+                {% include practice-card.html tech=tech color=stage.color %}
+              {% endfor %}
+            {% else %}
+              <div class="stage-empty" aria-label="No technologies in this stage yet">
+                <span class="empty-dot" aria-hidden="true">○</span>
+                <span>Empty</span>
+              </div>
+            {% endif %}
+
+            <div class="stage-empty stage-empty--filtered" style="display:none" aria-hidden="true">
+              <span class="empty-dot">◌</span>
+              <span>No match</span>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+
+    {% endif %}
+
+  </div>
+</div>
+
+<p class="roadmap-hint" aria-hidden="true">← swipe or scroll to explore all stages →</p>

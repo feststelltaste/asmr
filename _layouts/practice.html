@@ -75,7 +75,11 @@ layout: default
   {% endif %}
 
   <footer class="tech-footer">
+    {% if page.collection == "incubating" %}
+    <a href="{{ '/incubator/' | relative_url }}" class="back-link">← Back to Incubator</a>
+    {% else %}
     <a href="{{ '/' | relative_url }}" class="back-link">← Back to Roadmap</a>
+    {% endif %}
     {% if stage_data %}
     <span class="tech-footer-stage" style="--sc: {{ stage_data.color }}">
       Stage: <strong>{{ stage_data.name }}</strong> — {{ stage_data.description }}

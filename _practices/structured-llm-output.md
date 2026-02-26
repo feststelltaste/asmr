@@ -1,6 +1,6 @@
 ---
 title: "Structured LLM Output (JSON mode)"
-stage: trial
+stage: apply
 category: AI Tooling Setup
 description: "Enforcing typed JSON schemas on LLM output (tool use, JSON mode). Makes LLMs reliable participants in typed software pipelines."
 strategic_value: generic

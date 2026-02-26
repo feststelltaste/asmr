@@ -2,7 +2,7 @@
 title: "Agentic Coding Workflows"
 stage: trial
 category: Agentic AI Tools
-description: "Multi-step autonomous agents (Claude Code, Devin, SWE-agent) that plan, write, run, debug, and iterate on tasks with minimal human guidance."
+description: "Multi-step autonomous agents (Claude Code, Devin, OpenHands) that plan, write, run, debug, and iterate on tasks with minimal human guidance."
 strategic_value: core
 evolution: product
 devops_phases: [plan, code, test]

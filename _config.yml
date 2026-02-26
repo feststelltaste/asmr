@@ -9,11 +9,19 @@ collections:
   practices:
     output: true
     permalink: /practices/:name/
+  incubating:
+    output: true
+    permalink: /incubating/:name/
 
 defaults:
   - scope:
       path: ""
       type: "practices"
+    values:
+      layout: "practice"
+  - scope:
+      path: ""
+      type: "incubating"
     values:
       layout: "practice"
 

@@ -1,6 +1,6 @@
 ---
 title: "Vector Databases"
-stage: apply
+stage: stop
 category: AI Tooling Setup
 description: "Pgvector, Qdrant, Pinecone — semantic search stores used by RAG pipelines. Mature enough to pick based on your existing infrastructure."
 strategic_value: supporting
@@ -92,4 +92,4 @@ After establishing your first vector store (like [pgvector](https://github.com/p
 
 ## Staging History
 
-**Apply (Feb 2026):** Vector databases are a mature and foundational part of the 'AI stack'. Every team building agentic tools or RAG pipelines has a vector store in place, with pgvector being the most popular choice for teams already using PostgreSQL.
+**Stop (Feb 2026):** Vector databases are a mature and foundational part of the 'AI stack'. Every team building agentic tools or RAG pipelines has a vector store in place, with pgvector being the most popular choice for teams already using PostgreSQL. But they often lack deepter domain knowledge and aren't aware of dependencies among them when different clusters of terms are related to each others. Embeddings won't show that. So stop using it as a silver bullet for context enrichtment.

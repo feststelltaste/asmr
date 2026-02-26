@@ -1,6 +1,6 @@
 ---
 title: "Small Language Models (SLMs)"
-stage: assess
+stage: hold
 category: AI Tooling Setup
 description: "Using smaller, specialized models (1B-8B parameters) for high-volume, low-complexity tasks. Not yet mature enough for most enterprise modernization workflows."
 strategic_value: generic
@@ -91,4 +91,4 @@ After establishing an [AI Gateway / Routing](../ai-gateway-routing/) system, beg
 
 ## Staging History
 
-**Assess (Feb 2026):** Small Language Models (SLMs) are being assessed for high-volume, low-complexity modernization tasks. While they offer significant cost and latency advantages, teams must still evaluate their reasoning capabilities against the complex requirements of legacy codebases.
+**Hold (Feb 2026):** Small Language Models (SLMs) are being assessed for high-volume, low-complexity modernization tasks. While they offer significant cost and latency advantages, teams must still evaluate their reasoning capabilities against the complex requirements of legacy codebases.  But as of today there are rumors that smaller models might just be trained on bigger ones, leaving them clueless when getting in contact on unknown territiry that the destilation didnt cover.
