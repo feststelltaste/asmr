@@ -1,6 +1,6 @@
 ---
 title: "Vibe Coding"
-stage: hold
+stage: hold-on
 category: Agentic AI Tools
 description: "AI-first development where you describe intent in natural language and let the AI implement, then iterate on the result rather than writing code line by line."
 strategic_value: core
@@ -91,4 +91,4 @@ After prototyping your first service with [Vibe Coding](../vibe-coding/), implem
 
 ## Staging History
 
-**Hold (Feb 2026):** Vibe coding is being trial used for rapid prototyping and exploration of new technologies. While it dramatically speeds up the initial scaffolding of modern services, teams are still evaluating the best practices for transitioning 'vibe' code into maintainable production systems. But it's on hold by now because they lead to expectations that cannot be easily fullfiled in legacy environments. So if responsible used, try it out, but if not, please behold!
+**Hold (Feb 2026):** Vibe coding is being trialed for rapid prototyping and exploration of new technologies. While it dramatically speeds up the initial scaffolding of modern services, teams are still evaluating the best practices for transitioning 'vibe' code into maintainable production systems. But it is currently on hold because it leads to expectations that cannot be easily fulfilled in legacy environments. So if used responsibly, try it out; if not, beware!

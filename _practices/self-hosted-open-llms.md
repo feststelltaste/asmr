@@ -1,6 +1,6 @@
 ---
 title: "Self-hosted Open LLMs"
-stage: hold
+stage: hold-on
 category: AI Tooling Setup
 description: "Running Llama, Mistral, Qwen locally for privacy-sensitive code and data. Viable for many tasks, gap to frontier models still matters for complex reasoning."
 strategic_value: generic
@@ -86,4 +86,4 @@ After successfully self-hosting your first general-purpose model, begin experime
 
 ## Staging History
 
-**Hold (Feb 2026):** Self-hosting open-weight LLMs is currently being trialed by organizations with high security and privacy requirements. While the technology is maturing rapidly, the high operational cost and GPU infrastructure requirements mean it is still an emerging practice for most modernization teams. But as of today there are rumors that smaller models might just be trained on bigger ones, leaving them clueless when getting in contact on unknown territiry that the destilation didnt cover.
+**Hold (Feb 2026):** Self-hosting open-weight LLMs is currently being trialed by organizations with high security and privacy requirements. While the technology is maturing rapidly, the high operational cost and GPU infrastructure requirements mean it is still an emerging practice for most modernization teams. But as of today there are rumors that smaller models might just be trained on bigger ones, leaving them clueless when encountering unknown territory that the distillation didn't cover.
